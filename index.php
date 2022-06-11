@@ -26,9 +26,9 @@
         <a class="navbar-brand" href="index.php">
             <img src="img/logo.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
         </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+        </button>
     <div class="collapse navbar-collapse justify-content-center"  id="collapsibleNavbar">
     
       <ul class="navbar-nav">
@@ -43,8 +43,8 @@
         </li>    
       </ul>
     </div>
-  </div>
-</nav>
+    </div>
+    </nav>
         
     </div> <!-- end .container -->
  
