@@ -19,14 +19,33 @@
     
     <div class="container"> 
         <!-- Navbar -->
-        <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
-        <a class="navbar-brand" href="#">
+
+
+    <nav class="navbar navbar-expand-sm bg-light navbar-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index.php">
             <img src="img/logo.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
-            Ramen Something
         </a>
-        </nav>
-
-
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center"  id="collapsibleNavbar">
+    
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Foods</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Something</a>
+        </li>    
+      </ul>
+    </div>
+  </div>
+</nav>
+        
     </div> <!-- end .container -->
  
 
