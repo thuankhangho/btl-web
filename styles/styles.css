@@ -1,36 +1,49 @@
+/* universal setting */
 * {
-
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.2s linear;
 }
 
-.text-right{
-    text-align: right;
-}
-.text-center{
-    text-align: center;
-}
-.text-left{
-    text-align: left;
+:root {
+  --color: #ff7f50;
+  --border: 5px solid #ff7f50;
+  --bg: rgba(255, 255, 255, 0.3);
 }
 
+.text-right {
+  text-align: right;
+}
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
 
 /* navbar section */
-.navbar-dark .navbar-nav .nav-link
-{
-    color : #ff7f50;
-    font-weight: bold;
-    border-bottom: 5px solid transparent;
+.navbar-dark .navbar-nav .nav-link {
+  color: var(--color);
+  font-weight: bold;
+  border-bottom: 5px solid transparent;
 }
 
 .navbar-dark .navbar-nav .nav-link:hover {
-    border-bottom: 5px solid #ff7f50;
-  }
+  border-bottom: var(--border);
+}
 
 .navbar .navbar-collapse {
-    text-align: center;
+  text-align: center;
 }
 
 .navbar-toggler {
-    justify-content: center;
+  justify-content: center;
 }
 
 /* main content*/
