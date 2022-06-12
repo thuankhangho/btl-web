@@ -77,13 +77,16 @@
               <h2 class="text-center">Khám phá danh mục sản phẩm</h2>
                
               <div class="row justify-content-center">
-                <div class="col-4">
+                <div class="col-3">
                   <img src="img/food-img/ramen-cata.jpg" alt="" class="img-fluid img-curve">
                 </div>
-                <div class="col-4">
+                <div class="col-3">
                   <img src="img/food-img/ramen-cata.jpg" alt="" class="img-fluid img-curve">
                 </div>
-                <div class="col-4">
+                <div class="col-3">
+                  <img src="img/food-img/ramen-cata.jpg" alt="" class="img-fluid img-curve">
+                </div>
+                <div class="col-3">
                   <img src="img/food-img/ramen-cata.jpg" alt="" class="img-fluid img-curve">
                 </div>
               </div>
