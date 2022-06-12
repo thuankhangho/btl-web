@@ -40,7 +40,8 @@
                   <input type="password" name="password" id="password" class="form-control"/>
                   <label class="form-label" for="password">Mật khẩu</label>
                 </div>
-
+                <p class="text-center text-muted mt-5 mb-0">Chưa có tài khoản? <a href="register.php"
+                    class="fw-bold text-body"><u>Hãy đăng ký</u></a></p>
                 <button type="submit" name="login" class="btn btn-success btn-lg mb-1" style="background-color: #ff7f50;">Đăng Nhập</button>
               </form>
 
