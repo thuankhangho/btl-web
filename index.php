@@ -40,7 +40,7 @@
                 <a class="nav-link" href="php/about.php">Giới thiệu</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Sản phẩm</a>
+                <a class="nav-link" href="php/product.php">Sản phẩm</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="php/news.php">Tin tức</a>
