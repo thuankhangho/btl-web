@@ -1,5 +1,6 @@
 /* universal setting */
-* {
+*
+{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -10,19 +11,23 @@
   transition: 0.2s linear;
 }
 
-:root {
+:root
+{
   --color: #ff7f50;
   --border: 5px solid #ff7f50;
   --bg: rgba(255, 255, 255, 0.3);
 }
 
-.text-right {
+.text-right
+{
   text-align: right;
 }
-.text-center {
+.text-center
+{
   text-align: center;
 }
-.text-left {
+.text-left
+{
   text-align: left;
 }
 
@@ -32,17 +37,20 @@
     border-bottom: var(--border);
 }
 
-.navbar-dark .navbar-nav .nav-link {
+.navbar-dark .navbar-nav .nav-link
+{
   color: var(--color);
   font-weight: bold;
   border-bottom: 5px solid transparent;
 }
 
-.navbar-dark .navbar-nav .nav-link:hover {
+.navbar-dark .navbar-nav .nav-link:hover
+{
   border-bottom: var(--border);
 }
 
-.navbar .navbar-collapse {
+.navbar .navbar-collapse
+{
   text-align: center;
 }
 
@@ -56,10 +64,10 @@
     color: var(--color);
 }
 
-
 /* main content*/
 /*search*/
-.food-search{
+.food-search
+{
     background-image: url(../img/ramen-bg-searchbar.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -67,30 +75,34 @@
     padding: 10% 0;
 }
 
-.search{
+.search
+{
     position: relative;
     box-shadow: 0 0 40px rgba(51, 51, 51, .1);
 }
 
-.search input{
+.search input
+{
     height: 60px;
     text-indent: 25px;
     border: 2px solid #d6d4d4;
 }
 
-
-.search input:focus{
+.search input:focus
+{
     box-shadow: none;
     border: 2px solid var(--color);
 }
 
-.search .fa-search{
+.search .fa-search
+{
     position: absolute;
     top: 20px;
     left: 16px;
 }
 
-.search button{
+.search button
+{
     position: absolute;
     top: 5px;
     right: 5px;
@@ -99,30 +111,33 @@
     background: var(--color);
 }
 
-.search button:hover{
+.search button:hover
+{
     background:#57606f ;
 }
 
-.box-3{
+.box-3
+{
     width: 100%;
     margin: 4% auto;
 }
 
-.img-curve{
+.img-curve
+{
     border-radius: 15px;
 }
 
-
-.container-img{
+.container-img
+{
     padding: 4%;
-
 }
-/**/
 
 /*footer*/
 .footer
 {
     border-top: black;
     background-color: var(--color);
-    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
