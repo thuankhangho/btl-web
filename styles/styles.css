@@ -1,6 +1,5 @@
 /* universal setting */
 * {
-  font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -47,10 +46,15 @@
   text-align: center;
 }
 
-.navbar-toggler {
-  justify-content: center;
+.user-btn
+{
+    color: var(--color);
 }
 
+.dropdown-item
+{
+    color: var(--color);
+}
 
 
 /* main content*/
