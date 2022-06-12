@@ -3,9 +3,6 @@
 <head>
     <!-- jQuery CDN-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
     <!-- Font Awesome CDN-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Bootstrap CDN-->
@@ -35,8 +32,8 @@
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
               <span class="navbar-toggler-icon justify-content-center"></span>
           </button>
-          <div class="collapse navbar-collapse justify-content-center"  id="collapsibleNavbar">
-            <ul class="navbar-nav">
+      <div class="collapse navbar-collapse justify-content-center"  id="collapsibleNavbar">
+          <ul class="navbar-nav">
               <li class="nav-item">
                 <a class="nav-link" href="#">Home</a>
               </li>
@@ -44,11 +41,21 @@
                 <a class="nav-link" href="#">Menu</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link color-nav" href="#">Something</a>
+                <a class="nav-link" href="#">Something</a>
               </li>    
-            </ul>
-          </div>
-      </div>
+               <!-- Icon dropdown -->
+               <div class=" nav-item dropdown user-btn">
+                  <button type="button" class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown">
+                  <i class="fa fa-user"></i>
+                  </button>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                      <li><a class="dropdown-item" href="#">Sign Up</a></li>
+                      <li><a class="dropdown-item" href="#">Login</a></li>
+                    </ul>
+               </div>
+           </ul>
+       </div>
+    </div>
     </nav>
      <!-- end .navbar -->
 

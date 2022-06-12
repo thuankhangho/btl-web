@@ -51,6 +51,8 @@
   justify-content: center;
 }
 
+
+
 /* main content*/
 /*search*/
 .food-search{
@@ -94,7 +96,7 @@
 }
 
 .search button:hover{
-    background: black;
+    background:#57606f ;
 }
 /**/
 
