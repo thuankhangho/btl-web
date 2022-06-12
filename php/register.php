@@ -13,10 +13,20 @@
   <!-- CSS -->
   <link rel="stylesheet" href="styles/styles.css">
   <script src = "js/.js"></script>
-  <title>Đăng nhập</title>
-  
+  <title>Đăng ký tài khoản</title>
 </head>
 <body>
-
+  <h2>Đăng ký tài khoản</h2>
+  <form action="" method="post">
+        <input type="text" name="username" placeholder="Nhập username"><br><br>
+        <input type="password" name="password" placeholder="Nhập mật khẩu"><br><br>
+        <input type="text" name="firstName" placeholder="Nhập họ"><br><br>
+        <input type="text" name="lastName" placeholder="Nhập tên"><br><br>
+        Nhập ngày sinh: <input type="date" name="birthday"><br><br>
+        <input type="email" name="email" placeholder="Nhập email"><br><br>
+        <input type="text" name="phoneNumber" placeholder="Nhập số điện thoại"><br><br>
+        <input type="text" name="address" placeholder="Nhập địa chỉ"><br><br>
+        <input type="submit" name="login" value="Đăng ký">
+  </form>
 </body>
 </html>
