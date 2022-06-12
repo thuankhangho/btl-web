@@ -15,6 +15,10 @@
   <script src = "js/.js"></script>
   <title>Đăng nhập tài khoản</title>
 </head>
+
+<style>
+
+</style>
 <body>
   <h2>Đăng nhập tài khoản</h2>
   <form action="../index.php" method="post">
