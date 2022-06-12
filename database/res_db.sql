@@ -59,8 +59,8 @@ CREATE TABLE `product` (
   `desciption` text NOT NULL,
   `price` float UNSIGNED NOT NULL,
   `img_path` text NOT NULL,
-  `status` tinyint(1) NOT NULL,
-  `feature` tinyint(1) NOT NULL,
+  `status` tinyint(1) NOT NULL COMMENT '0: unavailable, 1: available',
+  `feature` tinyint(1) NOT NULL COMMENT '0: not featured on news, 1: featured on news',
   `comment-board_id` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -75,10 +75,12 @@ CREATE TABLE `user` (
   `username` varchar(100) NOT NULL,
   `password` varchar(255) NOT NULL,
   `full_name` varchar(100) NOT NULL,
+  `sex` varchar(6) NOT NULL COMMENT 'male, female, other',
   `birthday` date NOT NULL,
   `email` varchar(50) NOT NULL,
   `phone` varchar(15) NOT NULL,
-  `address` varchar(255) NOT NULL
+  `address` varchar(255) NOT NULL,
+  `active` tinyint(1) NOT NULL COMMENT '0: banned, 1: active'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
