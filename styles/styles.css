@@ -20,6 +20,14 @@
     font-weight: bold;
 }
 
+.navbar .navbar-collapse {
+    text-align: center;
+}
+
+.navbar-toggler {
+    justify-content: center;
+}
+
 /* main content*/
 
 /*footer*/
