@@ -37,10 +37,10 @@
                 <a class="nav-link" href="../index.php">Trang chủ</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="about.php#">Giới thiệu</a>
+                <a class="nav-link" href="about.php">Giới thiệu</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Sản phẩm</a>
+                <a class="nav-link" href="product.php">Sản phẩm</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="news.php">Tin tức</a>
