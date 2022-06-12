@@ -6,7 +6,8 @@
     <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-    
+    <!-- Font Awesome CDN-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Bootstrap CDN-->
     <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -53,7 +54,17 @@
 
     <!-- main content --> 
     <div class="main-content">
-    
+            <div class=" food-search row height d-flex justify-content-center align-items-center">
+
+                <div class="col-md-8">
+                  <div class="search">
+                      <i class="fa fa-search"></i>
+                      <input type="text" class="form-control" placeholder="What are you craving for?">
+                      <button class="btn btn-primary">Search</button>
+                  </div>     
+                </div>
+                      
+            </div>
     </div>
     <!-- end .main-content -->    
 
