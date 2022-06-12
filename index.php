@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Font Awesome CDN-->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" rel="stylesheet">
-    <!-- jQuery CDN-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <!-- Bootstrap CDN-->
-    <meta charset="utf-8">
+  <!-- Font Awesome CDN-->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" rel="stylesheet">
+  <!-- jQuery CDN-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!-- Bootstrap CDN-->
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -14,8 +14,8 @@
   <link rel="stylesheet" href="styles/styles.css">
   <script src = "js/.js"></script>
   <title>Bài tập lớn Lập trình Web (CO3049)</title>
-  
 </head>
+
 <body>
         <!-- Navbar -->
     <nav class="my-navbar-logo navbar navbar-expand-xl navbar-dark bg-dark">
@@ -59,7 +59,7 @@
        </div>
     </div>
     </nav>
-     <!-- end .navbar -->
+    <!-- end .navbar -->
 
     <!-- main content --> 
     <div class="main-content">
@@ -91,7 +91,6 @@
     </section>
     </div>
     <!-- end .main-content -->    
-
 
     <!-- footer --> 
     <div class="footer text-center">
