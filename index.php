@@ -20,13 +20,18 @@
 <body>
     
         <!-- Navbar -->
-    <nav class="my-navbar navbar navbar-expand-xl navbar-dark bg-dark">
-    <div class="my-container container-fluid">
+    <nav class="my-navbar-logo navbar navbar-expand-xl navbar-dark bg-dark">
+          <div class="my-container container-fluid justify-content-center">
           <a class="navbar-brand" href="index.php">
-              <img src="img/logo.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
+              <img src="img/logo.jpg" width="90" height="90" class="d-inline-block align-top" alt="">
           </a>
+          </div>
+    </nav>
+    <nav class="my-navbar navbar navbar-expand-xl navbar-dark bg-dark">
+    <div class="my-container container-fluid justify-content-center">
+          
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-              <span class="navbar-toggler-icon"></span>
+              <span class="navbar-toggler-icon justify-content-center"></span>
           </button>
           <div class="collapse navbar-collapse justify-content-center"  id="collapsibleNavbar">
             <ul class="navbar-nav">
