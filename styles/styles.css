@@ -102,6 +102,27 @@
 .search button:hover{
     background:#57606f ;
 }
+
+.box-3{
+    width: 100%;
+    margin: 4% auto;
+}
+
+.img-curve{
+    border-radius: 15px;
+}
+
+
+.container-img{
+    padding: 4%;
+
+}
 /**/
 
 /*footer*/
+.footer
+{
+    border-top: black;
+    background-color: var(--color);
+    padding: 8px;
+}

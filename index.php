@@ -70,15 +70,32 @@
                       <button class="btn btn-primary" name="submit-search">Search</button>
                   </div>     
                 </div>
-                      
             </div>
+
+
+        <div class="container-img">
+              <h2 class="text-center">Explore Our Catalogue</h2>
+               
+              <div class="row justify-content-center">
+                <div class="col-4">
+                  <img src="img/food-img/ramen-cata.jpg" alt="" class="img-fluid img-curve">
+                </div>
+                <div class="col-4">
+                  <img src="img/food-img/ramen-cata.jpg" alt="" class="img-fluid img-curve">
+                </div>
+                <div class="col-4">
+                  <img src="img/food-img/ramen-cata.jpg" alt="" class="img-fluid img-curve">
+                </div>
+              </div>
+         </div>
+    </section>
     </div>
     <!-- end .main-content -->    
 
 
     <!-- footer --> 
-    <div class="footer">
-
+    <div class="footer text-center">
+        <p>All rights reserved.</p>
     </div>
     <!-- end .footer -->   
  
