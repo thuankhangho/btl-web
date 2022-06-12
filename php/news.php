@@ -11,7 +11,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   <!-- CSS -->
-  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="../styles/styles.css">
   <script src = "js/script.js"></script>
   <title>Tin tức</title>
 </head>
@@ -21,7 +21,7 @@
 <nav class="my-navbar-logo navbar navbar-expand-xl navbar-dark bg-dark">
           <div class="my-container container-fluid justify-content-center">
           <a class="navbar-brand" href="index.php">
-              <img src="img/logo.jpg" width="90" height="90" class="d-inline-block align-top" alt="">
+              <img src="../img/logo.png" width="90" height="90" class="d-inline-block align-top" alt="">
           </a>
           </div>
     </nav>
