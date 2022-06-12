@@ -51,8 +51,8 @@
                   <i class="fas fa-user-circle"></i>
                   </button>
                     <ul class="dropdown-menu dropdown-menu-dark">
-                      <li><a class="dropdown-item" href="php/register.php">Đăng ký</a></li>
-                      <li><a class="dropdown-item" href="php/login.php">Đăng nhập</a></li>
+                      <li><a class="dropdown-item" href="php/form/register.php">Đăng ký</a></li>
+                      <li><a class="dropdown-item" href="php/form/login.php">Đăng nhập</a></li>
                     </ul>
                </li>
            </ul>
