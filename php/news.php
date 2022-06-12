@@ -45,9 +45,6 @@
               <li class="nav-item">
                 <a class="nav-link" href="#">Tin tức</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Liên lạc</a>
-              </li>    
                <!-- Icon dropdown -->
                <li class="dropdown user-drop">
                   <button type="button" class="user-btn btn btn-dark dropdown-toggle" data-bs-toggle="dropdown">
