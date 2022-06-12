@@ -17,7 +17,6 @@
   
 </head>
 <body>
-    
         <!-- Navbar -->
     <nav class="my-navbar-logo navbar navbar-expand-xl navbar-dark bg-dark">
           <div class="my-container container-fluid justify-content-center">
@@ -35,13 +34,16 @@
       <div class="collapse navbar-collapse justify-content-center"  id="collapsibleNavbar">
           <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" href="#">Home</a>
+                <a class="nav-link" href="#">Trang chủ</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Menu</a>
+                <a class="nav-link" href="#">Giới thiệu</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Something</a>
+                <a class="nav-link" href="#">Sản phẩm</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Liên lạc</a>
               </li>    
                <!-- Icon dropdown -->
                <li class="dropdown user-drop">
@@ -49,8 +51,8 @@
                   <i class="fas fa-user-circle"></i>
                   </button>
                     <ul class="dropdown-menu dropdown-menu-dark">
-                      <li><a class="dropdown-item" href="#">Sign Up</a></li>
-                      <li><a class="dropdown-item" href="#">Login</a></li>
+                      <li><a class="dropdown-item" href="#">Đăng ký</a></li>
+                      <li><a class="dropdown-item" href="#">Đăng nhập</a></li>
                     </ul>
                </li>
            </ul>
@@ -66,15 +68,13 @@
                 <div class="col-md-8">
                   <div class="search">
                       <i class="fa fa-search"></i>
-                      <input type="text" name="input-search" class="form-control" placeholder="What are you craving for?">
-                      <button class="btn btn-primary" name="submit-search">Search</button>
+                      <input type="text" name="input-search" class="form-control" placeholder="Bạn đang thèm gì?">
+                      <button class="btn btn-primary" name="submit-search">Tìm kiếm</button>
                   </div>     
                 </div>
             </div>
-
-
         <div class="container-img">
-              <h2 class="text-center">Explore Our Catalogue</h2>
+              <h2 class="text-center">Khám phá danh mục sản phẩm</h2>
                
               <div class="row justify-content-center">
                 <div class="col-4">
@@ -95,10 +95,8 @@
 
     <!-- footer --> 
     <div class="footer text-center">
-        <p>All rights reserved.</p>
+        <p style="font-weight: bold; color: white">©2022 All Rights Reserved</p>
     </div>
-    <!-- end .footer -->   
- 
-
+    <!-- end .footer -->
 </body>
 </html>
