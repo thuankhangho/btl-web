@@ -34,7 +34,7 @@
       <div class="collapse navbar-collapse justify-content-center"  id="collapsibleNavbar">
           <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" href="#">Trang chủ</a>
+                <a class="nav-link" href="index.php">Trang chủ</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="php/about.php">Giới thiệu</a>
