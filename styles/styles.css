@@ -15,6 +15,7 @@
 {
   --color: #ff7f50;
   --border: 5px solid #ff7f50;
+  --gray: #57606f;
   --bg: rgba(255, 255, 255, 0.3);
 }
 
@@ -64,11 +65,6 @@
     color: var(--color);
 }
 
-.float-text{
-  position: absolute;
-  bottom: 50px;
-  left: 40%;
-}
 
 /* main content*/
 /*search*/
@@ -137,7 +133,18 @@
 {
     padding: 4%;
 }
-
+.headline-container
+{
+  justify-content: center;
+}
+.headline
+{
+    color:var(--color);
+}
+.snippet
+{
+  color: var(--color);
+}
 /*footer*/
 .footer
 {
