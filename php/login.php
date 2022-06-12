@@ -17,7 +17,7 @@
 </head>
 <body>
   <h2>Đăng nhập tài khoản</h2>
-  <form action="" method="post">
+  <form action="../index.php" method="post">
         <input type="text" name="username" placeholder="Nhập username"><br><br>
         <input type="password" name="password" placeholder="Nhập mật khẩu"><br><br>
         <input type="submit" name="login" value="Đăng nhập">
