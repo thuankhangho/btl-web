@@ -62,3 +62,8 @@
     <!-- end .navbar -->
 </body>
 </html>
+
+<?php
+    include 'config/dtb.php';
+    //select data
+?>

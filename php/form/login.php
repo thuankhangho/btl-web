@@ -16,10 +16,52 @@
   <title>Đăng nhập tài khoản</title>
 </head>
 
-<style>
-
-</style>
 <body>
+<nav class="my-navbar-logo navbar navbar-expand-xl navbar-dark bg-dark">
+          <div class=" container-fluid justify-content-center">
+          <a class="navbar-brand" href="../../index.php">
+              <img src="../../img/logo.png" width="90" height="90" class="d-inline-block align-top" alt="">
+          </a>
+          </div>
+    </nav>
+    <nav class="my-navbar navbar navbar-expand-xl navbar-dark bg-dark">
+    <div class="container-fluid justify-content-center">
+          
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+              <span class="navbar-toggler-icon justify-content-center"></span>
+          </button>
+      <div class="collapse navbar-collapse justify-content-center"  id="collapsibleNavbar">
+          <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Trang chủ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Giới thiệu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Sản phẩm</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Tin tức</a>
+              </li>
+               <!-- Icon dropdown -->
+               <li class="dropdown user-drop">
+                  <button type="button" class="user-btn btn btn-dark dropdown-toggle" data-bs-toggle="dropdown">
+                  <i class="fas fa-user-circle"></i>
+                  </button>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                      <li><a class="dropdown-item" href="php/register.php">Đăng ký</a></li>
+                      <li><a class="dropdown-item" href="php/login.php">Đăng nhập</a></li>
+                    </ul>
+               </li>
+           </ul>
+       </div>
+    </div>
+    </nav>
+    <!-- end .navbar -->
+  </div>
+    
+
     <div class="h-100 h-custom my-container">
     <div class="container py-5 h-100">
       <div class="row d-flex justify-content-center align-items-center h-100">
