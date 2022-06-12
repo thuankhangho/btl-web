@@ -54,14 +54,14 @@ CREATE TABLE `comment` (
 --
 
 CREATE TABLE `product` (
-  `id` int(11) NOT NULL,
+  `id` int(10) UNSIGNED NOT NULL,
   `name` varchar(100) NOT NULL,
   `desciption` text NOT NULL,
-  `price` double UNSIGNED NOT NULL,
+  `price` float UNSIGNED NOT NULL,
   `img_path` text NOT NULL,
   `status` tinyint(1) NOT NULL,
   `feature` tinyint(1) NOT NULL,
-  `comment-board_id` int(11) NOT NULL
+  `comment-board_id` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -74,8 +74,7 @@ CREATE TABLE `user` (
   `id` int(10) UNSIGNED NOT NULL,
   `username` varchar(100) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `last_name` varchar(100) NOT NULL,
-  `first_name` varchar(100) NOT NULL,
+  `full_name` varchar(100) NOT NULL,
   `birthday` date NOT NULL,
   `email` varchar(50) NOT NULL,
   `phone` varchar(15) NOT NULL,
@@ -99,6 +98,12 @@ ALTER TABLE `comment`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `product`
+--
+ALTER TABLE `product`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
@@ -118,6 +123,12 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `comment`
 --
 ALTER TABLE `comment`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `product`
+--
+ALTER TABLE `product`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --

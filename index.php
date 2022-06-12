@@ -37,13 +37,13 @@
                 <a class="nav-link" href="#">Trang chủ</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Giới thiệu</a>
+                <a class="nav-link" href="php/about.php">Giới thiệu</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Sản phẩm</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Tin tức</a>
+                <a class="nav-link" href="php/news.php">Tin tức</a>
               </li>
                <!-- Icon dropdown -->
                <li class="dropdown user-drop">
