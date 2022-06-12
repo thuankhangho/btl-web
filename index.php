@@ -43,6 +43,9 @@
                 <a class="nav-link" href="#">Sản phẩm</a>
               </li>
               <li class="nav-item">
+                <a class="nav-link" href="#">Tin tức</a>
+              </li>
+              <li class="nav-item">
                 <a class="nav-link" href="#">Liên lạc</a>
               </li>    
                <!-- Icon dropdown -->
@@ -82,9 +85,7 @@
                     <a href="#">
                       <img src="img/food-img/ramen-cata.jpg" alt="" class="img-fluid img-curve">
                     </a>
-                    
                   </div>
-                    
                   <div class="col-3">
                       <a href="#">
                         <img src="img/food-img/sushi-cata.jpg" alt="" class="img-fluid img-curve">
@@ -96,8 +97,6 @@
                       <img src="img/food-img/beverage-cata.jpg" alt="" class="img-fluid img-curve">
                     </a>
                   </div>
-                
-                
                   <div class="col-3">
                     <a href="#">
                       <img src="img/food-img/rice-cata.jpg" alt="" class="img-fluid img-curve">
@@ -105,8 +104,6 @@
                   </div>
               </div>
          </div>
-
-
          <div class="blog bg-dark">
               <div class="headline-container text-center">
                   <h3 class="headline">Bảng Tin</h3>
