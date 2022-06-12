@@ -59,8 +59,8 @@
                 <div class="col-md-8">
                   <div class="search">
                       <i class="fa fa-search"></i>
-                      <input type="text" class="form-control" placeholder="What are you craving for?">
-                      <button class="btn btn-primary">Search</button>
+                      <input type="text" name="input-search" class="form-control" placeholder="What are you craving for?">
+                      <button class="btn btn-primary" name="submit-search">Search</button>
                   </div>     
                 </div>
                       
