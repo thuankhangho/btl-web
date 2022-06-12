@@ -14,7 +14,11 @@
 
 
 /* navbar section */
-
+.navbar-dark .navbar-nav .nav-link
+{
+    color : #ff7f50;
+    font-weight: bold;
+}
 
 /* main content*/
 
