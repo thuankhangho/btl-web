@@ -68,7 +68,8 @@
                   <input type="text" name="address" id="address" class="form-control"/>
                   <label class="form-label" for="address">Địa chỉ</label>
                 </div>
-
+                <p class="text-center text-muted mt-5 mb-0">Đã có tài khoản? <a href="login.php"
+                    class="fw-bold text-body"><u>Hãy đăng nhập</u></a></p>
 
                 <button type="submit" name="login" class="btn btn-success btn-lg mb-1" style="background-color: #ff7f50;">Đăng Ký</button>
               </form>

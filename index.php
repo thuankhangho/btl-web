@@ -21,7 +21,7 @@
     <nav class="my-navbar-logo navbar navbar-expand-xl navbar-dark bg-dark">
           <div class="my-container container-fluid justify-content-center">
           <a class="navbar-brand" href="index.php">
-              <img src="img/logo.jpg" width="90" height="90" class="d-inline-block align-top" alt="">
+              <img src="img/logo.png" width="90" height="90" class="d-inline-block align-top" alt="">
           </a>
           </div>
     </nav>
