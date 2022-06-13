@@ -154,7 +154,7 @@
                   <input type="text" name="address" id="address" class="form-control"/>
                 </div>
                 <p class="text-center text-muted mt-5 mb-0">Đã có tài khoản? <a href="login.php"
-                    class="fw-bold text-body"><u>Hãy đăng nhập</u></a></p>
+                    class="fw-bold text-body"><u>Hãy đăng nhập</u></a></p><br>
                 <div style="display: flex; align-items: center; justify-content: center">
                   <button type="submit" name="register" class="btn btn-success btn-lg mb-1" style="background-color: #ff7f50">Đăng Ký</button>
                 </div>

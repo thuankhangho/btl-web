@@ -71,17 +71,19 @@
 
               <form action="processing.php" method="post" class="px-md-2">
                 <div class="form-outline mb-4">
+                <label class="form-label" for="username" required>Username</label>
                   <input type="text" name="username" id="username" class="form-control"/>
-                  <label class="form-label" for="username" required>Username</label>
                 </div>
                 <div class="form-outline mb-4">
+                <label class="form-label" for="password" required>Mật khẩu</label>
                   <input type="password" name="password" id="password" class="form-control"/>
-                  <label class="form-label" for="password" required>Mật khẩu</label>
                 </div>
                 <p class="text-center text-muted mt-5 mb-0">Chưa có tài khoản? <a href="register.php"
-                    class="fw-bold text-body"><u>Hãy đăng ký</u></a></p>
-                <button type="submit" name="login" class="btn btn-success btn-lg mb-1" style="background-color: #ff7f50;">Đăng Nhập</button>
-              </form>
+                    class="fw-bold text-body"><u>Hãy đăng ký</u></a></p><br>
+                <div style="display: flex; align-items: center; justify-content: center">
+                  <button type="submit" name="register" class="btn btn-success btn-lg mb-1" style="background-color: #ff7f50">Đăng Nhập</button>
+                </div>
+                  </form>
             </div>
           </div>
         </div>
