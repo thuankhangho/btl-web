@@ -3,6 +3,11 @@
     //select data
     $query1 = "SELECT id, name, price FROM product ORDER BY id";
     $res = mysqli_query($conn,$query1);
+    $row_cnt = $result->num_rows;
+    //if no records found
+    if($row_cnt==0){
+        echo "<div class='alert alert-danger'>No records found.</div>";
+    }
     $food = mysqli_fetch_all($res,MYSQLI_ASSOC);
     mysqli_free_result($res);
 
