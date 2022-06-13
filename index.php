@@ -103,7 +103,7 @@
          </div>
          <div class="blog bg-dark">
               <div class="headline-container text-center">
-                  <h3 class="headline">Bảng Tin</h3>
+                  <h3 class="headline">Bảng tin</h3>
               </div>
               <div class="snippet">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit ligula nunc, non consequat lorem aliquam a. Vivamus non consequat urna. Fusce lobortis ultrices tristique. Nullam ante leo, pulvinar et eleifend a, congue quis libero. Mauris nec ullamcorper justo. Etiam sit amet finibus nulla, in ullamcorper sem. Proin quis mauris ac neque tempus ultricies. Etiam suscipit tincidunt metus elementum volutpat.
