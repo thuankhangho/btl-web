@@ -1,3 +1,13 @@
+<?php
+    include '../config/dtb.php';
+    //select data
+    $query1 = "SELECT id, name, price FROM product ORDER BY id";
+    $res = mysqli_query($conn,$query1);
+    $food = mysqli_fetch_all($res,MYSQLI_ASSOC);
+    mysqli_free_result($res);
+
+?> 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -60,10 +70,23 @@
     </div>
     </nav>
     <!-- end .navbar -->
+    <div class="displayProd">
+        <div class="row">
+          <?php foreach($food as $dish){?>
+            <div class="col s-6 md-3">
+                <div class="card z-depth-0">
+                  <div class="card-content center">
+                    <h6><?php echo htmlspecialchars($dish['name']); ?></h6>
+                    <div><?php echo htmlspecialchars($dish['price']); ?>
+                  </div>
+                  <div class="card-action right-align">
+                        <a class="brand-text" href="#">More info</a>
+                  </div>
+                </div>
+            </div>
+          <?php } ?>
+        </div>
+    </div>
 </body>
 </html>
 
-<?php
-    include '../config/dtb.php';
-    //select data
-?>

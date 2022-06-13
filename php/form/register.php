@@ -45,16 +45,7 @@
                 <a class="nav-link" href="../news.php">Tin tức</a>
               </li>
               </li>
-               <!-- Icon dropdown -->
-               <li class="dropdown user-drop">
-                  <button type="button" class="user-btn btn btn-dark dropdown-toggle" data-bs-toggle="dropdown">
-                  <i class="fas fa-user-circle"></i>
-                  </button>
-                    <ul class="dropdown-menu dropdown-menu-dark">
-                      <li><a class="dropdown-item" href="php/register.php">Đăng ký</a></li>
-                      <li><a class="dropdown-item" href="php/login.php">Đăng nhập</a></li>
-                    </ul>
-               </li>
+          
            </ul>
        </div>
     </div>
