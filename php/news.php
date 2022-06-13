@@ -60,5 +60,14 @@
     </div>
     </nav>
     <!-- end .navbar -->
+    <!-- main content -->
+    <div class="my-container container-fluid justify-content-center">
+    <h2 class="text-center">Tin tức</h2>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+        Praesentium magni magnam corrupti accusantium dicta voluptate eveniet consectetur aperiam? 
+        Dicta rem voluptates totam quas enim minus facilis placeat rerum ea porro.</p>
+
+    </div>
+    <!-- end main content --> 
 </body>
 </html>

@@ -27,7 +27,6 @@
     </nav>
     <nav class="my-navbar navbar navbar-expand-xl navbar-dark bg-dark">
     <div class="my-container container-fluid justify-content-center">
-          
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
               <span class="navbar-toggler-icon justify-content-center"></span>
           </button>
@@ -62,10 +61,12 @@
     <!-- end .navbar -->
 
     <!-- main content --> 
-    <h2>Giới thiệu</h2>
+    <div class="my-container container-fluid justify-content-center">
+    <h2 class="text-center">Giới thiệu</h2>
     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
         Praesentium magni magnam corrupti accusantium dicta voluptate eveniet consectetur aperiam? 
         Dicta rem voluptates totam quas enim minus facilis placeat rerum ea porro.</p>
+    </div>
     <!-- end main content --> 
 
     <!-- footer --> 
