@@ -70,7 +70,7 @@
             <div class="card-body p-4 p-md-5">
               <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">Đăng Nhập</h3>
 
-              <form action="../../index.php" method="post" class="px-md-2">
+              <form action="processing.php" method="post" class="px-md-2">
 
                 <div class="form-outline mb-4">
                   <input type="text" name="username" id="username" class="form-control"/>
