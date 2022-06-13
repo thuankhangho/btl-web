@@ -3,7 +3,7 @@
     //select data
     $query1 = "SELECT id, name, price FROM product ORDER BY id";
     $res = mysqli_query($conn,$query1);
-    $row_cnt = $result->num_rows;
+    $row_cnt = $res->num_rows;
     //if no records found
     if($row_cnt==0){
         echo "<div class='alert alert-danger'>No records found.</div>";
