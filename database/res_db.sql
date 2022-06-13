@@ -63,7 +63,7 @@ CREATE TABLE `product` (
   `feature` tinyint(1) NOT NULL COMMENT '0: not featured on news, 1: featured on news',
   `comment-board_id` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
+-- an example
 INSERT INTO `product` (`id`, `name`, `desciption`, `price`, `img_path`, `status`, `feature`, `comment-board_id`) VALUES (NULL, 'Ramen Hành 2', 'Chỉ là ramen hành', '9e19', '', '1', '1', 'Không có gì để nói');
 -- --------------------------------------------------------
 
