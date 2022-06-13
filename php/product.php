@@ -75,7 +75,7 @@
           <?php
           if($row_cnt==0){
                 echo "<div class='alert alert-danger'>No records found.</div>";
-            }
+          }
             ?>
           <?php foreach($food as $dish){?>
             <div class="col s-6 md-3">
