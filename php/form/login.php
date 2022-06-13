@@ -59,7 +59,6 @@
     </nav>
     <!-- end .navbar -->
   </div>
-    
 
     <div class="h-100 h-custom my-container">
     <div class="container py-5 h-100">
@@ -71,7 +70,6 @@
               <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">Đăng Nhập</h3>
 
               <form action="processing.php" method="post" class="px-md-2">
-
                 <div class="form-outline mb-4">
                   <input type="text" name="username" id="username" class="form-control"/>
                   <label class="form-label" for="username" required>Username</label>

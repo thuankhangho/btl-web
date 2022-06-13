@@ -62,7 +62,6 @@
     <!-- end .navbar -->
   </div>
 
-
   <div class="h-100 h-custom my-container">
     <div class="container py-5 h-100">
       <div class="row d-flex justify-content-center align-items-center h-100">
@@ -81,15 +80,15 @@
                   <input type="password" name="password" id="password" class="form-control" required>
                 </div>
                 <div class="form-outline mb-4">
-                  <label class="form-label" for="Name">Họ & Tên</label>
-                  <input type="text" name="Name" id="Name" class="form-control" required>
+                  <label class="form-label" for="name">Họ & Tên</label>
+                  <input type="text" name="name" id="name" class="form-control" required>
                 </div>
                 <div class="form-outline mb-4">
                     <label for="gender" class="form-label">Giới tính</label>
-                    <select class="select" required>
-                      <option value="1">Nam</option>
-                      <option value="2">Nữ</option>
-                      <option value="3">Khác</option>
+                    <select class="select" name="gender">
+                      <option value="male">Nam</option>
+                      <option value="female">Nữ</option>
+                      <option value="others">Khác</option>
                     </select>
                   </div>
                   <div class="form-outline mb-4">
