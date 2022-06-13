@@ -46,7 +46,15 @@
                 <a class="nav-link" href="../news.php">Tin tức</a>
               </li>
               </li>
-          
+              <li class="dropdown user-drop">
+                  <button type="button" class="user-btn btn btn-dark dropdown-toggle" data-bs-toggle="dropdown">
+                  <i class="fas fa-user-circle"></i>
+                  </button>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                      <li><a class="dropdown-item" href="register.php">Đăng ký</a></li>
+                      <li><a class="dropdown-item" href="login.php">Đăng nhập</a></li>
+                    </ul>
+               </li>
            </ul>
        </div>
     </div>
@@ -63,64 +71,51 @@
             <img src="reg-img/regform.jpg" class="w-100" style="border-top-left-radius: .3rem; border-top-right-radius: .3rem;">
             <div class="card-body p-4 p-md-5">
               <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">Đăng Ký</h3>
-
               <form action="../../index.php" method="post" class="px-md-2">
               <div class="form-outline mb-4">
-                  <input type="text" name="username" id="username" class="form-control"/>
                   <label class="form-label" for="username">Username</label>
+                  <input type="text" name="username" id="username" class="form-control" required>
                 </div>
-
                 <div class="form-outline mb-4">
-                  <input type="password" name="password" id="password" class="form-control"/>
-                  <label class="form-label" for="password">Password</label>
+                  <label class="form-label" for="password" required>Mật khẩu</label>
+                  <input type="password" name="password" id="password" class="form-control" required>
                 </div>
-
                 <div class="form-outline mb-4">
-                  <input type="text" name="Name" id="Name" class="form-control"/>
-                  <label class="form-label" for="Name">Họ và Tên</label>
+                  <label class="form-label" for="Name">Họ & Tên</label>
+                  <input type="text" name="Name" id="Name" class="form-control" required>
                 </div>
-
-                <div class="row">
-                  <div class="col-md-6 mb-4">
-
-                    <div class="form-outline datepicker">
-                      <input type="date" name="birthday" class="form-control">
-                      <label for="birthday" class="form-label">Ngày Sinh</label>
-                    </div>
-
-                  </div>
-                  <div class="col-md-6 mb-4">
-
-                    <select class="select">
-                      <option value="1" disabled>Giới tính</option>
-                      <option value="2">Nam</option>
-                      <option value="3">Nữ</option>
-                      <option value="4">Khác</option>
+                <div class="form-outline mb-4">
+                    <label for="gender" class="form-label">Giới tính</label>
+                    <select class="select" required>
+                      <option value="1">Nam</option>
+                      <option value="2">Nữ</option>
+                      <option value="3">Khác</option>
                     </select>
-
                   </div>
-                </div>
-
+                  <div class="form-outline mb-4">
+                    <div class="form-outline datepicker">
+                      <label for="birthday" class="form-label">Sinh nhật</label>
+                      <input type="date" name="birthday" class="form-control" required>
+                    </div>
+                  </div>
                 <div class="form-outline mb-4">
-                  <input type="text" name="email" id="email" class="form-control"/>
-                  <label class="form-label" for="email">Email</label>
+                  <label class="form-label" for="email" required>Email</label>
+                  <input type="email" name="email" id="email" class="form-control"/>
                 </div>
-
                 <div class="form-outline mb-4">
+                  <label class="form-label" for="phoneNumber" required>Số điện thoại</label>
                   <input type="text" name="phoneNumber" id="phoneNumber" class="form-control"/>
-                  <label class="form-label" for="phoneNumber">Số điện thoại</label>
                 </div>
-
                 <div class="form-outline mb-4">
+                  <label class="form-label" for="address" required>Địa chỉ</label>
                   <input type="text" name="address" id="address" class="form-control"/>
-                  <label class="form-label" for="address">Địa chỉ</label>
                 </div>
                 <p class="text-center text-muted mt-5 mb-0">Đã có tài khoản? <a href="login.php"
                     class="fw-bold text-body"><u>Hãy đăng nhập</u></a></p>
-
-                <button type="submit" name="login" class="btn btn-success btn-lg mb-1" style="background-color: #ff7f50;">Đăng Ký</button>
-              </form>
-
+                <div style="display: flex; align-items: center; justify-content: center">
+                  <button type="submit" name="login" class="btn btn-success btn-lg mb-1" style="background-color: #ff7f50">Đăng Ký</button>
+                </div>
+                </form>
             </div>
           </div>
         </div>

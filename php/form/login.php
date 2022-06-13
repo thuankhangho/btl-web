@@ -44,7 +44,15 @@
               <li class="nav-item">
                 <a class="nav-link" href="../news.php">Tin tức</a>
               </li>
-               
+              <li class="dropdown user-drop">
+                  <button type="button" class="user-btn btn btn-dark dropdown-toggle" data-bs-toggle="dropdown">
+                  <i class="fas fa-user-circle"></i>
+                  </button>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                      <li><a class="dropdown-item" href="register.php">Đăng ký</a></li>
+                      <li><a class="dropdown-item" href="login.php">Đăng nhập</a></li>
+                    </ul>
+               </li>
            </ul>
        </div>
     </div>
@@ -66,18 +74,16 @@
 
                 <div class="form-outline mb-4">
                   <input type="text" name="username" id="username" class="form-control"/>
-                  <label class="form-label" for="username">Username</label>
+                  <label class="form-label" for="username" required>Username</label>
                 </div>
-
                 <div class="form-outline mb-4">
                   <input type="password" name="password" id="password" class="form-control"/>
-                  <label class="form-label" for="password">Mật khẩu</label>
+                  <label class="form-label" for="password" required>Mật khẩu</label>
                 </div>
                 <p class="text-center text-muted mt-5 mb-0">Chưa có tài khoản? <a href="register.php"
                     class="fw-bold text-body"><u>Hãy đăng ký</u></a></p>
                 <button type="submit" name="login" class="btn btn-success btn-lg mb-1" style="background-color: #ff7f50;">Đăng Nhập</button>
               </form>
-
             </div>
           </div>
         </div>
