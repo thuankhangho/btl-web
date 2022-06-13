@@ -1,4 +1,6 @@
 .my-container
 {
     background-image: url(../reg-img/bg-form.jpg);
+    background-size: auto;
+    background-repeat: repeat-x;
 }
