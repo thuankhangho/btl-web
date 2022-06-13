@@ -114,12 +114,8 @@
             <img src="reg-img/regform.jpg" class="w-100" style="border-top-left-radius: .3rem; border-top-right-radius: .3rem;">
             <div class="card-body p-4 p-md-5">
               <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">Đăng Ký</h3>
-              <form action="processing.php" method="post" class="px-md-2">
-              <div class="form-outline mb-4">
-
               <form action="" method="post" class="px-md-2">
                 <div class="form-outline mb-4">
-                  <input type="text" name="username" id="username" class="form-control"/>
                   <label class="form-label" for="username">Username</label>
                   <input type="text" name="username" id="username" class="form-control" required>
                 </div>
@@ -128,42 +124,30 @@
                   <input type="password" name="password" id="password" class="form-control" required>
                 </div>
                 <div class="form-outline mb-4">
-                  <input type="text" name="fullname" id="fullname" class="form-control"/>
                   <label class="form-label" for="fullname">Họ và Tên</label>
+                  <input type="text" name="fullname" id="fullname" class="form-control" required>
                 </div>
                 <div class="form-outline mb-4">
-                    <label for="gender" class="form-label">Giới tính</label>
-                    <select class="select" name="gender">
-                      <option value="male">Nam</option>
-                      <option value="female">Nữ</option>
-                      <option value="others">Khác</option>
-                    </select>
-                  </div>
-                  <div class="form-outline mb-4">
-                    <div class="form-outline datepicker">
-                      <label for="birthday" class="form-label">Sinh nhật</label>
-                      <input type="date" name="birthday" class="form-control" required>
-                    </div>
-                  </div>
-                  <div class="col-md-6 mb-4">
-
-                    <select class="select" name="sex">
-                      <option value="" disabled>Giới tính</option>
-                      <option value="male">Nam</option>
-                      <option value="female">Nữ</option>
-                      <option value="other">Khác</option>
-                    </select>
-
+                  <label for="sex" class="form-label">Giới tính</label>
+                  <select class="select" name="sex" required>
+                    <option value="male">Nam</option>
+                    <option value="female">Nữ</option>
+                    <option value="others">Khác</option>
+                  </select>
+                </div>
+                <div class="form-outline mb-4">
+                  <div class="form-outline datepicker">
+                    <label for="birthday" class="form-label">Sinh nhật</label>
+                    <input type="date" name="birthday" class="form-control" required>
                   </div>
                 </div>
-
                 <div class="form-outline mb-4">
                   <label class="form-label" for="email" required>Email</label>
                   <input type="email" name="email" id="email" class="form-control"/>
                 </div>
                 <div class="form-outline mb-4">
-                  <input type="text" name="phone" id="phone" class="form-control"/>
                   <label class="form-label" for="phone">Số điện thoại</label>
+                  <input type="text" name="phone" id="phone" class="form-control"/>
                 </div>
                 <div class="form-outline mb-4">
                   <label class="form-label" for="address" required>Địa chỉ</label>
@@ -174,7 +158,7 @@
                 <div style="display: flex; align-items: center; justify-content: center">
                   <button type="submit" name="register" class="btn btn-success btn-lg mb-1" style="background-color: #ff7f50">Đăng Ký</button>
                 </div>
-                </form>
+              </form>
             </div>
           </div>
         </div>
