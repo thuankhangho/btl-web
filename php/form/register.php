@@ -89,8 +89,8 @@
         echo "<script>
                 Swal.fire({
                   icon: 'success',
-                  title: 'Resgiting Successfully',
-                  footer: '<a href=login.php>Click here to login</a>'
+                  title: 'Đăng ký tài khoản thành công',
+                  footer: '<a href=login.php>Nhấn vào đây để đăng nhập</a>'
                 })
               </script>";
       } else {
