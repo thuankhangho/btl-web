@@ -1,10 +1,16 @@
 <?php
-    echo $_POST['username']."<br>";
-    echo $_POST['password']."<br>";
-    echo $_POST['name']."<br>";
-    echo $_POST['gender']."<br>";
-    echo $_POST['birthday']."<br>";
-    echo $_POST['email']."<br>";
-    echo $_POST['phoneNumber']."<br>";
-    echo $_POST['address']."<br>";
+    require_once('config.php');
+    if (isset($_POST['login']))
+    {
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+        $query = "SELECT * FROM user WHERE username = '$username', password = '$password'";
+        $result = mysqli_query($conn, $query);
+        if ($result) {
+        echo "OK";
+      } 
+      else {
+        echo "Not OK";
+      }
+    }
 ?>

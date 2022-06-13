@@ -89,11 +89,13 @@
         echo "<script>
                 Swal.fire({
                   icon: 'success',
-                  title: 'Đăng ký tài khoản thành công',
+                  title: 'Đăng ký tài khoản thành công!',
+                  confirmButtonColor: '#ff7f50',
                   footer: '<a href=login.php>Nhấn vào đây để đăng nhập</a>'
                 })
               </script>";
-      } else {
+      } 
+      else {
         echo "<script>
                 Swal.fire({
                   icon: 'warning',
@@ -146,7 +148,7 @@
                   <input type="email" name="email" id="email" class="form-control"/>
                 </div>
                 <div class="form-outline mb-4">
-                  <label class="form-label" for="phone">Số điện thoại</label>
+                  <label class="form-label" for="phone" required>Số điện thoại</label>
                   <input type="text" name="phone" id="phone" class="form-control"/>
                 </div>
                 <div class="form-outline mb-4">
