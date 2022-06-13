@@ -59,12 +59,11 @@ CREATE TABLE `product` (
   `desciption` text NOT NULL,
   `price` float UNSIGNED NOT NULL,
   `img_path` text NOT NULL,
-  `status` tinyint(1) NOT NULL COMMENT '0: unavailable, 1: available',
-  `feature` tinyint(1) NOT NULL COMMENT '0: not featured on news, 1: featured on news',
+  `status` tinyint(1) NOT NULL DEFAULT 1 COMMENT '0: unavailable, 1: available',
+  `feature` tinyint(1) NOT NULL DEFAULT 1 COMMENT '0: not featured on news, 1: featured on news',
   `comment-board_id` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
--- an example
-INSERT INTO `product` (`id`, `name`, `desciption`, `price`, `img_path`, `status`, `feature`, `comment-board_id`) VALUES (NULL, 'Ramen Hành 2', 'Chỉ là ramen hành', '9e19', '', '1', '1', 'Không có gì để nói');
+
 -- --------------------------------------------------------
 
 --
@@ -81,7 +80,7 @@ CREATE TABLE `user` (
   `email` varchar(50) NOT NULL,
   `phone` varchar(15) NOT NULL,
   `address` varchar(255) NOT NULL,
-  `active` tinyint(1) NOT NULL COMMENT '0: banned, 1: active'
+  `active` tinyint(1) NOT NULL DEFAULT 1 COMMENT '0: banned, 1: active'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -92,25 +91,29 @@ CREATE TABLE `user` (
 -- Indexes for table `admin`
 --
 ALTER TABLE `admin`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `id` (`id`);
 
 --
 -- Indexes for table `comment`
 --
 ALTER TABLE `comment`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `id` (`id`);
 
 --
 -- Indexes for table `product`
 --
 ALTER TABLE `product`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `id` (`id`);
 
 --
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `id` (`id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -138,7 +141,7 @@ ALTER TABLE `product`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
