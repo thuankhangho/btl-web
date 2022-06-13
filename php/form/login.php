@@ -13,7 +13,7 @@
   <!-- CSS -->
   <link rel="stylesheet" href="reg-css/form.css">
   <script src = "js/.js"></script>
-  <title>Đăng nhập tài khoản</title>
+  <title>Đăng ký tài khoản</title>
 </head>
 
 <body>
