@@ -1,17 +1,16 @@
 <?php
-    include 'config/config.php';
-    //select data
-    $id="";
-    if(isset($_GET['id_prod']))
-        {
-            $id = $_GET['id_prod'];
-        }
-    $query1 = "SELECT * FROM product WHERE id = '".$id."'";
-    $res = mysqli_query($conn,$query1);
-    $dish = mysqli_fetch_all($res,MYSQLI_ASSOC);
-    $row_cnt = $res->num_rows;
-    $dish1 = $dish[0];
-    mysqli_free_result($res);
+  require_once('config/config.php');
+  //select data
+  $id = "";
+  if (isset($_GET['prod_id'])) {
+    $id = $_GET['prod_id'];
+  }
+  $query = "SELECT * FROM product WHERE id = '" . $id . "'";
+  $res = mysqli_query($conn, $query);
+  $dish = mysqli_fetch_all($res, MYSQLI_ASSOC);
+  $row_cnt = $res->num_rows;
+  $dish1 = $dish[0];
+  mysqli_free_result($res);
 ?> 
 
 <!DOCTYPE html>
@@ -33,19 +32,19 @@
 </head>
 
 <body>
-    <!-- nav bar --> 
-    <div>
-      <?php $IPATH = $_SERVER["DOCUMENT_ROOT"]."/btl-web/";
-      include($IPATH."navbar.php");?>
-    </div>
-    <!-- end nav bar --> 
-    
-    <?php
-        if($row_cnt==0){
-            echo "<div class='alert alert-danger'>No records found.</div>";
-        }
-    ?>
-    <main class="">
+  <!-- nav bar --> 
+  <div>
+    <?php $IPATH = $_SERVER["DOCUMENT_ROOT"]."/btl-web/";
+    include($IPATH."navbar.php");?>
+  </div>
+  <!-- end nav bar --> 
+  
+  <?php
+    if($row_cnt==0){
+        echo "<div class='alert alert-danger'>No records found.</div>";
+    }
+  ?>
+  <main class="">
     <div class="container dark-grey-text">
 
       <!--Grid row-->
@@ -69,31 +68,29 @@
             </div>
 
             <p class="lead">
-            <span><h4>Giá:</h4><?php echo htmlspecialchars($dish1['price']); ?>.000 VND</span>
+              <span><h4>Giá:</h4><?php echo htmlspecialchars($dish1['price']); ?>.000 VND</span>
             </p>
 
             <p class="lead font-weight-bold"><h5>Miêu tả:</h5></p>
 
             <p><?php echo htmlspecialchars($dish1['desciption']); ?></p>
+
             <p><h5>Tình trạng:</h5>
-                <?php
-                    if($dish1['status'] == 1)
-                    {
-                        echo '<p class="stat-ok">Còn hàng<p>';
-                    }
-                    else
-                    {
-                        echo '<p class="stat-fail">Hết hàng<p>';
-                    }
-                ?>
+              <?php
+                  if ($dish1['status'] == 1) {
+                    echo '<p class="stat-ok">Còn hàng<p>';
+                  } else {
+                    echo '<p class="stat-fail">Hết hàng<p>';
+                  }
+              ?>
             </p>
+
             <form class="d-flex justify-content-left">
               <!-- Default input -->
               <!-- <input type="number" value="1" aria-label="Search" class="form-control" style="width: 100px"> -->
               <!-- <button class="btn btn-primary btn-md my-0 p" type="submit">Add to cart -->
-            <!-- <i class="fas fa-shopping-cart ml-1"></i> -->
-              </button>
-
+              <!-- <i class="fas fa-shopping-cart ml-1"></i> -->
+              <!-- </button> -->
             </form>
 
           </div>
@@ -149,11 +146,11 @@
     </div>
   </main>
   <!--Main layout-->
-    <!-- footer --> 
-    <div>
-          <?php $IPATH = $_SERVER["DOCUMENT_ROOT"]."/btl-web/";
-          include($IPATH."footer.php");?>
-        </div>
-    <!-- end footer --> 
+  <!-- footer --> 
+  <div>
+    <?php $IPATH = $_SERVER["DOCUMENT_ROOT"]."/btl-web/";
+    include($IPATH."footer.php");?>
+  </div>
+  <!-- end footer --> 
 </body>
 </html>
