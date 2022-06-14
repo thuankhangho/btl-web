@@ -32,12 +32,10 @@
     <div class="p-3 mb-2 bg-danger bg-gradient text-white">Quản lý sản phẩm</div>
 <!-- footer --> 
   <footer class="bg-light text-center text-lg-start">
-  <!-- Copyright -->
-  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-      Admin Panel!!!
-  </div>
-  <!-- Copyright -->
-    </footer>
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            Admin Panel!!!
+        </div>
+  </footer>
     <!-- end footer --> 
 </body>
 </html>
