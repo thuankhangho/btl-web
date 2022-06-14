@@ -27,7 +27,10 @@
   <!-- Start retrieving data -->
   <?php
     require_once('config/config.php');
-    session_start();
+    if (session_id() === "")
+    {
+      session_start();
+    }
     if (isset($_POST['login'])) {
       $username =   $_POST['username'];
       $username =   mysqli_real_escape_string($conn, $username);
