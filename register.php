@@ -18,14 +18,13 @@
   <title>Đăng nhập tài khoản</title>
 </head>
 <body>
-  <!-- nav bar --> 
+  <!-- Start Nav bar --> 
   <div>
       <?php $IPATH = $_SERVER["DOCUMENT_ROOT"]."/btl-web/";
       include($IPATH."navbar.php");?>
     </div>
-    <!-- end nav bar --> 
   </div>
-
+  <!-- End Nav bar -->  
   <!-- Start retrieving data -->
   <?php
     require_once('config/config.php');
