@@ -17,14 +17,30 @@
 </head>
 
 <body>
-    <!-- nav bar --> 
-    <div>
-      <?php $IPATH = $_SERVER["DOCUMENT_ROOT"]."/btl-web/";
-      include($IPATH."navbar.php");?>
-    </div>
-    <!-- end nav bar --> 
+  <!-- Start Nav bar --> 
+  <div>
+    <?php $IPATH = $_SERVER["DOCUMENT_ROOT"]."/btl-web/";
+    include($IPATH."navbar.php");?>
   </div>
-
+  <!-- End Nav bar --> 
+  <!-- Start retrieving data -->
+  <?php
+    require_once('config.php');
+    if (isset($_POST['login'])) {
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+        $query = "SELECT * FROM user WHERE username = '$username', password = '$password'";
+        $result = mysqli_query($conn, $query);
+        if ($result) {
+        echo "OK";
+      } 
+      else {
+        echo "Not OK";
+      }
+    }
+  ?>
+  <!-- End retrieving data -->
+  <!-- Start Register Form -->
   <div class="h-100 h-custom my-container-log">
     <div class="container py-5 h-100">
       <div class="row d-flex justify-content-center align-items-center h-100">
@@ -36,24 +52,24 @@
 
               <form action="processing.php" method="post" class="px-md-2">
                 <div class="form-outline mb-4">
-                <label class="form-label" for="username" required>Username</label>
+                  <label class="form-label" for="username" required>Username</label>
                   <input type="text" name="username" id="username" class="form-control"/>
                 </div>
                 <div class="form-outline mb-4">
-                <label class="form-label" for="password" required>Mật khẩu</label>
+                  <label class="form-label" for="password" required>Mật khẩu</label>
                   <input type="password" name="password" id="password" class="form-control"/>
                 </div>
-                <p class="text-center text-muted mt-5 mb-0">Chưa có tài khoản? <a href="register.php"
-                    class="fw-bold text-body"><u>Hãy đăng ký</u></a></p><br>
+                  <p class="text-center text-muted mt-5 mb-0">Chưa có tài khoản? <a href="register.php" class="fw-bold text-body"><u>Hãy đăng ký</u></a></p><br>
                 <div style="display: flex; align-items: center; justify-content: center">
                   <button type="submit" name="login" class="btn btn-success btn-lg mb-1" style="background-color: #ff7f50">Đăng Nhập</button>
                 </div>
-                  </form>
+              </form>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+  <!-- End Register Form -->
 </body>
 </html>
