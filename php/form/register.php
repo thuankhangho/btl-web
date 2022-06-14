@@ -140,7 +140,7 @@
                 <div class="form-outline mb-4">
                   <div class="form-outline datepicker">
                     <label for="birthday" class="form-label">Sinh nhật</label>
-                    <input type="date" name="birthday" class="form-control" required>
+                    <input type="date" name="birthday" class="form-control" min="1922-01-01" max="2012-12-31" required>
                   </div>
                 </div>
                 <div class="form-outline mb-4">
