@@ -35,14 +35,14 @@
       $password =   mysqli_real_escape_string($conn, $password);
 
       $query    = "SELECT * FROM `user` WHERE username='$username' AND password='" . $password. "'";
-      $result = mysqli_query($conn, $query) or die(mysql_error());
+      $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
       $rows = mysqli_num_rows($result);
       if ($rows == 1) {
           $id = htmlspecialchars(mysqli_fetch_all($result, MYSQLI_ASSOC)[0]['id']);
           $_SESSION['user_id'] = $id;
           $_SESSION['username'] = $username;
           header('location:../btl-web/');
-          myslqi_free_result($result);
+          mysqli_free_result($result);
       } else {
           echo "<script>
                   Swal.fire({
