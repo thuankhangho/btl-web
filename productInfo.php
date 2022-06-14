@@ -45,8 +45,8 @@
             echo "<div class='alert alert-danger'>No records found.</div>";
         }
     ?>
-    <main class="mt-5 pt-4">
-    <div class="container dark-grey-text mt-5">
+    <main class="">
+    <div class="container dark-grey-text">
 
       <!--Grid row-->
       <div class="row productDISP">
