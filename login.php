@@ -12,7 +12,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   <!-- CSS -->
   <link rel="stylesheet" href="styles/form.css">
-  <script src = "js/.js"></script>
   <title>Đăng ký tài khoản</title>
 </head>
 
@@ -50,7 +49,7 @@
             <div class="card-body p-4 p-md-5">
               <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">Đăng Nhập</h3>
 
-              <form action="processing.php" method="post" class="px-md-2">
+              <form action="" method="post" class="px-md-2">
                 <div class="form-outline mb-4">
                   <label class="form-label" for="username" required>Username</label>
                   <input type="text" name="username" id="username" class="form-control"/>
