@@ -41,19 +41,19 @@
       $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
       $rows = mysqli_num_rows($result);
       if ($rows == 1) {
-          $id = htmlspecialchars(mysqli_fetch_all($result, MYSQLI_ASSOC)[0]['id']);
-          $_SESSION['user_id'] = $id;
-          $_SESSION['username'] = $username;
-          header('location:../btl-web/');
-          mysqli_free_result($result);
+        $id = htmlspecialchars(mysqli_fetch_all($result, MYSQLI_ASSOC)[0]['id']);
+        $_SESSION['user_id'] = $id;
+        $_SESSION['username'] = $username;
+        header('location:../btl-web/');
+        mysqli_free_result($result);
       } else {
-          echo "<script>
-                  Swal.fire({
-                    icon: 'warning',
-                    title: 'Username or password incorrect',
-                    text: 'Please try again!'
-                  })
-                </script>";
+        echo "<script>
+                Swal.fire({
+                  icon: 'warning',
+                  title: 'Username or password incorrect',
+                  text: 'Please try again!'
+                })
+              </script>";
       }
     }
     mysqli_close($conn);

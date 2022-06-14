@@ -63,8 +63,7 @@
                     footer: '<a href=login.php>Nhấn vào đây để đăng nhập</a>'
                   })
                 </script>";
-        }       
-        else {
+        } else {
           echo "<script>
                   Swal.fire({
                     icon: 'warning',
