@@ -58,11 +58,12 @@
                   <div class="last-div">
                     <i class="fa fa-comment-o"></i>
                   </div>
-                  <a href="productInfo.php?id_prod=<?php echo htmlspecialchars($dish['id']); ?>" class="stretched-link"></a>
-                <div class="buttons">
+                  <div class="buttons">
                       <button>Add to cart</button>
-                </div>
-              </div>
+                  </div>
+                  <a href="productInfo.php?id_prod=<?php echo htmlspecialchars($dish['id']); ?>" class="stretched-link">
+                </a>
+            </div>
           </div>
           <?php }?>
           
