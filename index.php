@@ -13,7 +13,7 @@
   <!-- CSS -->
   <link rel="stylesheet" href="styles/styles.css">
   <script src = "js/script.js"></script>
-  <title>Bài tập lớn Lập trình Web (CO3049)</title>
+  <title>Rabbit Hole (CO3049)</title>
 </head>
 
 <body>
@@ -26,7 +26,7 @@
     <!-- main content --> 
     <div class="main-content">
 
-            <div class=" food-search row height d-flex justify-content-center align-items-center">
+            <div class=" food-search height d-flex justify-content-center align-items-center">
 
                 <div class="col-md-8">
                   <div class="search">
