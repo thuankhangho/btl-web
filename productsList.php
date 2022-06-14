@@ -35,36 +35,42 @@
     <!-- end nav bar --> 
     
     
-    <div class="displayProd">
-        <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3">
+    <div class="displayProd ">
+        <div class="justify-content-center align-items-center row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3">
         <?php
           if($row_cnt==0){
                 echo "<div class='alert alert-danger'>No records found.</div>";
           }
         ?>
           <?php foreach($food as $dish){?>
-            <div class="height d-flex justify-content-center align-items-center">
-                  <div class="card p-3">  
-                      <div class="d-flex justify-content-between align-items-center ">
-                          <div class="mt-2">
-                              <h4 class="text-uppercase"><?php echo htmlspecialchars($dish['name']); ?></h4>
-                              <div class="mt-5">
-                                  <h5 class="text-uppercase mb-0">Ramen</h5>
-                              </div>
-                          </div>
-                          <div class="image">
-                              <img src="<?php echo htmlspecialchars($dish['img_path']); ?>" width="200">
-                          </div>
-                      </div>
-                        <p><?php echo htmlspecialchars($dish['desciption']); ?> </p>
-                        <button class="my-btn btn-danger">Add to cart</button>
+            <div class="card p-3">
+              <div class="top-div">
+                  <div class="border">
+                  <img src="<?php echo htmlspecialchars($dish['img_path']); ?>">
                   </div>
-            </div>
+                  <span><?php echo htmlspecialchars($dish['price']); ?>K </span>
+              </div>
+              <div class="bottom-div">
+                  <h3><?php echo htmlspecialchars($dish['name']); ?></h3>
+                  <p><?php echo htmlspecialchars($dish['desciption']); ?></p>
+              </div>
+              <div class="last-section">
+                  <div class="last-div">
+                    <i class="fa fa-comment-o"></i>
+                  </div>
+                  <a href="productInfo.php?id_prod=<?php echo htmlspecialchars($dish['id']); ?>" class="stretched-link"></a>
+                <div class="buttons">
+                      <button>Add to cart</button>
+                </div>
+              </div>
+          </div>
           <?php }?>
           
         </div>
     </div>
-
+    
+    
+  </div>
 
         <!-- footer --> 
     <div>
