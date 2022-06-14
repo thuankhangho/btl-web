@@ -14,8 +14,8 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   <!-- CSS -->
-  <link rel="stylesheet" href="styles/product-style.css">
-    <title>Document</title>
+  <link rel="stylesheet" href="styles/news.css">
+    <title>Tin tức</title>
 </head>
 <body>
 
@@ -27,25 +27,17 @@
     <!-- end nav bar --> 
 
 <div id="container">
-    <div id="col-6">
+    <div id="row">
         <div class="product-details">
-            <!-- Product Name -->
-            <h1>Cơm chiên trứng</h1>
-            <!-- Product's information -->
-            <p>Lorem ipsum dolor sit amet.</p>
+            <!-- News Name -->
+            <h1>Món mới</h1>
+            <!-- Information -->
+            <p>Cơm chiên ngon & bổ dưỡng, gồm 3 thành phần duy nhất!</p>
+            <p>Giảm giá 100% cho 1000 người tới quán vào 31/02/2023!</p>
     </div>
-    <div id="col-6">
+    <div id="row">
         <div class="product-image">
             <img src="img/food-img/rice-cata.jpg" alt="Rice">
-        <!-- 	product Information-->
-        <div class="info">
-            <h2>Nguyên liệu</h2>
-            <ul>
-                <li>Cơm</li>
-                <li>Chiên</li>
-                <li>Trứng</li>
-            </ul>
-        </div>
         </div>
     </div>
     </div>
@@ -53,7 +45,7 @@
     <!-- footer --> 
     <div>
       <?php $IPATH = $_SERVER["DOCUMENT_ROOT"]."/btl-web/";
-      include($IPATH."footer.php");?>
+      include($IPATH."footer.html");?>
     </div>
     <!-- end footer --> 
     </body>

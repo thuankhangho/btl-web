@@ -31,10 +31,11 @@
 /*search*/
 .food-search {
   background-image: url(../img/ramen-bg-searchbar.jpg);
-  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   padding: 10% 0;
+  background-size: 100% 100%;
+
 }
 
 .search {

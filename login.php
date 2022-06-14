@@ -20,7 +20,7 @@
     <!-- nav bar --> 
     <div>
       <?php $IPATH = $_SERVER["DOCUMENT_ROOT"]."/btl-web/";
-      include($IPATH."navbar.html");?>
+      include($IPATH."navbar.php");?>
     </div>
     <!-- end nav bar --> 
   </div>

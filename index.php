@@ -20,7 +20,7 @@
     <!-- nav bar --> 
     <div>
       <?php $IPATH = $_SERVER["DOCUMENT_ROOT"]."/btl-web/";
-      include($IPATH."navbar.html");?>
+      include($IPATH."navbar.php");?>
     </div>
     <!-- end nav bar --> 
     <!-- main content --> 
@@ -79,7 +79,7 @@ Sed interdum hendrerit ante sed gravida. Quisque est augue, mattis ac mi nec, el
     <!-- footer --> 
     <div>
       <?php $IPATH = $_SERVER["DOCUMENT_ROOT"]."/btl-web/";
-      include($IPATH."footer.html");?>
+      include($IPATH."footer.php");?>
     </div>
     <!-- end footer --> 
 </body>
