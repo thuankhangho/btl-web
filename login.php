@@ -38,15 +38,16 @@
       $result = mysqli_query($conn, $query) or die(mysql_error());
       $rows = mysqli_num_rows($result);
       if ($rows == 1) {
-          $_SESSION['username'] = $username;
+          $_SESSION['username'] = $username; 
           echo "<script>
                   Swal.fire({
                     icon: 'success',
                     title: 'Log in successfully!',
-                    confirmButtonColor: '#ff7f50',
-                    footer: '<a href=index.php>Back to main page</a>'
+                    confirmButtonColor: '#ff7f50'
                   })
                 </script>";
+          header('location:../btl-web/');
+        
       } else {
           echo "<script>
                   Swal.fire({
@@ -56,9 +57,8 @@
                   })
                 </script>";
       }
+      myslqi_free_result($result);
     }
-    // Free set
-    myslqi_free_result($result);
     mysqli_close($conn);
   ?>
   <!-- End retrieving data -->

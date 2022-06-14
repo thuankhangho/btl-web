@@ -84,9 +84,8 @@
                 })
               </script>";
       }
+      mysqli_free_result($find);
     }
-    // Free set
-    mysqli_free_result($find);
     mysqli_close($conn);
   ?>
   <!-- End retrieving data -->
