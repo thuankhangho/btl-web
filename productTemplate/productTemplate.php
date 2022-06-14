@@ -15,7 +15,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   <!-- CSS -->
   <link rel="stylesheet" href="styles.css">
-    <title>Tin tức</title>
+    <title>Document</title>
 </head>
 <body>
 
@@ -64,17 +64,25 @@
 <!-- end .navbar -->
 
 <div id="container">
-    <div id="row">
+    <div id="col-6">
         <div class="product-details">
-            <!-- News Name -->
-            <h1>Món mới</h1>
-            <!-- Information -->
-            <p>Cơm chiên ngon & bổ dưỡng, gồm 3 thành phần duy nhất!</p>
-            <p>Giảm giá 100% cho 1000 người tới quán vào 31/02/2023!</p>
+            <!-- Product Name -->
+            <h1>Cơm chiên trứng</h1>
+            <!-- Product's information -->
+            <p>Lorem ipsum dolor sit amet.</p>
     </div>
-    <div id="row">
+    <div id="col-6">
         <div class="product-image">
             <img src="../img/food-img/rice-cata.jpg" alt="Rice">
+        <!-- 	product Information-->
+        <div class="info">
+            <h2>Nguyên liệu</h2>
+            <ul>
+                <li>Cơm</li>
+                <li>Chiên</li>
+                <li>Trứng</li>
+            </ul>
+        </div>
         </div>
     </div>
     </div>

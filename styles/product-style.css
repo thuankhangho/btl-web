@@ -8,32 +8,7 @@
     --bg: rgba(255, 255, 255, 0.3);
   }
 
-  /* navbar section */
-.my-navbar {
-    border-bottom: var(--border);
-  }
   
-  .navbar-dark .navbar-nav .nav-link {
-    color: var(--color);
-    font-weight: bold;
-    border-bottom: 5px solid transparent;
-  }
-  
-  .navbar-dark .navbar-nav .nav-link:hover {
-    border-bottom: var(--border);
-  }
-  
-  .navbar .navbar-collapse {
-    text-align: center;
-  }
-  
-  .user-btn {
-    color: var(--color);
-  }
-  
-  .dropdown-item {
-    color: var(--color);
-  }
 
   /*footer*/
 .footer {
@@ -45,7 +20,7 @@
   }
 
 body {
-  background: white;
+    background: white;
 	background-attachment: fixed;	
 	background-size: cover;
 }
@@ -53,9 +28,12 @@ body {
 #container{
 	box-shadow: 0 15px 30px 1px rgba(128, 128, 128, 0.31);
 	text-align: center;
+	border-radius: 5px;
 	overflow: hidden;
-	height: 100%;
-	width: 100%;
+	margin: 5em auto;
+	height: 350px;
+	width: 700px;
+	
 }
 
 /* 	Product details  */
@@ -64,6 +42,10 @@ body {
 	text-align: left;
 	overflow: hidden;
 	padding: 30px;
+	height: 100%;
+	float: left;
+	width: 40%;
+
 }
 
 /* 	Product Name */
@@ -71,35 +53,37 @@ body {
 	font-family: 'Segoe UI Black', sans-serif;
 	display: inline-block;
 	position: relative;
-  text-align: center;
+    text-align: center;
 	font-size: 34px;
 	color: #344055;
 	margin: 0;
 }
 
-/* The most important information about the news */
+/* The most important information about the product */
 #container .product-details p {
 	font-family: 'Segoe UI', sans-serif;
 	font-size: 20px;
+	color: #7d7d7d;
 }
 
 /* product image  */
 .product-image {
+	transition: all 0.3s ease-out;
 	position: relative;
 	overflow: hidden;
+	height: 100%;
+	float: right;
+	width: 50%;
 	display: inline-block;
-  width: 30%;
-  height: 30%;
 }
 
-#container img {
-  width: 100%;
-  height: 100%;
-}
+#container img {width: 100%;height: 100%;}
 
 .info {
     background: rgba(27, 26, 26, 0.9);
     font-family: 'Palatino Linotype', serif;
+    transition: all 0.3s ease-out;
+    transform: translateX(-100%);
     position: absolute;
     line-height: 1.9;
     text-align: left;
@@ -111,3 +95,12 @@ body {
     left: 0;
     top: 0;
 }
+
+.info h2 {text-align: center}
+.product-image:hover .info{transform: translateX(0);}
+
+.info ul li{transition: 0.3s ease;}
+.info ul li:hover{transform: translateX(50px) scale(1.3);}
+
+.product-image:hover img {transition: all 0.3s ease-out;}
+.product-image:hover img {transform: scale(1.2, 1.2);}
