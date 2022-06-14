@@ -26,10 +26,10 @@
     </div>
     <!-- end nav bar --> 
 
-    <div class="p-3 mb-2 bg-primary bg-gradient text-white">Quản lý người dùng</div>
+    <div class="p-3 mb-2 bg-primary bg-gradient text-white">Quản lý thành viên</div>
     <div class="p-3 mb-2 bg-secondary bg-gradient text-white">Quản lý tin tức</div>
-    <div class="p-3 mb-2 bg-success bg-gradient text-white">Quản lý ???</div>
-    <div class="p-3 mb-2 bg-danger bg-gradient text-white">Quản lý ???</div>
+    <div class="p-3 mb-2 bg-success bg-gradient text-white">Quản lý bình luận</div>
+    <div class="p-3 mb-2 bg-danger bg-gradient text-white">Quản lý sản phẩm</div>
 <!-- footer --> 
   <footer class="bg-light text-center text-lg-start">
   <!-- Copyright -->
