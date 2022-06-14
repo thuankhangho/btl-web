@@ -30,21 +30,21 @@
     <a href="newMember.php"><input type="button" class="p-3 mb-2 bg-primary bg-gradient text-white" value="Thêm thành viên"></a>
     </form>
         <?php
-            include '../config/config.php';
+            include('../config/config.php');
             echo "<table class='table table-bordered'>
-            <tr>
-                <th>ID</th>
-                <th>Username</th>
-                <th>Mật khẩu</th>
-                <th>Họ & tên</th>
-                <th>Giới tính</th>
-                <th>Sinh nhật</th>
-                <th>Email</th>
-                <th>Số điện thoại</th>
-                <th>Địa chỉ</th>
-                <th>Sửa/Xóa thông tin</th>
-            </tr>
-            <tbody>";
+                    <tr>
+                        <th>ID</th>
+                        <th>Username</th>
+                        <th>Mật khẩu</th>
+                        <th>Họ & tên</th>
+                        <th>Giới tính</th>
+                        <th>Sinh nhật</th>
+                        <th>Email</th>
+                        <th>Số điện thoại</th>
+                        <th>Địa chỉ</th>
+                        <th>Sửa/Xóa thông tin</th>
+                    </tr>
+                    <tbody>";
             $sql = "SELECT * from user";
             $result = $conn->query($sql);
             if ($result->num_rows > 0)

@@ -1,8 +1,8 @@
 <?php
     if($_POST){
         // include database connection
-        include '../config/config.php';
-     
+        include ('../config/config.php');
+
         try{
             // // insert query
             // $nameErr = $YearErr ='';
