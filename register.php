@@ -52,7 +52,7 @@
         $address =    $_POST['address'];
         $address =    mysqli_real_escape_string($conn, $address);
         
-        $query = "INSERT INTO `user` (username, password, full_name, birthday, sex, email, phone, address) VALUES ('$username','$password','$full_name','$birthday','$sex','$email','$phone','$address')";
+        $query = "INSERT INTO `user` (username, password, full_name, sex, birthday, email, phone, address) VALUES ('$username','$password','$full_name', '$sex', '$birthday','$email','$phone','$address')";
         $result = mysqli_query($conn, $query);
         if ($result) {
           echo "<script>

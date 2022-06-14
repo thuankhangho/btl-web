@@ -35,7 +35,7 @@
             // {
             //     $YearErr = "Year must be within the range of 1990-2022";
             // }
-            $query2 = "INSERT INTO user (username, password, full_name, birthday, sex, email, phone, address) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";;
+            $query2 = "INSERT INTO user (username, password, full_name, sex, birthday, email, phone, address) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";;
             $stmt = $conn->prepare($query2);
             // prepare query for execution
 
