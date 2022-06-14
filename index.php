@@ -24,13 +24,6 @@
     if (isset($_SESSION['user_id'])) {
       $id = $_SESSION['user_id'];
       $username = $_SESSION['username'];
-      echo "<script>
-              Swal.fire({
-                icon: 'success',
-                title: 'WELCOME " . $username . "!',
-                confirmButtonColor: '#ff7f50'
-              })
-            </script>";
     }
   ?>
   <!-- End Conformation message -->
