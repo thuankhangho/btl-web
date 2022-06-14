@@ -20,9 +20,10 @@
 <body>
   <!-- Start Nav bar --> 
   <div>
-      <?php $IPATH = $_SERVER["DOCUMENT_ROOT"]."/btl-web/";
-      include($IPATH."navbar.php");?>
-    </div>
+      <?php 
+        $IPATH = $_SERVER["DOCUMENT_ROOT"]."/btl-web/";
+        include($IPATH."navbar.php");
+      ?>
   </div>
   <!-- End Nav bar -->  
   <!-- Start retrieving data -->
@@ -31,38 +32,55 @@
     if(isset($_POST['register'])) {
       $username =   $_POST['username'];
       $username =   mysqli_real_escape_string($conn, $username);
-      $password =   $_POST['password'];
-      $password =   mysqli_real_escape_string($conn, $password);
-      $full_name =  $_POST['fullname'];
-      $full_name =  mysqli_real_escape_string($conn, $full_name);
-      $birthday =   $_POST['birthday'];
-      $birthday =   mysqli_real_escape_string($conn, $birthday);
-      $sex =        $_POST['sex'];
-      $sex =        mysqli_real_escape_string($conn, $sex);
-      $email =      $_POST['email'];
-      $email =      mysqli_real_escape_string($conn, $email);
-      $phone =      $_POST['phone'];
-      $phone =      mysqli_real_escape_string($conn, $phone);
-      $address =    $_POST['address'];
-      $address =    mysqli_real_escape_string($conn, $address);
-      
-      $query = "INSERT INTO `user` (username, password, full_name, birthday, sex, email, phone, address) VALUES ('$username','$password','$full_name','$birthday','$sex','$email','$phone','$address')";
-      $result   = mysqli_query($conn, $query);
-      if ($result) {
-        echo "<script>
-                Swal.fire({
-                  icon: 'success',
-                  title: 'Đăng ký tài khoản thành công!',
-                  confirmButtonColor: '#ff7f50',
-                  footer: '<a href=login.php>Nhấn vào đây để đăng nhập</a>'
-                })
-              </script>";
+
+      $find = mysqli_query($conn, "SELECT * FROM `user` WHERE username = '$username'");
+      $rows = mysqli_num_rows($find);
+
+      if ($rows == 0) {
+        $password =   $_POST['password'];
+        $password =   mysqli_real_escape_string($conn, $password);
+        $full_name =  $_POST['fullname'];
+        $full_name =  mysqli_real_escape_string($conn, $full_name);
+        $birthday =   $_POST['birthday'];
+        $birthday =   mysqli_real_escape_string($conn, $birthday);
+        $sex =        $_POST['sex'];
+        $sex =        mysqli_real_escape_string($conn, $sex);
+        $email =      $_POST['email'];
+        $email =      mysqli_real_escape_string($conn, $email);
+        $phone =      $_POST['phone'];
+        $phone =      mysqli_real_escape_string($conn, $phone);
+        $address =    $_POST['address'];
+        $address =    mysqli_real_escape_string($conn, $address);
+        
+        $query = "INSERT INTO `user` (username, password, full_name, birthday, sex, email, phone, address) VALUES ('$username','$password','$full_name','$birthday','$sex','$email','$phone','$address')";
+        $result = mysqli_query($conn, $query);
+        if ($result) {
+          echo "<script>
+                  Swal.fire({
+                    icon: 'success',
+                    title: 'Đăng ký tài khoản thành công!',
+                    confirmButtonColor: '#ff7f50',
+                    footer: '<a href=login.php>Nhấn vào đây để đăng nhập</a>'
+                  })
+                </script>";
+        }       
+        else {
+          echo "<script>
+                  Swal.fire({
+                    icon: 'warning',
+                    title: '404 ERROR',
+                    text: 'Something went wrong'
+                  })
+                </script>";
+        }
+
       } 
       else {
         echo "<script>
                 Swal.fire({
                   icon: 'warning',
-                  title: 'ERROR'
+                  title: 'Username already exist!',
+                  text: 'Please try again'
                 })
               </script>";
       }
