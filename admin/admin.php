@@ -15,7 +15,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   <!-- CSS -->
   <link rel="stylesheet" href="admin-style/styles.css">
-    <title>Tin tức</title>
+    <title>Admin Panel</title>
 </head>
 <body>
 

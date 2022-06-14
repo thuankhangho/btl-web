@@ -57,6 +57,9 @@
                 </script>";
       }
     }
+    // Free set
+    myslqi_free_result($result);
+    mysqli_close($conn);
   ?>
   <!-- End retrieving data -->
   <!-- Start Register Form -->

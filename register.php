@@ -73,7 +73,7 @@
                   })
                 </script>";
         }
-
+        mysqli_free_result($result);
       } 
       else {
         echo "<script>
@@ -85,6 +85,9 @@
               </script>";
       }
     }
+    // Free set
+    mysqli_free_result($find);
+    mysqli_close($conn);
   ?>
   <!-- End retrieving data -->
 
