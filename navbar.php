@@ -60,7 +60,9 @@
               <li><a class="dropdown-item" href="logout.php">Sign out</a></li>
           </ul>
       </div>
+
       <?php } else { ?>
+
       <div class="dropdown user-drop">
           <button type="button" class="user-btn btn btn-dark dropdown-toggle" data-bs-toggle="dropdown">
           <i class="fas fa-user-circle"></i>
@@ -70,6 +72,7 @@
             <li><a class="dropdown-item" href="login.php">Đăng Nhập</a></li>
           </ul>
       </div>
+      
       <?php } ?>       
     </div>
   </nav>
