@@ -30,7 +30,7 @@
                 <a class="nav-link" href="about.php">Giới Thiệu</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="product.php">Sản Phẩm</a>
+                <a class="nav-link" href="productsList.php">Sản Phẩm</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="news.php">Tin Tức</a>
