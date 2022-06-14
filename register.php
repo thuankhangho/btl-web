@@ -109,7 +109,7 @@
                   <input type="password" name="password" id="password" class="form-control" required>
                 </div>
                 <div class="form-outline mb-4">
-                  <label class="form-label" for="fullname">Họ và Tên</label>
+                  <label class="form-label" for="fullname">Họ & tên</label>
                   <input type="text" name="fullname" id="fullname" class="form-control" required>
                 </div>
                 <div class="form-outline mb-4">

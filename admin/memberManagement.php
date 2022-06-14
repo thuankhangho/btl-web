@@ -26,8 +26,8 @@
     </div>
     <!-- end nav bar --> 
     <form method="post" action="memberManagement.php">
-    <a href="memberManagement.php"><input type="button" class="p-3 mb-2 bg-primary bg-gradient text-white" name="display" value="Hiển thị danh sách thành viên"></a>
-    <input type="submit" class="p-3 mb-2 bg-secondary bg-gradient text-white">Thêm thành viên
+    <!--<a href="memberManagement.php"><input type="button" class="p-3 mb-2 bg-primary bg-gradient text-white" name="display" value="Hiển thị danh sách thành viên"></a>-->
+    <a href="newMember.php"><input type="button" class="p-3 mb-2 bg-primary bg-gradient text-white" value="Thêm thành viên"></a>
     <input type="submit" class="p-3 mb-2 bg-success bg-gradient text-white">Sửa thông tin thành viên
     <input type="submit" class="p-3 mb-2 bg-danger bg-gradient text-white">Xóa thành viên
     </form>
@@ -37,13 +37,13 @@
             <tr>
                 <th>ID</th>
                 <th>Username</th>
-                <th>Password</th>
-                <th>Full name</th>
-                <th>Sex</th>
-                <th>Birthday</th>
+                <th>Mật khẩu</th>
+                <th>Họ & tên</th>
+                <th>Giới tính</th>
+                <th>Sinh nhật</th>
                 <th>Email</th>
-                <th>Phone</th>
-                <th>Address</th>
+                <th>Số điện thoại</th>
+                <th>Địa chỉ</th>
             </tr>
             <tbody>";
             $sql = "SELECT * from user";
