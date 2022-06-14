@@ -22,7 +22,7 @@
 <!-- nav bar --> 
     <div>
       <?php $IPATH = $_SERVER["DOCUMENT_ROOT"]."/btl-web/admin/";
-      include($IPATH."navbar-admin.php");?>
+      include($IPATH."navbar.php");?>
     </div>
     <!-- end nav bar --> 
 
