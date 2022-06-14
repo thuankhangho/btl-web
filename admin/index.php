@@ -14,7 +14,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   <!-- CSS -->
-  <link rel="stylesheet" href="admin-style/styles.css">
+  <link rel="stylesheet" href="admin-styles/styles.css">
     <title>Admin Panel</title>
 </head>
 <body>
@@ -26,18 +26,16 @@
     </div>
     <!-- end nav bar --> 
 
-    <div class="p-3 mb-2 bg-primary bg-gradient text-white">Quản lý người dùng</div>
+    <a href="memberManagement.php"><div class="p-3 mb-2 bg-primary bg-gradient text-white">Quản lý thành viên</div></a>
     <div class="p-3 mb-2 bg-secondary bg-gradient text-white">Quản lý tin tức</div>
-    <div class="p-3 mb-2 bg-success bg-gradient text-white">Quản lý ???</div>
-    <div class="p-3 mb-2 bg-danger bg-gradient text-white">Quản lý ???</div>
+    <div class="p-3 mb-2 bg-success bg-gradient text-white">Quản lý bình luận</div>
+    <div class="p-3 mb-2 bg-danger bg-gradient text-white">Quản lý sản phẩm</div>
 <!-- footer --> 
-  <footer class="bg-light text-center text-lg-start">
-  <!-- Copyright -->
+  <!-- <footer class="bg-light text-center text-lg-start">
   <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
       Admin Panel!!!
   </div>
-  <!-- Copyright -->
-    </footer>
-    <!-- end footer --> 
+    </footer> -->
+    <!-- end footer  -->
 </body>
 </html>
