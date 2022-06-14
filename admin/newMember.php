@@ -132,7 +132,7 @@
             <td></td>
             <td>
                 <input type='submit' value='Lưu' class='btn btn-primary' />
-                <a href='index.php' class='btn btn-danger'>Quay lại bảng thành viên</a>
+                <a href='memberManagement.php' class='btn btn-danger'>Quay lại bảng thành viên</a>
             </td>
         </tr>
         </table>
