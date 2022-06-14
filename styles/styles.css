@@ -95,9 +95,9 @@
   background: var(--color);
 }
 
-.search button:hover {
-  background: #57606f;
-}
+/* .search button:hover {
+  background: var(--gray);
+} */
 
 .box-3 {
   width: 100%;

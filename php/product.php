@@ -53,7 +53,7 @@
                 <a class="nav-link" href="product.php">Sản phẩm</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="news.php">Tin tức</a>
+                <a class="nav-link" href="../news/news.php">Tin tức</a>
               </li>
                <!-- Icon dropdown -->
                <li class="dropdown user-drop">
