@@ -5,6 +5,8 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" rel="stylesheet">
   <!-- jQuery CDN-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!-- jsdelivr CDN / Sweet Alert2-->
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <!-- Bootstrap CDN-->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,17 +26,35 @@
   <!-- End Nav bar --> 
   <!-- Start retrieving data -->
   <?php
-    require_once('config.php');
+    require_once('config/config.php');
+    session_start();
     if (isset($_POST['login'])) {
-        $username = $_POST['username'];
-        $password = $_POST['password'];
-        $query = "SELECT * FROM user WHERE username = '$username', password = '$password'";
-        $result = mysqli_query($conn, $query);
-        if ($result) {
-        echo "OK";
-      } 
-      else {
-        echo "Not OK";
+      $username =   $_POST['username'];
+      $username =   mysqli_real_escape_string($conn, $username);
+      $password =   $_POST['password'];
+      $password =   mysqli_real_escape_string($conn, $password);
+
+      $query    = "SELECT * FROM `user` WHERE username='$username' AND password='" . $password. "'";
+      $result = mysqli_query($conn, $query) or die(mysql_error());
+      $rows = mysqli_num_rows($result);
+      if ($rows == 1) {
+          $_SESSION['username'] = $username;
+          echo "<script>
+                  Swal.fire({
+                    icon: 'success',
+                    title: 'Log in successfully!',
+                    confirmButtonColor: '#ff7f50',
+                    footer: '<a href=index.php>Back to main page</a>'
+                  })
+                </script>";
+      } else {
+          echo "<script>
+                  Swal.fire({
+                    icon: 'warning',
+                    title: 'Username or password incorrect',
+                    text: 'Please try again!'
+                  })
+                </script>";
       }
     }
   ?>
