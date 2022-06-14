@@ -28,8 +28,6 @@
     <form method="post" action="memberManagement.php">
     <!--<a href="memberManagement.php"><input type="button" class="p-3 mb-2 bg-primary bg-gradient text-white" name="display" value="Hiển thị danh sách thành viên"></a>-->
     <a href="newMember.php"><input type="button" class="p-3 mb-2 bg-primary bg-gradient text-white" value="Thêm thành viên"></a>
-    <input type="submit" class="p-3 mb-2 bg-success bg-gradient text-white">Sửa thông tin thành viên
-    <input type="submit" class="p-3 mb-2 bg-danger bg-gradient text-white">Xóa thành viên
     </form>
         <?php
             include '../config/config.php';
@@ -44,6 +42,7 @@
                 <th>Email</th>
                 <th>Số điện thoại</th>
                 <th>Địa chỉ</th>
+                <th>Sửa/Xóa thông tin</th>
             </tr>
             <tbody>";
             $sql = "SELECT * from user";
@@ -52,9 +51,12 @@
             {
                 while ($row = $result->fetch_assoc())
                 {
+                    $id = $row['id'];
                     echo "<tr><td>".$row['id']."</td><td>".$row['username']."</td><td>".$row['password'].
                     "</td><td>".$row['full_name']."</td><td>".$row['sex']."</td><td>".$row['birthday']
-                    ."</td><td>".$row['email']."</td><td>".$row['phone']."</td><td>".$row['address']."</td></tr>";
+                    ."</td><td>".$row['email']."</td><td>".$row['phone']."</td><td>".$row['address']."</td>
+                    <td><a href='c.php?id=$id' class='btn btn-primary m-r-1em' name='edit'>Sửa</a>
+                    <a href='#' onclick='delete_user($id)' class='btn btn-danger'>Xóa</a></td></tr>";
                 }
                 echo "</tbody></table>";
             }
