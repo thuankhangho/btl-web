@@ -78,9 +78,9 @@
 
             <form class="d-flex justify-content-left">
               <!-- Default input -->
-              <input type="number" value="1" aria-label="Search" class="form-control" style="width: 100px">
-              <button class="btn btn-primary btn-md my-0 p" type="submit">Add to cart
-                <i class="fas fa-shopping-cart ml-1"></i>
+              <!-- <input type="number" value="1" aria-label="Search" class="form-control" style="width: 100px"> -->
+              <!-- <button class="btn btn-primary btn-md my-0 p" type="submit">Add to cart -->
+            <!-- <i class="fas fa-shopping-cart ml-1"></i> -->
               </button>
 
             </form>
@@ -147,6 +147,11 @@
     </div>
   </main>
   <!--Main layout-->
-
+    <!-- footer --> 
+    <div>
+          <?php $IPATH = $_SERVER["DOCUMENT_ROOT"]."/btl-web/";
+          include($IPATH."footer.php");?>
+        </div>
+    <!-- end footer --> 
 </body>
 </html>
