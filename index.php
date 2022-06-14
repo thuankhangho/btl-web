@@ -21,9 +21,9 @@
   <!-- Start conformation message -->
   <?php
     session_start();
-    $id = $_SESSION['user_id'];
-    $username = $_SESSION['username'];
-    if (isset($id)) {
+    if (isset($_SESSION['user_id'])) {
+      $id = $_SESSION['user_id'];
+      $username = $_SESSION['username'];
       echo "<script>
               Swal.fire({
                 icon: 'success',

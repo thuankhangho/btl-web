@@ -29,7 +29,7 @@
   <!-- Start retrieving data -->
   <?php
     require_once('config/config.php');
-    if(isset($_POST['register'])) {
+    if (isset($_POST['register'])) {
       $username =   $_POST['username'];
       $username =   mysqli_real_escape_string($conn, $username);
 
@@ -73,8 +73,7 @@
                 </script>";
         }
         mysqli_free_result($result);
-      } 
-      else {
+      } else {
         echo "<script>
                 Swal.fire({
                   icon: 'warning',
