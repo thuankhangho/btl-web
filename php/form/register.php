@@ -15,7 +15,7 @@
   <!-- CSS -->
   <link rel="stylesheet" href="reg-css/form.css">
   <script src = "js/.js"></script>
-  <title>Đăng nhập tài khoản</title>
+  <title>Đăng ký tài khoản</title>
 </head>
 <body>
   <!-- Navbar -->
@@ -44,7 +44,7 @@
               <a class="nav-link" href="../product.php">Sản Phẩm</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../news.php">Tin Tức</a>
+              <a class="nav-link" href="../../news/news.php">Tin Tức</a>
             </li>
             <li class="dropdown user-drop">
                 <button type="button" class="user-btn btn btn-dark dropdown-toggle" data-bs-toggle="dropdown">

@@ -13,7 +13,7 @@
   <!-- CSS -->
   <link rel="stylesheet" href="styles/styles.css">
   <script src = "js/script.js"></script>
-  <title>Bài tập lớn Lập trình Web (CO3049)</title>
+  <title>Trang chủ</title>
 </head>
 
 <body>

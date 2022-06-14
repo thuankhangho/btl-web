@@ -23,7 +23,7 @@
   <!-- CSS -->
   <link rel="stylesheet" href="../styles/styles.css">
   <script src = "js/script.js"></script>
-  <title>Tin tức</title>
+  <title>Sản phẩm</title>
 </head>
 
 <body>
