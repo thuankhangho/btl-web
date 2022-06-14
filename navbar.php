@@ -1,4 +1,6 @@
-
+<?php
+  session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,8 +38,10 @@
               <li class="nav-item">
                 <a class="nav-link" href="news.php">Tin Tức</a>
               </li>
-              <!-- Icon dropdown -->
-              <?php if ($_SESSION['username']){ ?>
+          </ul>
+      </div>
+      <!-- Icon dropdown -->
+      <?php if ($_SESSION['username']){ ?>
                 <div class="dropdown">
                               <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
                                   <img src="img/logo.png" alt="hugenerd" width="30" height="30" class="rounded-circle">
@@ -56,20 +60,18 @@
                 </div>
 
                       <?php } else { ?>
-                          <li class="dropdown user-drop">
+                          <div class="dropdown user-drop">
                               <button type="button" class="user-btn btn btn-dark dropdown-toggle" data-bs-toggle="dropdown">
                               <i class="fas fa-user-circle"></i>
                               </button>
-                                <ul class="dropdown-menu dropdown-menu-dark">
+                                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark">
                                   <li><a class="dropdown-item" href="register.php">Đăng Ký</a></li>
                                   <li><a class="dropdown-item" href="login.php">Đăng Nhập</a></li>
                                 </ul>
-                          </li>
+                      </div>
                       <?php }
                       ?>
               
-          </ul>
-      </div>
     </div>
   </nav>
 </body>

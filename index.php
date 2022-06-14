@@ -22,7 +22,7 @@
   <?php
     session_start();
     $_SESSION['user_id'] = "";
-    $_SESSION['username'] = "ewewr";
+    $_SESSION['username'] = "";
     $id = $_SESSION['user_id'];
     $username = $_SESSION['username'];
     if (isset($id)) {
