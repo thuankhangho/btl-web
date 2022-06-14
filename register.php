@@ -13,58 +13,22 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   <!-- CSS -->
-  <link rel="stylesheet" href="reg-css/form.css">
+  <link rel="stylesheet" href="styles/form.css">
   <script src = "js/.js"></script>
-  <title>Đăng ký tài khoản</title>
+  <title>Đăng nhập tài khoản</title>
 </head>
 <body>
-  <!-- Navbar -->
+  <!-- nav bar --> 
   <div>
-    <nav class="my-navbar-logo navbar navbar-expand-xl navbar-dark bg-dark">
-        <div class=" container-fluid justify-content-center">
-          <a class="navbar-brand" href="../../index.php">
-              <img src="../../img/logo.png" width="90" height="90" class="d-inline-block align-top" alt="">
-          </a>
-        </div>
-    </nav>
-    <nav class="my-navbar navbar navbar-expand-xl navbar-dark bg-dark">
-      <div class="container-fluid justify-content-center">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-          <span class="navbar-toggler-icon justify-content-center"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-center"  id="collapsibleNavbar">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="../../index.php">Trang chủ</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../about.php">Giới thiệu</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../product.php">Sản phẩm</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../../news/news.php">Tin tức</a>
-            </li>
-            <li class="dropdown user-drop">
-                <button type="button" class="user-btn btn btn-dark dropdown-toggle" data-bs-toggle="dropdown">
-                  <i class="fas fa-user-circle"></i>
-                </button>
-                <ul class="dropdown-menu dropdown-menu-dark">
-                  <li><a class="dropdown-item" href="register.php">Đăng ký</a></li>
-                  <li><a class="dropdown-item" href="login.php">Đăng nhập</a></li>
-                </ul>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <!-- end .navbar -->
+      <?php $IPATH = $_SERVER["DOCUMENT_ROOT"]."/btl-web/";
+      include($IPATH."navbar.php");?>
+    </div>
+    <!-- end nav bar --> 
   </div>
 
   <!-- Start retrieving data -->
   <?php
-    require_once('config.php');
+    require_once('config/config.php');
     if(isset($_POST['register'])) {
       $username =   $_POST['username'];
       $username =   mysqli_real_escape_string($conn, $username);
@@ -108,12 +72,12 @@
   <!-- End retrieving data -->
 
   <!-- Start Register Form -->
-  <div class="h-100 h-custom my-container">
+  <div class="h-100 h-custom my-container-log">
     <div class="container py-5 h-100">
       <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col-lg-8 col-xl-6">
           <div class="card rounded-3">
-            <img src="reg-img/regform.jpg" class="w-100" style="border-top-left-radius: .3rem; border-top-right-radius: .3rem;">
+            <img src="img/reg-img/regform.jpg" class="w-100" style="border-top-left-radius: .3rem; border-top-right-radius: .3rem;">
             <div class="card-body p-4 p-md-5">
               <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">Đăng Ký</h3>
               <form action="" method="post" class="px-md-2">
@@ -140,7 +104,7 @@
                 <div class="form-outline mb-4">
                   <div class="form-outline datepicker">
                     <label for="birthday" class="form-label">Sinh nhật</label>
-                    <input type="date" name="birthday" class="form-control" min="1922-01-01" max="2012-12-31" required>
+                    <input type="date" name="birthday" class="form-control" required>
                   </div>
                 </div>
                 <div class="form-outline mb-4">
