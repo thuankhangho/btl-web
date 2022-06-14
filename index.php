@@ -12,7 +12,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   <!-- CSS -->
   <link rel="stylesheet" href="styles/styles.css">
-  <script src = "js/script.js"></script>
   <title>Trang chủ</title>
 </head>
 
