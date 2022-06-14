@@ -14,7 +14,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   <!-- CSS -->
   <link rel="stylesheet" href="styles/form.css">
-  <title>Đăng ký tài khoản</title>
+  <title>Đăng nhập tài khoản</title>
 </head>
 
 <body>
@@ -38,16 +38,11 @@
       $result = mysqli_query($conn, $query) or die(mysql_error());
       $rows = mysqli_num_rows($result);
       if ($rows == 1) {
-          $_SESSION['username'] = $username; 
-          echo "<script>
-                  Swal.fire({
-                    icon: 'success',
-                    title: 'Log in successfully!',
-                    confirmButtonColor: '#ff7f50'
-                  })
-                </script>";
+          $id = htmlspecialchars(mysqli_fetch_all($result, MYSQLI_ASSOC)[0]['id']);
+          $_SESSION['user_id'] = $id;
+          $_SESSION['username'] = $username;
           header('location:../btl-web/');
-        
+          myslqi_free_result($result);
       } else {
           echo "<script>
                   Swal.fire({
@@ -57,7 +52,6 @@
                   })
                 </script>";
       }
-      myslqi_free_result($result);
     }
     mysqli_close($conn);
   ?>
