@@ -9,8 +9,6 @@
     <title>Document</title>
 </head>
 <body>
-
-  <!-- Navbar -->
   <nav class="my-navbar-logo navbar navbar-expand-xl navbar-dark bg-dark">
       <div class="my-container container-fluid justify-content-center">
       <a class="navbar-brand" href="index.php">
@@ -51,6 +49,5 @@
       </div>
     </div>
   </nav>
-
 </body>
-<!-- end .navbar -->
+</html>
