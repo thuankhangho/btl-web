@@ -9,8 +9,6 @@
     <title>Document</title>
 </head>
 <body>
-
-  <!-- Navbar -->
   <nav class="my-navbar-logo navbar navbar-expand-xl navbar-dark bg-dark">
       <div class="my-container container-fluid justify-content-center">
       <a class="navbar-brand" href="index.php">
@@ -26,16 +24,16 @@
       <div class="collapse navbar-collapse justify-content-center"  id="collapsibleNavbar">
           <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" href="index.php">Trang chủ</a>
+                <a class="nav-link" href="index.php">Trang Chủ</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="about.php">Giới thiệu</a>
+                <a class="nav-link" href="about.php">Giới Thiệu</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="product.php">Sản phẩm</a>
+                <a class="nav-link" href="productsList.php">Sản Phẩm</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="news.php">Tin tức</a>
+                <a class="nav-link" href="news.php">Tin Tức</a>
               </li>
               <!-- Icon dropdown -->
               <li class="dropdown user-drop">
@@ -43,14 +41,13 @@
                   <i class="fas fa-user-circle"></i>
                   </button>
                     <ul class="dropdown-menu dropdown-menu-dark">
-                      <li><a class="dropdown-item" href="register.php">Đăng ký</a></li>
-                      <li><a class="dropdown-item" href="login.php">Đăng nhập</a></li>
+                      <li><a class="dropdown-item" href="register.php">Đăng Ký</a></li>
+                      <li><a class="dropdown-item" href="login.php">Đăng Nhập</a></li>
                     </ul>
               </li>
           </ul>
       </div>
     </div>
   </nav>
-
 </body>
-<!-- end .navbar -->
+</html>

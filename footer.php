@@ -9,11 +9,7 @@
     <title>Document</title>
 </head>
 <body>
-
-<!-- Navbar -->
-<!-- footer --> 
 <div class="footer text-center">
-        
     <div class="container p-4">
 <!-- Section: Social media -->
         <div class="mb-4">
@@ -47,7 +43,5 @@
     <p style="font-weight: bold; color: white">©2022 All Rights Reserved</p>
     </div>
 </div>
-<!-- end .footer -->
-
 </body>
-<!-- end .navbar -->
+</html>
