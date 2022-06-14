@@ -21,7 +21,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   <!-- CSS -->
-  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="styles/product-style.css">
   <script src = "js/script.js"></script>
   <title>Sản phẩm</title>
 </head>
@@ -57,7 +57,7 @@
                           </div>
                       </div>
                         <p><?php echo htmlspecialchars($dish['desciption']); ?> </p>
-                        <button class="btn btn-danger">Add to cart</button>
+                        <button class="my-btn btn-danger">Add to cart</button>
                   </div>
             </div>
           <?php }?>
