@@ -12,7 +12,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   <!-- CSS -->
   <link rel="stylesheet" href="styles/form.css">
-  <script src = "js/.js"></script>
   <title>Đăng ký tài khoản</title>
 </head>
 
@@ -23,7 +22,6 @@
       include($IPATH."navbar.php");?>
     </div>
     <!-- end nav bar --> 
-  </div>
 
   <div class="h-100 h-custom my-container-log">
     <div class="container py-5 h-100">
