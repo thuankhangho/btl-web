@@ -54,7 +54,7 @@
               "</td><td>".$row['full_name']."</td><td>".$row['sex']."</td><td>".$row['birthday']
               ."</td><td>".$row['email']."</td><td>".$row['phone']."</td><td>".$row['address']."</td>
               <td><a href='editMember.php?id=$id' class='btn btn-primary m-r-1em' name='edit'>Sửa</a>
-              <a href='#' onclick='delete_user($id)' class='btn btn-danger'>Xóa</a></td></tr>";
+              <a href='deleteMember.php?id=$id' class='btn btn-danger'>Xóa</a></td></tr>";
           }
           echo "</tbody></table>";
         }

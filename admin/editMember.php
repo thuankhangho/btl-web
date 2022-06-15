@@ -34,7 +34,7 @@
       // {
       //     $YearErr = "Year must be within the range of 1990-2022";
       // }
-      $query3 = "UPDATE user SET username=?, password=?, full_name=?, sex=?, birthday=?, email=?, phone=?, address=? WHERE id=?";
+      $query3 = "UPDATE user SET username = ?, password = ?, full_name = ?, sex = ?, birthday = ?, email = ?, phone = ?, address = ? WHERE id = ?";
       $stmt = $conn->prepare($query3);
       // prepare query for execution
 
