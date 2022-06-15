@@ -6,7 +6,7 @@
     try {
       // // insert query
       // $nameErr = $YearErr ='';
-      //$id = $_POST['id'];
+      $id = $_POST['id'];
       $username = $_POST['username'];
       $password = $_POST['password'];
       $fullname = $_POST['full_name'];
@@ -35,7 +35,7 @@
       // {
       //     $YearErr = "Year must be within the range of 1990-2022";
       // }
-      $query2 = "INSERT INTO user (username, password, full_name, sex, birthday, email, phone, address) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";;
+      $query3 = "UPDATE user SET username=?, password=?, id=?, full_name=?,  WHERE id=?";
       $stmt = $conn->prepare($query2);
       // prepare query for execution
 
@@ -88,10 +88,10 @@
     </div>
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
       <table class='table table-hover table-responsive table-bordered'>
-        <!-- <tr>
+        <tr>
           <td>ID</td>
           <td><input type='text' name='id' class='form-control' required></td>
-        </tr> -->
+        </tr>
         <tr>
           <td>Username</td>
           <td><input type='text' name='username' class='form-control' required></td>
