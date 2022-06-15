@@ -45,6 +45,7 @@ CREATE TABLE `comment` (
   `user_id` int(11) NOT NULL,
   `datetime` datetime NOT NULL,
   `content` text NOT NULL
+  `comment-board_id` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -56,7 +57,7 @@ CREATE TABLE `comment` (
 CREATE TABLE `product` (
   `id` int(10) UNSIGNED NOT NULL,
   `name` varchar(100) NOT NULL,
-  `desciption` text NOT NULL,
+  `description` text NOT NULL,
   `price` float UNSIGNED NOT NULL,
   `img_path` text NOT NULL,
   `status` tinyint(1) NOT NULL DEFAULT 1 COMMENT '0: unavailable, 1: available',
