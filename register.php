@@ -14,8 +14,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   <!-- CSS -->
   <link rel="stylesheet" href="styles/form.css">
-  <script src = "js/.js"></script>
-  <title>Đăng nhập tài khoản</title>
+  <title>Đăng ký tài khoản</title>
 </head>
 <body>
   <!-- Start Nav bar --> 
@@ -63,22 +62,24 @@
                     footer: '<a href=login.php>Nhấn vào đây để đăng nhập</a>'
                   })
                 </script>";
-        } else {
+        } 
+        else {
           echo "<script>
                   Swal.fire({
                     icon: 'warning',
-                    title: '404 ERROR',
-                    text: 'Something went wrong'
+                    title: 'Lỗi',
+                    text: 'Đã xảy ra lỗi!'
                   })
                 </script>";
         }
-        mysqli_free_result($result);
-      } else {
+        //mysqli_free_result($result);
+      } 
+      else {
         echo "<script>
                 Swal.fire({
                   icon: 'warning',
-                  title: 'Username already exist!',
-                  text: 'Please try again'
+                  title: 'Tài khoản đã tồn tại!',
+                  text: 'Vui lòng thử lại!'
                 })
               </script>";
       }
@@ -121,7 +122,7 @@
                 <div class="form-outline mb-4">
                   <div class="form-outline datepicker">
                     <label for="birthday" class="form-label">Sinh nhật</label>
-                    <input type="date" name="birthday" class="form-control" required>
+                    <input type="date" name="birthday" class="form-control" min="1912-01-01" max="2012-12-31" required>
                   </div>
                 </div>
                 <div class="form-outline mb-4">
