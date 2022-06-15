@@ -27,11 +27,11 @@ SET time_zone = "+00:00";
 -- Table structure for table `admin`
 --
 
-CREATE TABLE `admin` (
+CREATE TABLE `news` (
   `id` int(10) UNSIGNED NOT NULL,
-  `username` varchar(100) NOT NULL,
-  `password` varchar(255) NOT NULL,
-  `full_name` varchar(100) NOT NULL
+  `datetime` datetime NOT NULL,
+  `content` text NOT NULL,
+  `comment_board_id` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -96,13 +96,11 @@ INSERT INTO `user` (`id`, `username`, `password`, `full_name`, `sex`, `birthday`
 --
 
 --
--- Indexes for table `admin`
+-- Indexes for table `news`
 --
-ALTER TABLE `admin`
+ALTER TABLE `news`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `id` (`id`),
-  ADD UNIQUE KEY `username` (`username`);
-
+  ADD UNIQUE KEY `id` (`id`);
 --
 -- Indexes for table `comment`
 --
@@ -130,9 +128,9 @@ ALTER TABLE `user`
 --
 
 --
--- AUTO_INCREMENT for table `admin`
+-- AUTO_INCREMENT for table `news`
 --
-ALTER TABLE `admin`
+ALTER TABLE `news`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=101;
 
 --
