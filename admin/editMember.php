@@ -2,11 +2,10 @@
   if ($_POST) {
     // include database connection
     include ('../config/config.php');
-  
     try {
       // // insert query
       // $nameErr = $YearErr ='';
-      $id = $_POST['id'];
+      $id = $_GET['id'];
       $username = $_POST['username'];
       $password = $_POST['password'];
       $fullname = $_POST['full_name'];
@@ -35,14 +34,14 @@
       // {
       //     $YearErr = "Year must be within the range of 1990-2022";
       // }
-      $query3 = "UPDATE user SET username=?, password=?, id=?, full_name=?,  WHERE id=?";
-      $stmt = $conn->prepare($query2);
+      $query3 = "UPDATE user SET username=?, password=?, full_name=?, sex=?, birthday=?, email=?, phone=?, address=? WHERE id=?";
+      $stmt = $conn->prepare($query3);
       // prepare query for execution
 
       // Execute the query
       // if($nameErr==''&&$YearErr==''){
-          $stmt->bind_param('ssssssss', $username, $password, $fullname,
-          $sex, $birthday, $email, $phone, $address);
+          $stmt->bind_param('sssssssss', $username, $password, $fullname,
+          $sex, $birthday, $email, $phone, $address, $id);
           $stmt->execute();
           echo "<div class='alert alert-success'>Record was saved.</div>";
       // }
@@ -84,13 +83,13 @@
   <!-- container -->
   <div class="container">
     <div class="page-header">
-      <h1>Thêm thành viên</h1>
+      <h1>Sửa thông tin thành viên</h1>
     </div>
-    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
+    <form method="post">
       <table class='table table-hover table-responsive table-bordered'>
         <tr>
           <td>ID</td>
-          <td><input type='text' name='id' class='form-control' required></td>
+          <td><input type='text' name='id' class='form-control' value="<?php echo $_GET['id']?>" disabled></td>
         </tr>
         <tr>
           <td>Username</td>
