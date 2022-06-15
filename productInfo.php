@@ -73,7 +73,7 @@
 
             <p class="lead font-weight-bold"><h5>Miêu tả:</h5></p>
 
-            <p><?php echo htmlspecialchars($dish1['desciption']); ?></p>
+            <p><?php echo htmlspecialchars($dish1['description']); ?></p>
 
             <p><h5>Tình trạng:</h5>
               <?php
