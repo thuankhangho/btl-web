@@ -37,7 +37,6 @@ CREATE TABLE `admin` (
 --
 -- Dumping data for table `admin`
 --
-
 -- --------------------------------------------------------
 
 --
@@ -104,7 +103,6 @@ CREATE TABLE `user` (
 --
 -- Dumping data for table `user`
 --
-
 
 INSERT INTO `admin` (`id`, `username`, `password`, `full_name`) VALUES
 (101, 'kamisamada', 'startend', 'staffA');
