@@ -16,10 +16,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- include library -->
-  <?php include ('header.php') ?>
+  <!-- Font Awesome CDN-->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" rel="stylesheet">
+  <!-- jQuery CDN-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!-- Bootstrap CDN-->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   <!-- CSS -->
-  <link rel="stylesheet" href="styles/productInfo-style.css">
+  <link rel="stylesheet" href="styles/product-style.css">
   <script src = "js/script.js"></script>
   <title>Thông tin món ăn</title>
 </head>
@@ -37,6 +44,7 @@
         echo "<div class='alert alert-danger'>No records found.</div>";
     }
   ?>
+  <main class="">
     <div class="container dark-grey-text">
 
       <!--Grid row-->
@@ -101,49 +109,43 @@
 
         <!--Grid column-->
         <div class="col-md-6 text-center">
+
           <h4 class="my-4 h4">Comment</h4>
+
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus suscipit modi sapiente illo soluta odit
+            voluptates,
+            quibusdam officia. Neque quibusdam quas a quis porro? Molestias illo neque eum in laborum.</p>
+
         </div>
         <!--Grid column-->
-        <div class="row d-flex justify-content-center">
-  <div class="col-md-8 col-lg-6">
-    <div class="card shadow-0 border" style="background-color: #f0f2f5;">
-      <div class="card-body p-4">
-        <div class="form-outline mb-4">
-          <input type="text" id="addANote" class="form-control" placeholder="Type comment..." />
-          <label class="form-label" for="addANote">+ Add a note</label>
-        </div>
-
-        <div class="card mb-4">
-          <div class="card-body">
-            <p>Type your note, and hit enter to add it</p>
-
-            <div class="d-flex justify-content-between">
-              <div class="d-flex flex-row align-items-center">
-                <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(4).webp" alt="avatar" width="25"
-                  height="25" />
-                <p class="small mb-0 ms-2">Martha</p>
-              </div>
-              <div class="d-flex flex-row align-items-center">
-                <p class="small text-muted mb-0">Upvote?</p>
-                <i class="far fa-thumbs-up mx-2 fa-xs text-black" style="margin-top: -0.16rem;"></i>
-                <p class="small text-muted mb-0">3</p>
-              </div>
-            </div>
-          </div>
-        </div>
 
       </div>
-    </div>
-  </div>
-</div>
+      <!--Grid row-->
+
+      <!--Grid row-->
+      <div class="row wow fadeIn">
+
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-12 mb-4">
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-6 mb-4">
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-6 mb-4">
+        </div>
+        <!--Grid column-->
+
       </div>
       <!--Grid row-->
 
     </div>
-                  
+  </main>
   <!--Main layout-->
-  
-  
   <!-- footer --> 
   <div>
     <?php $IPATH = $_SERVER["DOCUMENT_ROOT"]."/btl-web/";

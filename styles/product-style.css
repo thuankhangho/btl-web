@@ -8,6 +8,9 @@
   --bg: rgba(255, 255, 255, 0.3);
 }
 
+main {
+  background-color: black;
+}
 
 .my-btn {
   background-color: var(--color);
@@ -92,7 +95,30 @@
   background-color: black;
 }
 
+h1 {
+  font-family: "Segoe UI Black", sans-serif;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  font-size: 34px;
+  color: #344055;
+  margin: 0;
+}
 
+.productDISP {
+  background-color: var(--color);
+}
 
-/*comment*/
+.commentDISP {
+  background-color: black;
+  color: white;
+}
+.stat-ok {
+  color: green;
+  font-weight: bold;
+}
 
+.stat-fail {
+  color: red;
+  font-weight: bold;
+}

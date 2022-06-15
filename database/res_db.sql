@@ -27,16 +27,13 @@ SET time_zone = "+00:00";
 -- Table structure for table `admin`
 --
 
-CREATE TABLE `admin` (
+CREATE TABLE `news` (
   `id` int(10) UNSIGNED NOT NULL,
-  `username` varchar(100) NOT NULL,
-  `password` varchar(255) NOT NULL,
-  `full_name` varchar(100) NOT NULL
+  `datetime` datetime NOT NULL,
+  `content` text NOT NULL,
+  `comment_board_id` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `admin`
---
 -- --------------------------------------------------------
 
 --
@@ -46,19 +43,6 @@ CREATE TABLE `admin` (
 CREATE TABLE `comment` (
   `id` int(10) UNSIGNED NOT NULL,
   `user_id` int(11) NOT NULL,
-  `datetime` datetime NOT NULL,
-  `content` text NOT NULL,
-  `comment_board_id` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `news`
---
-
-CREATE TABLE `news` (
-  `id` int(10) UNSIGNED NOT NULL,
   `datetime` datetime NOT NULL,
   `content` text NOT NULL,
   `comment_board_id` text NOT NULL
@@ -104,45 +88,23 @@ CREATE TABLE `user` (
 -- Dumping data for table `user`
 --
 
-INSERT INTO `admin` (`id`, `username`, `password`, `full_name`) VALUES
-(101, 'kamisamada', 'startend', 'staffA');
-
 INSERT INTO `user` (`id`, `username`, `password`, `full_name`, `sex`, `birthday`, `email`, `phone`, `address`, `active`) VALUES
-(2052242, 'user', 'iwannafly', 'Edogawa Conan', 'male', '2022-06-16', 'conanmeitantei@gmail.com', '7258258758', 'asgz14hs', 1),
-(2052243, 'user2', 'TMD', 'Tokoyami Towa', 'female', '2022-04-28', 'everlastingdarkness@gmail.com', '7258258758', 'ahudjhvkusg', 1),
-(2052244, 'user3', 'stellarstellar', 'Hoshimachi Suisei', 'female', '2022-04-23', 'suiseinogotokuarawaretasutaanogenseki@gmail.com', '4684548214', 'asgz14hs', 1);
+(2052242, 'admin', 'iwannafly', 'Edogawa Conan', 'male', '2022-06-16', 'conanmeitantei@gmail.com', '7258258758', 'asgz14hs', 1);
 
-INSERT INTO `product`(`id`, `name`, `description`, `price`, `img_path`, `status`, `feature`, `comment_board_id`) VALUES 
-('0','Shoyu Ramen','Ramen & nước tương','900','img/product-list/shoyu-ramen.jpg','0','0','0');
-
-INSERT INTO `comment`(`id`, `user_id`, `datetime`, `content`, `comment_board_id`) VALUES 
-('0','2052243','2022-06-15','Nhà hàng tuyệt hảo!','2052243');
-
-INSERT INTO `news`(`id`, `datetime`, `content`, `comment_board_id`) VALUES 
-('0','2022-06-15','Địa điểm mới','0');
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `admin`
+-- Indexes for table `news`
 --
-ALTER TABLE `admin`
+ALTER TABLE `news`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `id` (`id`),
-  ADD UNIQUE KEY `username` (`username`);
-
+  ADD UNIQUE KEY `id` (`id`);
 --
 -- Indexes for table `comment`
 --
 ALTER TABLE `comment`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `id` (`id`);
-
---
--- Indexes for table `news`
---
-ALTER TABLE `news`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `id` (`id`);
 
@@ -166,10 +128,10 @@ ALTER TABLE `user`
 --
 
 --
--- AUTO_INCREMENT for table `admin`
+-- AUTO_INCREMENT for table `news`
 --
-ALTER TABLE `admin`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=103;
+ALTER TABLE `news`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=101;
 
 --
 -- AUTO_INCREMENT for table `comment`
@@ -187,9 +149,10 @@ ALTER TABLE `product`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2052245;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2052243;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
