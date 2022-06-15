@@ -30,16 +30,16 @@
       <div class="collapse navbar-collapse justify-content-center"  id="collapsibleNavbar">
           <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" href="index.php">Trang Chủ</a>
+                <a class="nav-link" href="index.php">Trang chủ</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="about.php">Giới Thiệu</a>
+                <a class="nav-link" href="about.php">Giới thiệu</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="productsList.php">Sản Phẩm</a>
+                <a class="nav-link" href="productsList.php">Sản phẩm</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="news.php">Tin Tức</a>
+                <a class="nav-link" href="news.php">Tin tức</a>
               </li>
           </ul>
       </div>
