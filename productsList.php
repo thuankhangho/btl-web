@@ -50,7 +50,7 @@
           </div>
           <div class="bottom-div">
               <h3><?php echo htmlspecialchars($dish['name']); ?></h3>
-              <p><?php echo htmlspecialchars($dish['description']); ?></p>
+              <p><?php echo htmlspecialchars($dish['desciption']); ?></p>
           </div>
           <div class="last-section">
               <div class="last-div">
