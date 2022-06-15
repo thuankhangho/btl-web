@@ -45,7 +45,7 @@ CREATE TABLE `comment` (
   `user_id` int(11) NOT NULL,
   `datetime` datetime NOT NULL,
   `content` text NOT NULL,
-  `comment-board_id` text NOT NULL
+  `comment_board_id` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -62,7 +62,7 @@ CREATE TABLE `product` (
   `img_path` text NOT NULL,
   `status` tinyint(1) NOT NULL DEFAULT 1 COMMENT '0: unavailable, 1: available',
   `feature` tinyint(1) NOT NULL DEFAULT 1 COMMENT '0: not featured on news, 1: featured on news',
-  `comment-board_id` text NOT NULL
+  `comment_board_id` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
