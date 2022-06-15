@@ -12,8 +12,8 @@
   <nav class="my-navbar navbar navbar-expand-xl navbar-dark bg-dark">
     <!-- Container wrapper -->
     <div class="my-container container-fluid">
-        <a class="navbar-brand" href="">
-            <img src="../img/logo.png" width="30" height="30" class="d-inline-block align-text-top" alt="">
+        <a class="navbar-brand" href="index.php">
+            <img href="index.php" src="../img/logo.png" width="30" height="30" class="d-inline-block align-text-top" alt="">
             ADMIN DASHBOARD
         </a>
       <!-- Right elements -->
