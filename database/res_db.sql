@@ -115,13 +115,13 @@ INSERT INTO `user` (`id`, `username`, `password`, `full_name`, `sex`, `birthday`
 (2052244, 'user3', 'stellarstellar', 'Hoshimachi Suisei', 'female', '2022-04-23', 'suiseinogotokuarawaretasutaanogenseki@gmail.com', '4684548214', 'asgz14hs', 1);
 
 INSERT INTO `product`(`id`, `name`, `description`, `price`, `img_path`, `status`, `feature`, `comment_board_id`) VALUES 
-('0','Shoyu Ramen','Ramen & nước tương','900','img/product-list/shoyu-ramen.jpg','0','0','0')
+('0','Shoyu Ramen','Ramen & nước tương','900','img/product-list/shoyu-ramen.jpg','0','0','0');
 
 INSERT INTO `comment`(`id`, `user_id`, `datetime`, `content`, `comment_board_id`) VALUES 
-('0','2052243','2022-06-15','Nhà hàng tuyệt hảo!','2052243')
+('0','2052243','2022-06-15','Nhà hàng tuyệt hảo!','2052243');
 
 INSERT INTO `news`(`id`, `datetime`, `content`, `comment_board_id`) VALUES 
-('0','2022-06-15','Địa điểm mới','0')
+('0','2022-06-15','Địa điểm mới','0');
 --
 -- Indexes for dumped tables
 --
