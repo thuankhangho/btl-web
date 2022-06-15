@@ -38,6 +38,8 @@
                     <th>Giá</th>
                     <th>Hình</th>
                     <th>Trạng thái (còn/hết)</th>
+                    <th>Trên tin tức?</th>
+                    <th>ID của bảng bình luận</th>
                 </tr>
                 <tbody>";
         $sql = "SELECT * from product";
@@ -47,7 +49,8 @@
               $id = $row['id'];
               echo "<tr><td>".$row['id']."</td><td>".$row['name']."</td><td>".$row['description'].
               "</td><td>".$row['price']."</td><td>".$row['img_path']."</td><td>".$row['status']."</td>
-              <td><a href='editProduct.php?id=$id' class='btn btn-primary m-r-1em' name='edit'>Sửa</a>
+              <td>".$row['feature']."</td><td>".$row['comment_board_id']."</td><td>".
+              "<a href='editProduct.php?id=$id' class='btn btn-primary m-r-1em' name='edit'>Sửa</a>
               <a href='deleteProduct.php?id=$id' class='btn btn-danger'>Xóa</a></td></tr>";
           }
           echo "</tbody></table>";

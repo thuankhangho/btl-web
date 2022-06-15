@@ -122,7 +122,7 @@
           <td></td>
           <td>
             <input type='submit' value='Lưu' class='btn btn-primary' />
-            <a href='memberManagement.php' class='btn btn-danger'>Quay lại bảng thành viên</a>
+            <a href='productManagement.php' class='btn btn-danger'>Quay lại bảng sản phẩm</a>
           </td>
         </tr>
       </table>
