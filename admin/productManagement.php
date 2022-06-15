@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <!-- include library -->
-  <?php include ('../header.php') ?>
+  <?php include ('../header.php'); ?>
   <!-- CSS -->
   <link rel="stylesheet" href="admin-styles/styles.css">
   <title>Admin Panel</title>

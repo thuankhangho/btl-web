@@ -70,7 +70,7 @@
 <html lang="en">
 <head>
   <!-- include library -->
-  <?php include ('../header.php') ?>
+  <?php include ('../header.php'); ?>
   <style>
   .container{ margin: 0 auto; }
   </style>

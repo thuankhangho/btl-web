@@ -2,13 +2,22 @@
 <html lang="en">
 <head>
   <!-- include library -->
-  <?php include ('../header.php') ?>
+  <?php include ('../header.php'); ?>
   <!-- CSS -->
   <link rel="stylesheet" href="admin-styles/styles.css">
   <title>Admin Panel</title>
 </head>
 <body>
 
+  <?php 
+    session_start();
+    if (isset($_SESSION['admin_id'])) {
+      $id = $_SESSION['admin_id'];
+      $username = $_SESSION['admin_username'];
+    } else {
+      header('Location: ../admin/login.php');
+    }
+  ?>
   <!-- nav bar --> 
   <div>
     <?php $IPATH = $_SERVER["DOCUMENT_ROOT"]."/btl-web/admin/";
