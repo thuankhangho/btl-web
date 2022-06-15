@@ -26,8 +26,8 @@
   </div>
   <!-- end nav bar --> 
 
-    <a href="memberManagement.php"><div class="p-3 mb-2 bg-primary bg-gradient text-white text-decoration-none">Quản lý thành viên</div></a>
-    <a href="memberManagement.php"><div class="p-3 mb-2 bg-secondary bg-gradient text-white text-decoration-none">Quản lý sản phẩm</div></a>
+    <a href="memberManagement.php" style="text-decoration: none"><div class="p-3 mb-2 bg-primary bg-gradient text-white">Quản lý thành viên</div></a>
+    <a href="productManagement.php" style="text-decoration: none"><div class="p-3 mb-2 bg-secondary bg-gradient text-white">Quản lý sản phẩm</div></a>
     <div class="p-3 mb-2 bg-success bg-gradient text-white">Quản lý tin tức</div>
     <div class="p-3 mb-2 bg-danger bg-gradient text-white">Quản lý bình luận</div>
   <!-- footer --> 
