@@ -108,9 +108,9 @@ INSERT INTO `admin` (`id`, `username`, `password`, `full_name`) VALUES
 (101, 'kamisamada', 'startend', 'staffA');
 
 INSERT INTO `user` (`id`, `username`, `password`, `full_name`, `sex`, `birthday`, `email`, `phone`, `address`, `active`) VALUES
-(2052242, 'user', 'iwannafly', 'Edogawa Conan', 'male', '2022-06-16', 'conanmeitantei@gmail.com', '7258258758', 'asgz14hs', 1),
-(2052243, 'user2', 'TMD', 'Tokoyami Towa', 'female', '2022-04-28', 'everlastingdarkness@gmail.com', '7258258758', 'ahudjhvkusg', 1),
-(2052244, 'user3', 'stellarstellar', 'Hoshimachi Suisei', 'female', '2022-04-23', 'suiseinogotokuarawaretasutaanogenseki@gmail.com', '4684548214', 'asgz14hs', 1);
+(2052242, 'user', 'iwannafly', 'Edogawa Conan', 'male', '2022-06-16', 'conanmeitantei@gmail.com', '07258258758', 'asgz14hs', 1),
+(2052243, 'user2', 'TMD', 'Tokoyami Towa', 'female', '2022-04-28', 'everlastingdarkness@gmail.com', '07258258758', 'ahudjhvkusg', 1),
+(2052244, 'user3', 'stellarstellar', 'Hoshimachi Suisei', 'female', '2022-04-23', 'suiseinogotokuarawaretasutaanogenseki@gmail.com', '04684548214', 'asgz14hs', 1);
 
 INSERT INTO `product`(`id`, `name`, `description`, `price`, `img_path`, `status`, `feature`, `comment_board_id`) VALUES 
 ('0','Shoyu Ramen','Ramen & nước tương','900','img/product-list/shoyu-ramen.jpg','0','0','0');
