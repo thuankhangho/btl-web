@@ -44,7 +44,7 @@ CREATE TABLE `comment` (
   `id` int(10) UNSIGNED NOT NULL,
   `user_id` int(11) NOT NULL,
   `datetime` datetime NOT NULL,
-  `content` text NOT NULL
+  `content` text NOT NULL,
   `comment-board_id` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
