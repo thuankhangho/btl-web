@@ -113,11 +113,11 @@
             <p>
               <h5>Tình trạng:</h5>
               <?php
-                  if ($dish1['status'] == 1) {
-                    echo '<p class="stat-ok">Còn hàng<p>';
-                  } else {
-                    echo '<p class="stat-fail">Hết hàng<p>';
-                  }
+                if ($dish1['status'] == 1) {
+                  echo '<p class="stat-ok">Còn hàng</p>';
+                } else {
+                  echo '<p class="stat-fail">Hết hàng</p>';
+                }
               ?>
             </p>              
             <a href="productsList.php" class="btn btn-success">Trở về Danh mục sản phẩm</a>
@@ -141,94 +141,94 @@
 
       <hr>
 
-  <div class="container my-5 py-5">
-  <div class="row d-flex justify-content-center commentDISP">
+      <div class="container my-5 py-5">
+        <div class="row d-flex justify-content-center commentDISP">
 
-  <!--Grid column-->
-  <div class="col-md-6 text-center">
-    <h4 class="my-4 h4">Phần bình luận</h4>
-  </div>
-  <!--Grid column-->
-    </div>
-    <div class="row d-flex justify-content-center">
-      <div class="col-md-12 col-lg-10 col-xl-8">
-        <div class="card">
-          <div class="card-header py-3 border-0" style="background-color: #f8f9fa;">
-            <form action="" method="post">
-              <div class="d-flex flex-start w-100">
-                <img class="rounded-circle shadow-1-strong me-3"
-                  src="img/logo.png" alt="avatar" width="40"
-                  height="40" />
-                <div class="form-outline w-100">
-                  <textarea class="form-control" id="textAreaExample" rows="4"
-                    style="background: #fff; resize: none;" placeholder="Bình luận mới" name="comment_text"></textarea>
-                  <!-- <label class="form-label" for="textAreaExample">Bình luận</label> -->
+        <!--Grid column-->
+        <div class="col-md-6 text-center">
+          <h4 class="my-4 h4">Phần bình luận</h4>
+        </div>
+        <!--Grid column-->
+        </div>
+        <div class="row d-flex justify-content-center">
+          <div class="col-md-12 col-lg-10 col-xl-8">
+            <div class="card">
+              <div class="card-header py-3 border-0" style="background-color: #f8f9fa;">
+                <form action="" method="post">
+                  <div class="d-flex flex-start w-100">
+                    <img class="rounded-circle shadow-1-strong me-3"
+                      src="img/logo.png" alt="avatar" width="40"
+                      height="40" />
+                    <div class="form-outline w-100">
+                      <textarea class="form-control" id="textAreaExample" rows="4"
+                        style="background: #fff; resize: none;" placeholder="Bình luận mới" name="comment_text"></textarea>
+                      <!-- <label class="form-label" for="textAreaExample">Bình luận</label> -->
+                    </div>
+                  </div>
+                  <div class="float-end mt-2 pt-1">
+                    <button type="submit" class="btn-orange btn btn-primary btn-sm" name="comment_post">Đăng</button>
+                    <input type="reset" class="btn-orange-out btn btn-outline-primary btn-sm" value="Hủy"></input>
+                  </div>
+                </form>
+              </div>
+              <?php 
+
+                if($cmt_cnt == 0)
+                {
+                  echo "Chưa có bình luận nào";
+                }
+                foreach($cmts as $comment){
+              ?>
+              <!--cmt-->
+              <div class="card-body">
+                <div class="d-flex flex-start align-items-center">
+                  <img class="rounded-circle shadow-1-strong me-3"
+                    src="img/logo.png" alt="avatar" width="60"
+                    height="60" />
+                  <div>
+                    <h6 class="fw-bold text-primary mb-1">
+                      <?php $key = array_search($comment['user_id'], array_column($users, 'id')); 
+                      echo ($users[$key]['username']);
+                      ?>
+                    </h6>
+                    <p class="text-muted small mb-0">
+                      <?php echo $comment['datetime'];?>
+                    </p>
+                  </div>
+                </div>
+
+                <p class="mt-3 mb-4 pb-2">
+                  <?php echo $comment['content'];?>
+                </p>
+
+                <div class="small d-flex justify-content-start">
+                  <a href="#!" class="d-flex align-items-center me-3">
+                    <i class="far fa-thumbs-up me-2"></i>
+                    <p class="mb-0">Thích</p>
+                  </a>
+                  <a href="#!" class="d-flex align-items-center me-3">
+                    <i class="far fa-comment-dots me-2"></i>
+                    <p class="mb-0">Bình luận</p>
+                  </a>
+                  <a href="#!" class="d-flex align-items-center me-3">
+                    <i class="fas fa-share me-2"></i>
+                    <p class="mb-0">Chia sẻ</p>
+                  </a>
                 </div>
               </div>
-              <div class="float-end mt-2 pt-1">
-                <button type="submit" class="btn-orange btn btn-primary btn-sm" name="comment_post">Đăng</button>
-                <input type="reset" class="btn-orange-out btn btn-outline-primary btn-sm" value="Hủy"></input>
-              </div>
-            </form>
-          </div>
-          <?php 
-
-            if($cmt_cnt == 0)
-            {
-              echo "Chưa có bình luận nào";
-            }
-            foreach($cmts as $comment){
-          ?>
-          <!--cmt-->
-          <div class="card-body">
-            <div class="d-flex flex-start align-items-center">
-              <img class="rounded-circle shadow-1-strong me-3"
-                src="img/logo.png" alt="avatar" width="60"
-                height="60" />
-              <div>
-                <h6 class="fw-bold text-primary mb-1">
-                  <?php $key = array_search($comment['user_id'], array_column($users, 'id')); 
-                  echo ($users[$key]['username']);
-                  ?>
-                </h6>
-                <p class="text-muted small mb-0">
-                  <?php echo $comment['datetime'];?>
-                </p>
-              </div>
-            </div>
-
-            <p class="mt-3 mb-4 pb-2">
-              <?php echo $comment['content'];?>
-            </p>
-
-            <div class="small d-flex justify-content-start">
-              <a href="#!" class="d-flex align-items-center me-3">
-                <i class="far fa-thumbs-up me-2"></i>
-                <p class="mb-0">Thích</p>
-              </a>
-              <a href="#!" class="d-flex align-items-center me-3">
-                <i class="far fa-comment-dots me-2"></i>
-                <p class="mb-0">Bình luận</p>
-              </a>
-              <a href="#!" class="d-flex align-items-center me-3">
-                <i class="fas fa-share me-2"></i>
-                <p class="mb-0">Chia sẻ</p>
-              </a>
+              <?php 
+                }
+                mysqli_close($conn);
+              ?>
+              <!--cmt-->
             </div>
           </div>
-          <?php 
-            }
-            mysqli_close($conn);
-          ?>
-          <!--cmt-->
         </div>
       </div>
-    </div>
-  </div>
       <!--Grid row-->
 
     </div>
-    </main>
+  </main>
   <!--Main layout-->
   <!-- footer --> 
   <div>

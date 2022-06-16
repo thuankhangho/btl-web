@@ -1,15 +1,24 @@
 <?php
   require_once('config/config.php');
   //select data
-  $id = "";
+  $news_id = "";
   if (isset($_GET['news_id'])) {
-    $id = $_GET['news_id'];
+    $news_id = $_GET['news_id'];
   }
-  $query = "SELECT * FROM news WHERE id = '" . $id . "'";
+  $query = "SELECT * FROM news WHERE id = '" . $news_id . "'";
   $res = mysqli_query($conn, $query);
   $newspage = mysqli_fetch_all($res, MYSQLI_ASSOC);
   $row_cnt = $res->num_rows;
   $newspage1 = $newspage[0];
+
+  $query1 = "SELECT * FROM news_comments WHERE news_id = '" . $news_id . "'";
+  $res = mysqli_query($conn, $query1);
+  $cmts = mysqli_fetch_all($res, MYSQLI_ASSOC);
+  $cmt_cnt = $res->num_rows;
+
+  $query2 = "SELECT id, username FROM user";
+  $res = mysqli_query($conn, $query2);
+  $users = mysqli_fetch_all($res, MYSQLI_ASSOC);
   mysqli_free_result($res);
 ?> 
 
@@ -39,19 +48,134 @@
     include($IPATH."navbar.php");?>
   </div>
   <!-- end nav bar --> 
-
+  <?php
+    if ($row_cnt == 0){
+      echo "<div class='alert alert-danger'>No records found.</div>";
+    }
+    if (isset($_POST['comment_post']) && isset($_SESSION['user_id'])) {
+      $user_id = $_SESSION['user_id'];
+      $user_id = mysqli_real_escape_string($conn, $user_id);
+      $datetime = date('d-m-y h:i:s');
+      $datetime = mysqli_real_escape_string($conn, $datetime);
+      $content = $_POST['comment_text'];
+      $content = mysqli_real_escape_string($conn, $content);
+      $news_id = mysqli_real_escape_string($conn, $news_id);
+      $query = "INSERT INTO `news_comments` (user_id, datetime, content, news_id) VALUES ('$user_id','$datetime','$content', '$news_id')";
+      $res = mysqli_query($conn, $query);
+      if ($res) {
+        header('location: newsInfo.php');
+      }
+      mysqli_free_result($res);
+    }
+    elseif (isset($_POST['comment_post'])) {
+      echo "<script>
+              Swal.fire({
+                icon: 'warring',
+                title: 'Bạn cần đăng nhập để có thể viết bình luận!',
+                confirmButtonColor: '#ff7f50',
+                footer: '<a href=login.php>Nhấn vào đây để đăng nhập</a>'
+              })
+            </script>";
+    }
+  ?>
   <div id="container">
-        <div class="newsDISP">
-            <div class="mb-3 text-white">
-                <h1><?php echo htmlspecialchars($newspage1['name']); ?></h1>
-            </div>
-            <p class="lead text-white">
-              <span class="text-white">
-                <h5 class="text-white"><?php echo htmlspecialchars($newspage1['datetime']); ?></h5>
-              </span>
-              <p class="text-white"><?php echo htmlspecialchars($newspage1['content']); ?></p>
-            </p>
+    <div class="newsDISP">
+        <div class="mb-3 text-white">
+            <h1><?php echo htmlspecialchars($newspage1['name']); ?></h1>
         </div>
+        <p class="lead text-white">
+          <span class="text-white">
+            <h5 class="text-white"><?php echo htmlspecialchars($newspage1['datetime']); ?></h5>
+          </span>
+          <p class="text-white"><?php echo htmlspecialchars($newspage1['content']); ?></p>
+        </p>
+        <hr>
+
+        <div class="container my-5 py-5">
+          <div class="row d-flex justify-content-center commentDISP">
+
+          <!--Grid column-->
+          <div class="col-md-6 text-center">
+            <h4 class="my-4 h4">Phần bình luận</h4>
+          </div>
+          <!--Grid column-->
+          </div>
+          <div class="row d-flex justify-content-center">
+            <div class="col-md-12 col-lg-10 col-xl-8">
+              <div class="card">
+                <div class="card-header py-3 border-0" style="background-color: #f8f9fa;">
+                  <form action="" method="post">
+                    <div class="d-flex flex-start w-100">
+                      <img class="rounded-circle shadow-1-strong me-3"
+                        src="img/logo.png" alt="avatar" width="40"
+                        height="40" />
+                      <div class="form-outline w-100">
+                        <textarea class="form-control" id="textAreaExample" rows="4"
+                          style="background: #fff; resize: none;" placeholder="Bình luận mới" name="comment_text"></textarea>
+                        <!-- <label class="form-label" for="textAreaExample">Bình luận</label> -->
+                      </div>
+                    </div>
+                    <div class="float-end mt-2 pt-1">
+                      <button type="submit" class="btn-orange btn btn-primary btn-sm" name="comment_post">Đăng</button>
+                      <input type="reset" class="btn-orange-out btn btn-outline-primary btn-sm" value="Hủy"></input>
+                    </div>
+                  </form>
+                </div>
+                <?php 
+
+                  if($cmt_cnt == 0)
+                  {
+                    echo "Chưa có bình luận nào";
+                  }
+                  foreach($cmts as $comment){
+                ?>
+                <!--cmt-->
+                <div class="card-body">
+                  <div class="d-flex flex-start align-items-center">
+                    <img class="rounded-circle shadow-1-strong me-3"
+                      src="img/logo.png" alt="avatar" width="60"
+                      height="60" />
+                    <div>
+                      <h6 class="fw-bold text-primary mb-1">
+                        <?php $key = array_search($comment['user_id'], array_column($users, 'id')); 
+                        echo ($users[$key]['username']);
+                        ?>
+                      </h6>
+                      <p class="text-muted small mb-0">
+                        <?php echo $comment['datetime'];?>
+                      </p>
+                    </div>
+                  </div>
+
+                  <p class="mt-3 mb-4 pb-2">
+                    <?php echo $comment['content'];?>
+                  </p>
+
+                  <div class="small d-flex justify-content-start">
+                    <a href="#!" class="d-flex align-items-center me-3">
+                      <i class="far fa-thumbs-up me-2"></i>
+                      <p class="mb-0">Thích</p>
+                    </a>
+                    <a href="#!" class="d-flex align-items-center me-3">
+                      <i class="far fa-comment-dots me-2"></i>
+                      <p class="mb-0">Bình luận</p>
+                    </a>
+                    <a href="#!" class="d-flex align-items-center me-3">
+                      <i class="fas fa-share me-2"></i>
+                      <p class="mb-0">Chia sẻ</p>
+                    </a>
+                  </div>
+                </div>
+                <?php 
+                  }
+                  mysqli_close($conn);
+                ?>
+                <!--cmt-->
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
   </div>
   <!-- footer --> 
   <div>
