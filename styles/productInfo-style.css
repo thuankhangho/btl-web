@@ -22,3 +22,13 @@ h1 {
     font-weight: bold;
   }
   
+  .btn-orange  
+  {
+    background-color: var(--color);
+  }
+
+  .btn-orange-out
+  {
+    color: var(--color);
+    
+  }
