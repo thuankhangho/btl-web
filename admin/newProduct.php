@@ -9,7 +9,7 @@
       $name = $_POST['name'];
       $description = $_POST['description'];
       $price = $_POST['price'];
-      $img_path = "img/product-list/" . $_FILES['img_path']['name'];
+      $img_path = "img/product-list/" . $_POST['img_path'];
       $status = $_POST['status'];
       $feature = $_POST['feature'];
       // if($input_name=='')
@@ -41,7 +41,7 @@
       $stmt->bind_param('ssisii', $name, $description, $price, $img_path, $status, $feature);
       $stmt->execute();
       echo "<div class='alert alert-success'>Record was saved.</div>";
-      move_uploaded_file($_FILES['img_path']['tmp_name'], '../img/product-list/' . $_FILES['img_path']['name']);
+      move_uploaded_file($_POST['img_path'], '../img/product-list/' . $_POST['img_path']);
       // }
       // else{
       //     echo "<div class='alert alert-danger'>Unable to save record.</div>";
