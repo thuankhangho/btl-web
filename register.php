@@ -62,8 +62,7 @@
                     footer: '<a href=login.php>Nhấn vào đây để đăng nhập</a>'
                   })
                 </script>";
-        } 
-        else {
+        } else {
           echo "<script>
                   Swal.fire({
                     icon: 'warning',
@@ -72,7 +71,7 @@
                   })
                 </script>";
         }
-        //mysqli_free_result($result);
+        mysqli_free_result($result);
       } 
       else {
         echo "<script>
