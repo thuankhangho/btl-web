@@ -77,6 +77,7 @@
   .container{ margin: 0 auto; }
   </style>
   <title>Thêm sản phẩm</title>
+  <script src="../js/checkPicturesInput.js" defer></script>
 </head>
 <body>
   <!-- container -->
@@ -104,7 +105,7 @@
         </tr>
         <tr>
           <td>Hình ảnh sản phẩm</td>
-          <td><input type='file' name="img_path" class='form-control' required></td>
+          <td><input type='file' name="img_path" class='form-control' onchange="ValidateSingleInput(this);" required accept=".png, .jpg, .jpeg"></td>
         </tr>
         <tr>
           <td>Trạng thái</td>

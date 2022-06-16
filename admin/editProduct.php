@@ -106,7 +106,7 @@
         </tr>
         <tr>
           <td>Hình ảnh sản phẩm</td>
-          <td><input type="file" name="img_path" class='form-control' value="<?php echo $_GET['img_path']?>" accept=".png, .jpg" required></td>
+          <td><input type="file" name="img_path" class='form-control' value="<?php echo $_GET['img_path']?>" accept=".png, .jpg, .jpeg" required></td>
         </tr>
         <tr>
           <td>Trạng thái</td>
