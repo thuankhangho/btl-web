@@ -38,7 +38,17 @@
             <i class="fab fa-linkedin-in"></i>
           </a>
         </div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum possimus eaque asperiores non similique est neque recusandae mollitia quis, voluptas ducimus quia, dolorem animi ipsa officiis magnam ut. Corporis, illo veritatis! Quod fugiat doloremque, fuga laboriosam tempore omnis. Quia, omnis. Itaque odit ut cum animi quam debitis expedita, nostrum quod.
+        <div class="row">
+        <div class="col-sm-4">
+          a
+        </div>
+        <div class="col-sm-4">
+          b
+        </div>
+        <div class="col-sm-4">
+          c
+        </div>
+        </div>
         <!-- Section: Social media -->
         <p style="font-weight: bold; color: white">©2022 All Rights Reserved</p>
       </div>

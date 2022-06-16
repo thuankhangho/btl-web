@@ -75,7 +75,7 @@
       <div class="row productDISP">
 
         <!--Grid column-->
-        <div class="col-md-6 mb-4">
+        <div class="col-md-6 mb-4" style="display: flex; align-items: center; justify-content: center">
           <img src="<?php echo htmlspecialchars($dish1['img_path']); ?>" class="img-fluid" alt="">
         </div>
         <!--Grid column-->
@@ -107,6 +107,8 @@
                   }
               ?>
             </p>
+
+            <a href="productsList.php" style="text-decoration: none; font-size: 150%"><button>Trở về trang Sản phẩm</button></a>              
 
             <form class="d-flex justify-content-left">
               <!-- Default input -->

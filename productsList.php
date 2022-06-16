@@ -55,14 +55,10 @@
           </div>
           <div class="bottom-div">
               <h3><?php echo htmlspecialchars($dish['name']); ?></h3>
-              <p><?php echo htmlspecialchars($dish['description']); ?></p>
           </div>
           <div class="last-section">
               <div class="last-div">
                 <i class="fa fa-comment-o"></i>
-              </div>
-              <div class="buttons" style="display: flex; justify-content: center; align-items: center">
-                  <button style="width:125%">Xem thông tin sản phẩm</button>
               </div>
               <a href="productInfo.php?prod_id=<?php echo htmlspecialchars($dish['id']); ?>" class="stretched-link">
               </a>
