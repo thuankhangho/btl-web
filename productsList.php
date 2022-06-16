@@ -51,7 +51,7 @@
               <div class="border">
               <img src="<?php echo htmlspecialchars($dish['img_path']); ?>">
               </div>
-              <span><?php echo htmlspecialchars($dish['price']); ?>K </span>
+              <span style="width: auto; padding: 0 10px 0 10px"><?php echo htmlspecialchars($dish['price']); ?></span>
           </div>
           <div class="bottom-div">
               <h3><?php echo htmlspecialchars($dish['name']); ?></h3>
