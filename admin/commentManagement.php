@@ -45,29 +45,29 @@
       $result = $conn->query($sql);
       if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
-            $id = $row['id'];
-            $user_id = $row['user_id'];
-            $datetime = $row['datetime'];
-            $content = $row['content'];
-            $content = mysqli_real_escape_string($conn, $content);
-            $prod_id = $row['prod_id'];
-            echo "<tr>
-                    <td>" . $id . "</td>
-                    <td>" . $user_id . "</td>
-                    <td>" . $datetime . "</td>
-                    <td>" . $content . "</td>
-                    <td>" . $prod_id . "</td>
-                    <td> 
-                        <a href='editComment.php?
-                          id=$id&
-                          user_id=$user_id&
-                          datetime=$datetime&
-                          content=$content&
-                          prod_id=$prod_id&' 
-                          class='btn btn-primary m-r-1em' name='edit'>Sửa</a>
-                        <a href='deleteComment.php?id=$id' class='btn btn-danger'>Xóa</a>
-                    </td>
-                  </tr>";
+          $id = $row['id'];
+          $user_id = $row['user_id'];
+          $datetime = $row['datetime'];
+          $content = $row['content'];
+          $content = mysqli_real_escape_string($conn, $content);
+          $prod_id = $row['prod_id'];
+          echo "<tr>
+                  <td>" . $id . "</td>
+                  <td>" . $user_id . "</td>
+                  <td>" . $datetime . "</td>
+                  <td>" . $content . "</td>
+                  <td>" . $prod_id . "</td>
+                  <td> 
+                      <a href='editComment.php?
+                        id=$id&
+                        user_id=$user_id&
+                        datetime=$datetime&
+                        content=$content&
+                        prod_id=$prod_id&' 
+                        class='btn btn-primary m-r-1em' name='edit'>Sửa</a>
+                      <a href='deleteComment.php?id=$id' class='btn btn-danger'>Xóa</a>
+                  </td>
+                </tr>";
         }
         echo "</tbody></table>";
       }

@@ -49,39 +49,39 @@
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
       while ($row = $result->fetch_assoc()) {
-          $id = $row['id'];
-          $username = $row['username'];
-          $password = $row['password'];
-          $full_name = $row['full_name'];
-          $seggs = $row['sex'];
-          $birthday = $row['birthday'];
-          $email = $row['email'];
-          $phone = $row['phone'];
-          $address = $row['address'];
-          echo "<tr>
-                  <td>" . $id . "</td>
-                  <td>" . $username . "</td>
-                  <td>" . $password . "</td>
-                  <td>" . $full_name . "</td>
-                  <td>" . $seggs . "</td>
-                  <td>" . $birthday . "</td>
-                  <td>" . $email . "</td>
-                  <td>" . $phone . "</td>
-                  <td>" . $address . "</td>
-                  <td>
-                    <a href='editMember.php?
-                      id=$id&
-                      username=$username&
-                      password=$password&full_name=$full_name&
-                      sex=$seggs&
-                      birthday=$birthday&
-                      email=$email&
-                      phone=$phone&
-                      address=$address' 
-                      class='btn btn-primary m-r-1em' name='edit'>Sửa</a>
-                    <a href='deleteMember.php?id=$id' class='btn btn-danger'>Xóa</a>
-                  </td>
-                </tr>";
+        $id = $row['id'];
+        $username = $row['username'];
+        $password = $row['password'];
+        $full_name = $row['full_name'];
+        $seggs = $row['sex'];
+        $birthday = $row['birthday'];
+        $email = $row['email'];
+        $phone = $row['phone'];
+        $address = $row['address'];
+        echo "<tr>
+                <td>" . $id . "</td>
+                <td>" . $username . "</td>
+                <td>" . $password . "</td>
+                <td>" . $full_name . "</td>
+                <td>" . $seggs . "</td>
+                <td>" . $birthday . "</td>
+                <td>" . $email . "</td>
+                <td>" . $phone . "</td>
+                <td>" . $address . "</td>
+                <td>
+                  <a href='editMember.php?
+                    id=$id&
+                    username=$username&
+                    password=$password&full_name=$full_name&
+                    sex=$seggs&
+                    birthday=$birthday&
+                    email=$email&
+                    phone=$phone&
+                    address=$address' 
+                    class='btn btn-primary m-r-1em' name='edit'>Sửa</a>
+                  <a href='deleteMember.php?id=$id' class='btn btn-danger'>Xóa</a>
+                </td>
+              </tr>";
       }
       echo "</tbody></table>";
     }
