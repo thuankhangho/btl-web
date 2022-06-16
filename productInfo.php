@@ -29,6 +29,8 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" rel="stylesheet">
   <!-- jQuery CDN-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!-- jsdelivr CDN / Sweet Alert2-->
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <!-- Bootstrap CDN-->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -67,6 +69,16 @@
       }
       mysqli_free_result($res);
     }
+    elseif (isset($_POST['comment_post'])) {
+      echo "<script>
+              Swal.fire({
+                icon: 'warring',
+                title: 'Please sign up in order to comment',
+                confirmButtonColor: '#ff7f50',
+                footer: '<a href=login.php>Nhấn vào đây để đăng nhập</a>'
+              })
+            </script>";
+    }
   ?>
   <main class="">
     <div class="container dark-grey-text">
@@ -75,7 +87,7 @@
       <div class="row productDISP">
 
         <!--Grid column-->
-        <div class="col-md-6 mb-4" style="display: flex; align-items: center; justify-content: center">
+        <div class="col-md-6 mb-4">
           <img src="<?php echo htmlspecialchars($dish1['img_path']); ?>" class="img-fluid" alt="">
         </div>
         <!--Grid column-->
@@ -98,7 +110,8 @@
 
             <p><?php echo htmlspecialchars($dish1['description']); ?></p>
 
-            <p><h5>Tình trạng:</h5>
+            <p>
+              <h5>Tình trạng:</h5>
               <?php
                   if ($dish1['status'] == 1) {
                     echo '<p class="stat-ok">Còn hàng<p>';
@@ -106,10 +119,9 @@
                     echo '<p class="stat-fail">Hết hàng<p>';
                   }
               ?>
-            </p>
-
-            <a href="productsList.php" style="text-decoration: none; font-size: 150%"><button>Trở về trang Sản phẩm</button></a>              
-
+            </p>              
+            <a href="productsList.php" style="text-decoration: none; font-size: 150%"><button>Trở về trang Sản phẩm</button></a>
+            
             <form class="d-flex justify-content-left">
               <!-- Default input -->
               <!-- <input type="number" value="1" aria-label="Search" class="form-control" style="width: 100px"> -->
@@ -223,7 +235,7 @@
       <!--Grid row-->
 
     </div>
-  </main>
+    </main>
   <!--Main layout-->
   <!-- footer --> 
   <div>
