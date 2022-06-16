@@ -39,7 +39,7 @@
                 <a class="nav-link" href="productsList.php">Sản phẩm</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="news.php">Tin tức</a>
+                <a class="nav-link" href="newsList.php">Tin tức</a>
               </li>
           </ul>
       </div>
