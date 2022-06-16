@@ -80,6 +80,7 @@
     .container { margin: 0 auto; }
   </style>
   <title>Sửa thông tin sản phẩm</title>
+  <script src="../js/checkPicturesInput.js" defer></script>
 </head>
 <body>
   <!-- container -->
@@ -106,7 +107,7 @@
         </tr>
         <tr>
           <td>Hình ảnh sản phẩm</td>
-          <td><input type="file" name="img_path" class='form-control' value="<?php echo $_GET['img_path']?>" accept=".png, .jpg, .jpeg" required></td>
+          <td><input type="file" name="img_path" class='form-control' value="<?php echo $_GET['img_path']?>" onchange="ValidateSingleInput(this);" accept=".png, .jpg, .jpeg" required></td>
         </tr>
         <tr>
           <td>Trạng thái</td>
