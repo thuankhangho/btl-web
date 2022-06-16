@@ -55,7 +55,11 @@
       // }
       if ($_POST['submit'])
       {
-        echo "<script>window.location.href='editProduct.php?id=$id&name=$name&description=$description&price=$price&img_path=$img_path&status=$status&feature=$feature'; alert('Record was saved successfully.')</script>";
+        echo "<script>window.location.href='editProduct.php?id=$id&name=$name&description=$description&price=$price&img_path=$img_path&status=$status&feature=$feature'; Swal.fire({
+          icon: 'success',
+          title: 'Chỉnh sửa thành công!',
+          confirmButtonColor: '#ff7f50'
+        })</script>";
       }
       mysqli_close($conn);
     }   

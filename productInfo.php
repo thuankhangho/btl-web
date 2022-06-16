@@ -84,7 +84,7 @@
     <div class="container dark-grey-text">
 
       <!--Grid row-->
-      <div class="row productDISP">
+      <div class="row">
 
         <!--Grid column-->
         <div class="col-md-6 mb-4" style="display: flex; align-items: center; justify-content: center">
@@ -103,7 +103,7 @@
             </div>
 
             <p class="lead">
-              <span><h4>Giá:</h4><?php echo htmlspecialchars($dish1['price']); ?>.000 VND</span>
+              <span><h4>Giá:</h4><?php echo htmlspecialchars($dish1['price']); ?> VND</span>
             </p>
 
             <p class="lead font-weight-bold"><h5>Miêu tả:</h5></p>
@@ -204,15 +204,15 @@
             <div class="small d-flex justify-content-start">
               <a href="#!" class="d-flex align-items-center me-3">
                 <i class="far fa-thumbs-up me-2"></i>
-                <p class="mb-0">Like</p>
+                <p class="mb-0">Thích</p>
               </a>
               <a href="#!" class="d-flex align-items-center me-3">
                 <i class="far fa-comment-dots me-2"></i>
-                <p class="mb-0">Comment</p>
+                <p class="mb-0">Bình luận</p>
               </a>
               <a href="#!" class="d-flex align-items-center me-3">
                 <i class="fas fa-share me-2"></i>
-                <p class="mb-0">Share</p>
+                <p class="mb-0">Chia sẻ</p>
               </a>
             </div>
           </div>

@@ -47,7 +47,11 @@
       // }
       if ($_POST['submit'])
       {
-        echo "<script>window.location.href='editMember.php?id=$id&username=$username&password=$password&full_name=$fullname&sex=$sex&birthday=$birthday&email=$email&phone=$phone&address=$address'; alert('Record was saved successfully.')</script>";
+        echo "<script>window.location.href='editMember.php?id=$id&username=$username&password=$password&full_name=$fullname&sex=$sex&birthday=$birthday&email=$email&phone=$phone&address=$address'; Swal.fire({
+          icon: 'success',
+          title: 'Chỉnh sửa thành công!',
+          confirmButtonColor: '#ff7f50'
+        })</script>";
       }
       // else{
       //     echo "<div class='alert alert-danger'>Unable to save record.</div>";

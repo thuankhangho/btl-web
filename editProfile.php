@@ -74,7 +74,7 @@
   <style>
     .container { margin: 0 auto; }
   </style>
-  <title>Profile editing</title>
+  <title>Chỉnh sửa thông tin tài khoản</title>
 </head>
 <body>
   <!-- nav bar --> 
@@ -86,7 +86,7 @@
   <!-- container -->
   <div class="container">
     <div class="page-header">
-      <h1>Sửa thông tin thành viên</h1>
+      <h1>Chỉnh sửa thông tin tài khoản</h1>
     </div>
     <form method="post">
       <table class='table table-hover table-responsive table-bordered'>
