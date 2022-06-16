@@ -61,7 +61,7 @@
               echo "<tr><td>".$id."</td><td>".$row['username']."</td><td>".$row['password'].
               "</td><td>".$row['full_name']."</td><td>".$row['sex']."</td><td>".$row['birthday']
               ."</td><td>".$row['email']."</td><td>".$row['phone']."</td><td>".$row['address']."</td>
-              <td><a href='editMember.php?id=$id&username=$username&password=$password&fullname=$full_name&
+              <td><a href='editMember.php?id=$id&username=$username&password=$password&full_name=$full_name&
               sex=$seggs&birthday=$birthday&email=$email&phone=$phone&address=$address' class='btn btn-primary m-r-1em' name='edit'>Sửa</a>
               <a href='deleteMember.php?id=$id' class='btn btn-danger'>Xóa</a></td></tr>";
           }
