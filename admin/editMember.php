@@ -93,20 +93,21 @@
         </tr>
         <tr>
           <td>Username</td>
-          <td><input type='text' name='username' class='form-control' required></td>
+          <td><input type='text' name='username' class='form-control' value="<?php echo $_GET['username']?>" required></td>
         </tr>
         <tr>
           <td>Password</td>
-          <td><input type='text' name='password' class='form-control' required></td>
+          <td><input type='text' name='password' class='form-control' value="<?php echo $_GET['password']?>" required></td>
         </tr>
         <tr>
           <td>Họ & tên</td>
-          <td><input type='text' name='full_name' class='form-control' required></td>
+          <td><input type='text' name='full_name' class='form-control' value="<?php echo $_GET['full_name']?>" required></td>
         </tr>
         <tr>
           <td>Giới tính</td>
           <td>
-            <select class="select" name="sex" required>
+            <select class="select" name="sex" value="<?php echo $_GET['sex']?>" required>
+              <option value="empty">  </option>
               <option value="male">Nam</option>
               <option value="female">Nữ</option>
               <option value="others">Khác</option>
@@ -115,19 +116,19 @@
         </tr>
         <tr>
           <td>Sinh nhật</td>
-          <td><input type='date' name='birthday' class='form-control' required></td>
+          <td><input type='date' name='birthday' class='form-control' value="<?php echo $_GET['birthday']?>" required></td>
         </tr>
         <tr>
           <td>Email</td>
-          <td><input type='email' name='email' class='form-control' required></td>
+          <td><input type='email' name='email' class='form-control' value="<?php echo $_GET['email']?>" required></td>
         </tr>
         <tr>
           <td>Số điện thoại</td>
-          <td><input type='text' name='phone' class='form-control' required></td>
+          <td><input type='text' name='phone' class='form-control' value="<?php echo $_GET['phone']?>" required></td>
         </tr>
         <tr>
           <td>Địa chỉ</td>
-          <td><input type='text' name='address' class='form-control' required></td>
+          <td><input type='text' name='address' class='form-control' value="<?php echo $_GET['address']?>" required></td>
         </tr>
         <tr>
           <td></td>
