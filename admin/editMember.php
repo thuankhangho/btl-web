@@ -111,10 +111,20 @@
           <td>Giới tính</td>
           <td>
             <select class="select" name="sex" required>
-            <?php if ($_GET['sex'] == 'male') echo "<option value='male' selected>Nam</option><option value='female'>Nữ</option><option value='others'>Khác</option>";
-                  else if ($_GET['sex'] == 'female') echo "<option value='male'>Nam</option><option value='female' selected>Nữ</option><option value='others'>Khác</option>";
-                  else if ($_GET['sex'] == 'others') echo "<option value='male'>Nam</option><option value='female'>Nữ</option><option value='others' selected>Khác</option>";
-                  ?>
+              <?php 
+                if ($_GET['sex'] == 'male') 
+                  echo "<option value='male' selected>Nam</option>
+                        <option value='female'>Nữ</option>
+                        <option value='others'>Khác</option>";
+                elseif ($_GET['sex'] == 'female') 
+                  echo "<option value='male'>Nam</option>
+                        <option value='female' selected>Nữ</option>
+                        <option value='others'>Khác</option>";
+                elseif ($_GET['sex'] == 'others') 
+                  echo "<option value='male'>Nam</option>
+                        <option value='female'>Nữ</option>
+                        <option value='others' selected>Khác</option>";
+              ?>
             </select>
           </td>
         </tr>
