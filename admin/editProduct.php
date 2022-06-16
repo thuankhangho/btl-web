@@ -9,7 +9,7 @@
       $name = $_POST['name'];
       $description = $_POST['description'];
       $price = $_POST['price'];
-      $img_path = "img/product-list/" . $_FILES['img_path']['name'];
+      $img_path = "img/product-list/" . $_POST['img_path'];
       $status = $_POST['status'];
       $feature = $_POST['feature'];
       // if($input_name=='')
@@ -103,7 +103,7 @@
         </tr>
         <tr>
           <td>Hình ảnh sản phẩm</td>
-          <td><input type="file" name="img_path" class='form-control'></td>
+          <td><input type="file" name="img_path" class='form-control' required></td>
         </tr>
         <tr>
           <td>Trạng thái</td>
