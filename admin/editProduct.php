@@ -102,12 +102,8 @@
           <td><input type='number' name='price' class='form-control' required></td>
         </tr>
         <tr>
-          <td>Đường dẫn đến hình ảnh sản phẩm</td>
-          <td>
-          <div class="drop-zone">
-            <input type="file" name="img_path" class="drop-zone__input">
-          </div>
-          </td>
+          <td>Hình ảnh sản phẩm</td>
+          <td><input type="file" name="img_path" class='form-control'></td>
         </tr>
         <tr>
           <td>Trạng thái</td>
