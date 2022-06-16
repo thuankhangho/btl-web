@@ -40,7 +40,10 @@
       // if($nameErr==''&&$YearErr==''){
       $stmt->bind_param('ssisii', $name, $description, $price, $img_path, $status, $feature);
       $stmt->execute();
-      echo "<div class='alert alert-success'>Record was saved.</div>";
+      if ($_POST['submit'])
+          {
+            echo "<script>window.location.href='productManagement.php'; alert('Record was saved successfully.')</script>";
+          }
       move_uploaded_file($_POST['img_path'], '../img/product-list/' . $_POST['img_path']);
       // }
       // else{
@@ -118,7 +121,7 @@
         <tr>
           <td></td>
           <td>
-            <input type='submit' value='Lưu' class='btn btn-primary' />
+            <input type='submit' name='submit' value='Lưu' class='btn btn-primary' />
             <a href='productManagement.php' class='btn btn-danger'>Quay lại bảng sản phẩm</a>
           </td>
         </tr>

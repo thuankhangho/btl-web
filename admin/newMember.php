@@ -44,7 +44,10 @@
           $stmt->bind_param('ssssssss', $username, $password, $fullname,
           $sex, $birthday, $email, $phone, $address);
           $stmt->execute();
-          echo "<div class='alert alert-success'>Record was saved.</div>";
+          if ($_POST['submit'])
+          {
+            echo "<script>window.location.href='memberManagement.php'; alert('Record was saved successfully.')</script>";
+          }
       // }
       // else{
       //     echo "<div class='alert alert-danger'>Unable to save record.</div>";
@@ -133,7 +136,7 @@
         <tr>
           <td></td>
           <td>
-            <input type='submit' value='Lưu' class='btn btn-primary' />
+            <input type='submit' name='submit' value='Lưu' class='btn btn-primary' />
             <a href='memberManagement.php' class='btn btn-danger'>Quay lại bảng thành viên</a>
           </td>
         </tr>
