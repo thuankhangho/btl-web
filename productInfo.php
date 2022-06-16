@@ -16,7 +16,7 @@
   $cmts = mysqli_fetch_all($res, MYSQLI_ASSOC);
   $cmt_cnt = $res->num_rows;
   mysqli_free_result($res);
-  $query2 = "SELECT id,username FROM user";
+  $query2 = "SELECT id, username FROM user";
   $res = mysqli_query($conn, $query2);
   $users = mysqli_fetch_all($res, MYSQLI_ASSOC);
   mysqli_free_result($res);
@@ -131,28 +131,30 @@
     <div class="row d-flex justify-content-center">
       <div class="col-md-12 col-lg-10 col-xl-8">
         <div class="card">
-        <div class="card-header py-3 border-0" style="background-color: #f8f9fa;">
-            <div class="d-flex flex-start w-100">
-              <img class="rounded-circle shadow-1-strong me-3"
-                src="img/logo.png" alt="avatar" width="40"
-                height="40" />
-              <div class="form-outline w-100">
-                <textarea class="form-control" id="textAreaExample" rows="4"
-                  style="background: #fff;" placeholder="Comment mới"></textarea>
-                <label class="form-label" for="textAreaExample">Message</label>
+          <div class="card-header py-3 border-0" style="background-color: #f8f9fa;">
+            <form action="">
+              <div class="d-flex flex-start w-100">
+                <img class="rounded-circle shadow-1-strong me-3"
+                  src="img/logo.png" alt="avatar" width="40"
+                  height="40" />
+                <div class="form-outline w-100">
+                  <textarea class="form-control" id="textAreaExample" rows="4"
+                    style="background: #fff; resize: none;" placeholder="Bình luận mới" name="comment_text"></textarea>
+                  <label class="form-label" for="textAreaExample">Bình luận</label>
+                </div>
               </div>
-            </div>
-            <div class="float-end mt-2 pt-1">
-              <button type="button" class="btn-orange btn btn-primary btn-sm">Post comment</button>
-              <button type="button" class="btn-orange-out btn btn-outline-primary btn-sm">Cancel</button>
-            </div>
+              <div class="float-end mt-2 pt-1">
+                <input type="button" class="btn-orange btn btn-primary btn-sm" value="Đăng" name="comment_post"></input>
+                <input type="reset" class="btn-orange-out btn btn-outline-primary btn-sm" value="Hủy"></input>
+              </div>
+            </form>
           </div>
           <?php 
-              if($cmt_cnt == 0)
-              {
-                 echo "Chưa có bình luận nào";
-              }
-              foreach($cmts as $comment){
+            if($cmt_cnt == 0)
+            {
+                echo "Chưa có bình luận nào";
+            }
+            foreach($cmts as $comment){
           ?>
            
           <!--cmt-->
@@ -192,8 +194,9 @@
               </a>
             </div>
           </div>
-          <?php }
-          mysqli_close($conn);
+          <?php 
+            }
+            mysqli_close($conn);
           ?>
           <!--cmt-->
         </div>
