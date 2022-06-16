@@ -29,7 +29,7 @@
             <span class="d-none d-sm-inline mx-1">Admin</span>
           </a>
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
-            <li><a class="dropdown-item" href="../">Trở lại chủ</a></li>
+            <li><a class="dropdown-item" href="../">Trở lại trang chủ</a></li>
             <li><a class="dropdown-item" href="logout.php">Đăng xuất</a></li>
           </ul>
         </div>
