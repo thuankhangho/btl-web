@@ -120,7 +120,7 @@
                   }
               ?>
             </p>              
-            <a href="productsList.php" style="text-decoration: none; font-size: 150%"><button>Trở về Danh mục sản phẩm</button></a>
+            <a href="productsList.php" class="btn btn-success">Trở về Danh mục sản phẩm</a>
             
             <form class="d-flex justify-content-left">
               <!-- Default input -->
