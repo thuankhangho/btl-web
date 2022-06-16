@@ -21,7 +21,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   <!-- CSS -->
-  <link rel="stylesheet" href="../styles/styles.css">
+  <link rel="stylesheet" href="styles/news.css">
   <script src = "js/script.js"></script>
   <title>Sản phẩm</title>
 </head>
@@ -34,6 +34,12 @@
   </div>
   <!-- end nav bar -->
   <!--Main layout-->
+  <div class="site-cata height d-flex justify-content-center align-items-center">
+        <div class="col-md-8">
+          <div class="search">
+          </div>     
+        </div>
+  </div>
 <div class="container">
   <!--Section: News of the day-->
   <section class="border-bottom pb-4 mb-5">
