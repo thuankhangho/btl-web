@@ -46,8 +46,8 @@
     <div class="row gx-5">
       <div class="col-md-6 mb-4">
         <div class="bg-image hover-overlay ripple shadow-2-strong rounded-5" data-mdb-ripple-color="light">
-          <img src="https://mdbcdn.b-cdn.net/img/new/slides/080.webp" class="img-fluid" />
-          <a href="#!">
+          <img src="" class="img-fluid" />
+          <a href="newsInfo.php?news_id=<?php echo htmlspecialchars($newspage1['id']); ?>">
             <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
           </a>
         </div>
@@ -55,10 +55,18 @@
       <div class="col-md-6 mb-4">
         <span class="badge bg-danger px-2 py-1 shadow-1-strong mb-3">Tin mới</span>
         <h4><strong><?php echo $news[0]['name'];?></strong></h4>
+        <div class="col-6">
+              <u> <?php echo $news[0]['datetime'];?></u>
+            </div>
         <p class="text-muted">
           <?php echo $news[0]['content'];?>
         </p>
-        <button type="button" class="btn btn-primary">Đọc thêm</button>
+        <a href="newsInfo.php?news_id=<?php echo htmlspecialchars($news[0]['id']); ?>">
+              <button type="button" class="btn btn-primary stretched-link">
+                Đọc thêm
+              </button>
+        </a>
+        
       </div>
     </div>
   </section>
@@ -76,7 +84,7 @@
           <!-- Featured image -->
           <div class="bg-image hover-overlay shadow-1-strong ripple rounded-5 mb-4"
             data-mdb-ripple-color="light">
-            <img src="https://mdbcdn.b-cdn.net/img/new/fluid/city/113.webp" class="img-fluid" />
+            <img src="" class="img-fluid" />
             <a href="#!">
               <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
             </a>
@@ -84,19 +92,21 @@
           <!-- Article data -->
           <div class="row mb-3">
             <div class="col-6">
-              <a href="" class="text-info">
-                <i class="fas fa-plane"></i>
+              <a href="" class="text-info minitext">
+              <img class="rounded-circle shadow-1-strong me-3 d-inline-block align-top"
+                src="img/logo.png" alt="avatar" width="24"
+                height="24" />
                 Unknown
               </a>
             </div>
 
-            <div class="col-6 text-end">
+            <div class="col-6 text-end minitext">
               <u> <?php echo $news[$j]['datetime'];?></u>
             </div>
           </div>
 
           <!-- Article title and description -->
-          <a href="" class="text-dark">
+          <a href="newsInfo.php?news_id=<?php echo htmlspecialchars($news[$j]['id']); ?>" class="text-dark minitext">
             <h5><?php echo $news[$j]['name'];?></h5>
             <p>
             <?php echo $news[$j]['content'];?>
@@ -113,22 +123,6 @@
   </section>
   <!--Section: Content-->
 
-  <!-- Pagination -->
-  <nav class="my-4" aria-label="...">
-    <ul class="pagination pagination-circle justify-content-center">
-      <li class="page-item">
-        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
-      </li>
-      <li class="page-item"><a class="page-link" href="#">1</a></li>
-      <li class="page-item active" aria-current="page">
-        <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="page-item"><a class="page-link" href="#">3</a></li>
-      <li class="page-item">
-        <a class="page-link" href="#">Next</a>
-      </li>
-    </ul>
-  </nav>
 </div>
 <!--Main layout-->
   <!-- footer --> 

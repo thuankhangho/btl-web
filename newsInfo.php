@@ -1,3 +1,18 @@
+<?php
+  require_once('config/config.php');
+  //select data
+  $id = "";
+  if (isset($_GET['news_id'])) {
+    $id = $_GET['news_id'];
+  }
+  $query = "SELECT * FROM news WHERE id = '" . $id . "'";
+  $res = mysqli_query($conn, $query);
+  $newspage = mysqli_fetch_all($res, MYSQLI_ASSOC);
+  $row_cnt = $res->num_rows;
+  $newspage1 = $newspage[0];
+  mysqli_free_result($res);
+?> 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +29,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   <!-- CSS -->
-  <link rel="stylesheet" href="styles/news.css">
+  <link rel="stylesheet" href="styles/news-info.css">
   <title>Tin tức</title>
 </head>
 <body>
@@ -26,20 +41,17 @@
   <!-- end nav bar --> 
 
   <div id="container">
-    <div id="row">
-      <div class="product-details">
-        <!-- News Name -->
-        <h1>Món mới</h1>
-        <!-- Information -->
-        <p>Cơm chiên ngon & bổ dưỡng, gồm 3 thành phần duy nhất!</p>
-        <p>Giảm giá 100% cho 1000 người tới quán vào 31/02/2023!</p>
-      </div>
-    <div id="row">
-      <div class="product-image">
-          <img src="img/food-img/rice-cata.jpg" alt="Rice">
-      </div>
-    </div>
-    </div>
+        <div class="newsDISP">
+            <div class="mb-3 text-white">
+                <h1><?php echo htmlspecialchars($newspage1['name']); ?></h1>
+            </div>
+            <p class="lead text-white">
+              <span class="text-white">
+                <h5 class="text-white"><?php echo htmlspecialchars($newspage1['datetime']); ?></h5>
+              </span>
+              <p class="text-white"><?php echo htmlspecialchars($newspage1['content']); ?></p>
+            </p>
+        </div>
   </div>
   <!-- footer --> 
   <div>

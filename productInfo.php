@@ -62,7 +62,6 @@
         <!--Grid column-->
         <div class="col-md-6 mb-4">
           <img src="<?php echo htmlspecialchars($dish1['img_path']); ?>" class="img-fluid" alt="">
-
         </div>
         <!--Grid column-->
 
