@@ -17,10 +17,10 @@ main {
 }
 
 .site-cata {
-  background-image: url(../img/cata-name-prod.jpg);
+  background-image: url(../img/site-name/prod-page.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  padding: 10% 0;
+  padding: 9% 8%;
   background-size: cover;
   max-width: 100%;
   height: 100%;
