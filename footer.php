@@ -41,6 +41,7 @@
         <p>
           Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit. Donec Hendrerit Ligula Nunc, Non Consequat Lorem Aliquam A. Vivamus Non Consequat Urna. Fusce Lobortis Ultrices Tristique. Nullam Ante Leo, Pulvinar Et Eleifend A, Congue Quis Libero. Mauris Nec Ullamcorper Justo. Etiam Sit Amet Finibus Nulla, In Ullamcorper Sem. Proin Quis Mauris Ac Neque Tempus Ultricies. Etiam Suscipit Tincidunt Metus Elementum Volutpat. Sed Interdum Hendrerit Ante Sed Gravida. Quisque Est Augue, Mattis Ac Mi Nec, Eleifend Venenatis Lorem. Morbi Lobortis Placerat Commodo. In Luctus Mi Purus. Donec Non Eros In Velit Faucibus Vulputate. Nam Eu Est Vulputate, Congue Justo Ut, Sodales Orci. Praesent Eu Fermentum Massa. Phasellus Ac Volutpat Lacus. Sed Porttitor
         </p>
+        </div>
         <!-- Section: Social media -->
         <p style="font-weight: bold; color: white">©2022 All Rights Reserved</p>
       </div>
