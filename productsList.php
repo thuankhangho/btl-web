@@ -22,7 +22,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   <!-- CSS -->
   <link rel="stylesheet" href="styles/product-style.css">
-  <script src = "js/script.js"></script>
   <title>Sản phẩm</title>
 </head>
 
@@ -56,8 +55,8 @@
               <div class="last-div">
                 <i class="fa fa-comment-o"></i>
               </div>
-              <div class="buttons">
-                  <button>Add to cart</button>
+              <div class="buttons" style="display: flex; justify-content: center; align-items: center">
+                  <button style="width:125%">Xem thông tin sản phẩm</button>
               </div>
               <a href="productInfo.php?prod_id=<?php echo htmlspecialchars($dish['id']); ?>" class="stretched-link">
               </a>
