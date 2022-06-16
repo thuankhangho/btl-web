@@ -82,7 +82,7 @@
   <!-- container -->
   <div class="container">
     <div class="page-header">
-      <h1>Sửa thông tin thành viên</h1>
+      <h1>Sửa thông tin sản phẩm</h1>
     </div>
     <form method="post">
       <table class='table table-hover table-responsive table-bordered'>
