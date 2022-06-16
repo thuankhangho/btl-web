@@ -54,9 +54,9 @@
           </a>
         </div>
         <div class="col-3">
-            <a href="#">
-              <img src="img/food-img/sushi-cata.jpg" alt="" class="img-fluid img-curve">
-            </a>
+          <a href="#">
+            <img src="img/food-img/sushi-cata.jpg" alt="" class="img-fluid img-curve">
+          </a>
         </div>
         <div class="col-3">
           <a href="#">
@@ -66,7 +66,7 @@
         <div class="col-3">
           <a href="#">
             <img src="img/food-img/rice-cata.jpg" alt="" class="img-fluid img-curve">
-            </a>
+          </a>
         </div>
       </div>
     </div>

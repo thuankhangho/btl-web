@@ -113,9 +113,9 @@
                 <div class="form-outline mb-4">
                   <label for="sex" class="form-label">Giới tính</label>
                   <select class="select" name="sex" required>
-                    <option value="Nam">Nam</option>
-                    <option value="Nữ">Nữ</option>
-                    <option value="Khác">Khác</option>
+                    <option value="nam">Nam</option>
+                    <option value="nữ">Nữ</option>
+                    <option value="khác">Khác</option>
                   </select>
                 </div>
                 <div class="form-outline mb-4">

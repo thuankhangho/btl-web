@@ -175,7 +175,7 @@
 
             if($cmt_cnt == 0)
             {
-                echo "Chưa có bình luận nào";
+              echo "Chưa có bình luận nào";
             }
             foreach($cmts as $comment){
           ?>
