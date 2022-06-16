@@ -21,7 +21,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   <!-- CSS -->
-  <link rel="stylesheet" href="styles/news-info.css">
+  <link rel="stylesheet" href="styles/news.css">
   <script src = "js/script.js"></script>
   <title>Sản phẩm</title>
 </head>
@@ -53,8 +53,7 @@
         </div>
       </div>
       <div class="col-md-6 mb-4">
-        
-        <a href="newsInfo.php?news_id=<?php echo htmlspecialchars($news[0]['id']); ?>" class="nonedecor">
+        <a href="newsInfo.php?news_id=<?php echo htmlspecialchars($news[0]['id']); ?>" class="minitext">
               <span class="badge bg-danger px-2 py-1 shadow-1-strong mb-3">Tin mới</span>
               <h4><strong><?php echo $news[0]['name'];?></strong></h4>
               <div class="col-6">
@@ -90,7 +89,7 @@
           <!-- Article data -->
           <div class="row mb-3">
             <div class="col-6">
-              <a href="" class="text-info nonedecor">
+              <a href="" class="text-info minitext">
               <img class="rounded-circle shadow-1-strong me-3 d-inline-block align-top"
                 src="img/logo.png" alt="avatar" width="24"
                 height="24" />
@@ -98,13 +97,13 @@
               </a>
             </div>
 
-            <div class="col-6 text-end nonedecor">
+            <div class="col-6 text-end minitext">
               <u> <?php echo $news[$j]['datetime'];?></u>
             </div>
           </div>
 
           <!-- Article title and description -->
-          <a href="newsInfo.php?news_id=<?php echo htmlspecialchars($news[$j]['id']); ?>" class="text-dark nonedecor">
+          <a href="newsInfo.php?news_id=<?php echo htmlspecialchars($news[$j]['id']); ?>" class="text-dark minitext">
             <h5><?php echo $news[$j]['name'];?></h5>
             <p>
             <?php echo $news[$j]['content'];?>
