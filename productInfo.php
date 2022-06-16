@@ -1,21 +1,21 @@
 <?php
   require_once('config/config.php');
   //select data
-  $id = "";
+  $prod_id = "";
   if (isset($_GET['prod_id'])) {
-    $id = $_GET['prod_id'];
+    $prod_id = $_GET['prod_id'];
   }
-  $query = "SELECT * FROM product WHERE id = '" . $id . "'";
+  $query = "SELECT * FROM product WHERE id = '" . $prod_id . "'";
   $res = mysqli_query($conn, $query);
   $dish = mysqli_fetch_all($res, MYSQLI_ASSOC);
   $row_cnt = $res->num_rows;
   $dish1 = $dish[0];
-  mysqli_free_result($res);
-  $query1 = "SELECT * FROM prod_comments WHERE prod_id = '" . $id . "'";
+
+  $query1 = "SELECT * FROM prod_comments WHERE prod_id = '" . $prod_id . "'";
   $res = mysqli_query($conn, $query1);
   $cmts = mysqli_fetch_all($res, MYSQLI_ASSOC);
   $cmt_cnt = $res->num_rows;
-  mysqli_free_result($res);
+
   $query2 = "SELECT id, username FROM user";
   $res = mysqli_query($conn, $query2);
   $users = mysqli_fetch_all($res, MYSQLI_ASSOC);
@@ -49,8 +49,23 @@
   <!-- end nav bar --> 
   
   <?php
-    if($row_cnt==0){
-        echo "<div class='alert alert-danger'>No records found.</div>";
+    if ($row_cnt == 0){
+      echo "<div class='alert alert-danger'>No records found.</div>";
+    }
+    if (isset($_POST['comment_post']) && isset($_SESSION['user_id'])) {
+      $user_id = $_SESSION['user_id'];
+      $user_id = mysqli_real_escape_string($conn, $user_id);
+      $datetime = date('d-m-y h:i:s');
+      $datetime = mysqli_real_escape_string($conn, $datetime);
+      $content = $_POST['comment_text'];
+      $content = mysqli_real_escape_string($conn, $content);
+      $prod_id = mysqli_real_escape_string($conn, $prod_id);
+      $query = "INSERT INTO `prod_comments` (user_id, datetime, content, prod_id) VALUES ('$user_id','$datetime','$content', '$prod_id')";
+      $res = mysqli_query($conn, $query);
+      if ($res) {
+        header('location: productInfo.php');
+      }
+      mysqli_free_result($res);
     }
   ?>
   <main class="">
@@ -131,7 +146,7 @@
       <div class="col-md-12 col-lg-10 col-xl-8">
         <div class="card">
           <div class="card-header py-3 border-0" style="background-color: #f8f9fa;">
-            <form action="">
+            <form action="" method="post">
               <div class="d-flex flex-start w-100">
                 <img class="rounded-circle shadow-1-strong me-3"
                   src="img/logo.png" alt="avatar" width="40"
@@ -143,12 +158,13 @@
                 </div>
               </div>
               <div class="float-end mt-2 pt-1">
-                <input type="button" class="btn-orange btn btn-primary btn-sm" value="Đăng" name="comment_post"></input>
+                <button type="submit" class="btn-orange btn btn-primary btn-sm" name="comment_post">Đăng</button>
                 <input type="reset" class="btn-orange-out btn btn-outline-primary btn-sm" value="Hủy"></input>
               </div>
             </form>
           </div>
           <?php 
+
             if($cmt_cnt == 0)
             {
                 echo "Chưa có bình luận nào";
