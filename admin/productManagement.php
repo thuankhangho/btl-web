@@ -28,39 +28,55 @@
     <form method="post" action="productManagement.php">
       <a href="newProduct.php"><input type="button" class="p-3 mb-2 bg-primary bg-gradient text-white" value="Thêm sản phẩm"></a>
     </form>
-      <?php
-        include('../config/config.php');
-        echo "<table class='table table-bordered'>
-                <tr>
-                    <th>ID</th>
-                    <th>Tên sản phẩm</th>
-                    <th>Mô tả sản phẩm</th>
-                    <th>Giá</th>
-                    <th>Hình</th>
-                    <th>Trạng thái (còn/hết)</th>
-                    <th>Trên tin tức?</th>
-                </tr>
-                <tbody>";
-        $sql = "SELECT * from product";
-        $result = $conn->query($sql);
-        if ($result->num_rows > 0) {
-          while ($row = $result->fetch_assoc()) {
-            $id = $row['id'];
-            $name = $row['name'];
-            $description = $row['description'];
-            $price = $row['price'];
-            $img_path = $row['img_path'];
-            $status = $row['status'];
-            $feature = $row['feature'];
-            echo "<tr><td>".$id."</td><td>".$name."</td><td>".$description.
-            "</td><td>".$price."</td><td>".$img_path."</td><td>".$status."</td>
-            <td>".$feature."</td><td>".
-            "<a href='editProduct.php?id=$id&name=$name&description=$description&price=$price&img_path=$img_path&status=$status&feature=$feature' class='btn btn-primary m-r-1em' name='edit'>Sửa</a>
-            <a href='deleteProduct.php?id=$id' class='btn btn-danger'>Xóa</a></td></tr>";
-          }
-          echo "</tbody></table>";
+    <?php
+      include('../config/config.php');
+      echo "<table class='table table-bordered'>
+              <tr>
+                  <th>ID</th>
+                  <th>Tên sản phẩm</th>
+                  <th>Mô tả sản phẩm</th>
+                  <th>Giá</th>
+                  <th>Hình</th>
+                  <th>Trạng thái (còn/hết)</th>
+                  <th>Trên tin tức?</th>
+              </tr>
+              <tbody>";
+      $sql = "SELECT * from product";
+      $result = $conn->query($sql);
+      if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+          $id = $row['id'];
+          $name = $row['name'];
+          $description = $row['description'];
+          $price = $row['price'];
+          $img_path = $row['img_path'];
+          $status = $row['status'];
+          $feature = $row['feature'];
+          echo "<tr>
+                  <td>" . $id . "</td>
+                  <td>" . $name . "</td>
+                  <td>" . $description . "</td>
+                  <td>" . $price . "</td>
+                  <td>" . $img_path . "</td>
+                  <td>" . $status . "</td>
+                  <td>" . $feature . "</td>
+                  <td>
+                    <a href='editProduct.php?
+                      id=$id&
+                      name=$name&
+                      description=$description&
+                      price=$price&
+                      img_path=$img_path&
+                      status=$status&
+                      feature=$feature' 
+                      class='btn btn-primary m-r-1em' name='edit'>Sửa</a>
+                    <a href='deleteProduct.php?id=$id' class='btn btn-danger'>Xóa</a>
+                  </td>
+                </tr>";
         }
-      ?>
+        echo "</tbody></table>";
+      }
+    ?>
   <!-- footer --> 
   <!-- <footer class="bg-light text-center text-lg-start">
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">

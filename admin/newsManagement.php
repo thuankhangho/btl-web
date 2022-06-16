@@ -28,32 +28,43 @@
     <form method="post" action="productManagement.php">
       <a href="newProduct.php"><input type="button" class="p-3 mb-2 bg-primary bg-gradient text-white" value="Thêm sản phẩm"></a>
     </form>
-      <?php
-        include('../config/config.php');
-        echo "<table class='table table-bordered'>
-                <tr>
-                    <th>ID</th>
-                    <th>Tên bài viết</th>
-                    <th>Ngày giờ đăng bài</th>
-                    <th>Nội dung bài viết</th>
-                </tr>
-                <tbody>";
-        $sql = "SELECT * from news";
-        $result = $conn->query($sql);
-        if ($result->num_rows > 0) {
-          while ($row = $result->fetch_assoc()) {
-            $id = $row['id'];
-            $name = $row['name'];
-            $datetime = $row['datetime'];
-            $content = $row['content'];
-            echo "<tr><td>".$id."</td><td>".$name."</td><td>".$datetime.
-            "</td><td>".$content."</td><td>".
-            "<a href='editNews.php?id=$id&name=$name&datetime=$datetime&content=$content' class='btn btn-primary m-r-1em' name='edit'>Sửa</a>
-            <a href='deleteNews.php?id=$id' class='btn btn-danger'>Xóa</a></td></tr>";
-          }
-          echo "</tbody></table>";
+    <?php
+      include('../config/config.php');
+      echo "<table class='table table-bordered'>
+              <tr>
+                  <th>ID</th>
+                  <th>Tên bài viết</th>
+                  <th>Ngày giờ đăng bài</th>
+                  <th>Nội dung bài viết</th>
+              </tr>
+              <tbody>";
+      $sql = "SELECT * from news";
+      $result = $conn->query($sql);
+      if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+          $id = $row['id'];
+          $name = $row['name'];
+          $datetime = $row['datetime'];
+          $content = $row['content'];
+          echo "<tr>
+                  <td>" . $id . "</td>
+                  <td>" . $name . "</td>
+                  <td>" . $datetime . "</td>
+                  <td>" . $content . "</td>
+                  <td>
+                    <a href='editNews.php?
+                      id=$id&
+                      name=$name&
+                      datetime=$datetime&
+                      content=$content' 
+                      class='btn btn-primary m-r-1em' name='edit'>Sửa</a>
+                    <a href='deleteNews.php?id=$id' class='btn btn-danger'>Xóa</a>
+                  </td>
+                </tr>";
         }
-      ?>
+        echo "</tbody></table>";
+      }
+    ?>
   <!-- footer --> 
   <!-- <footer class="bg-light text-center text-lg-start">
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
