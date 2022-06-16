@@ -100,7 +100,7 @@ CREATE TABLE `user` (
   `username` varchar(100) NOT NULL,
   `password` varchar(255) NOT NULL,
   `full_name` varchar(100) NOT NULL,
-  `sex` varchar(6) NOT NULL COMMENT 'male, female, other',
+  `sex` varchar(6) NOT NULL COMMENT 'Nam, Nữ, Khác',
   `birthday` date NOT NULL,
   `email` varchar(50) NOT NULL,
   `phone` varchar(15) NOT NULL,
