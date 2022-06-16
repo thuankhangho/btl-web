@@ -68,6 +68,7 @@
   <style>
     .container { margin: 0 auto; }
   </style>
+  <title>Profile editing</title>
 </head>
 <body>
   <!-- nav bar --> 
@@ -105,18 +106,18 @@
             <select class="select" name="sex" required>
               <?php 
               
-                if ($mem1['sex'] == 'nam') 
-                  echo "<option value='nam' selected>Nam</option>
-                        <option value='nữ'>Nữ</option>
-                        <option value='khác'>Khác</option>";
-                elseif ($mem1['sex'] == 'nữ') 
-                  echo "<option value='nam'>Nam</option>
-                        <option value='nữ' selected>Nữ</option>
-                        <option value='khác'>Khác</option>";
-                elseif ($mem1['sex'] == 'khác') 
-                  echo "<option value='nam'>Nam</option>
-                        <option value='nữ'>Nữ</option>
-                        <option value='khác' selected>Khác</option>";
+                if ($mem1['sex'] == 'Nam') 
+                  echo "<option value='Nam' selected>Nam</option>
+                        <option value='Nữ'>Nữ</option>
+                        <option value='Khác'>Khác</option>";
+                elseif ($mem1['sex'] == 'Nữ') 
+                  echo "<option value='Nam'>Nam</option>
+                        <option value='Nữ' selected>Nữ</option>
+                        <option value='Khác'>Khác</option>";
+                elseif ($mem1['sex'] == 'Khác') 
+                  echo "<option value='Nam'>Nam</option>
+                        <option value='Nữ'>Nữ</option>
+                        <option value='Khác' selected>Khác</option>";
               ?>
             </select>
           </td>

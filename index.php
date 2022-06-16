@@ -18,15 +18,6 @@
 </head>
 
 <body>
-  <!-- Start conformation message -->
-  <?php
-    session_start();
-    if (isset($_SESSION['user_id'])) {
-      $id = $_SESSION['user_id'];
-      $username = $_SESSION['username'];
-    }
-  ?>
-  <!-- End Conformation message -->
   <!-- nav bar --> 
   <div>
     <?php $IPATH = $_SERVER["DOCUMENT_ROOT"]."/btl-web/";

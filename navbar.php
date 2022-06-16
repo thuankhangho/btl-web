@@ -54,7 +54,7 @@
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
               <li><a class="dropdown-item" href="editProfile.php?id=<?php echo $_SESSION['user_id']; ?>">Chỉnh sửa thông tin</a></li> 
               <li><a class="dropdown-item" href="#">Cài đặt</a></li>
-              <li><a class="dropdown-item" href="#">Tài khoản</a></li>
+              <li><a class="dropdown-item" href="profile.php">Tài khoản</a></li>
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="logout.php">Đăng xuất</a></li>
           </ul>
