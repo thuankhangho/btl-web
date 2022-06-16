@@ -33,6 +33,12 @@
   </div>
   <!-- end nav bar --> 
   <div class="displayProd ">
+      <div class=" site-cata height d-flex justify-content-center align-items-center">
+        <div class="col-md-8">
+          <div class="search">
+          </div>     
+        </div>
+      </div>
       <div class="justify-content-center align-items-center row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3">
         <?php
           if ($row_cnt == 0){

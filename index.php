@@ -36,7 +36,6 @@
   <!-- main content --> 
   <div class="main-content">
     <div class=" food-search height d-flex justify-content-center align-items-center">
-
         <div class="col-md-8">
           <div class="search">
               <i class="fa fa-search"></i>
