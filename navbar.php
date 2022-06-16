@@ -53,9 +53,9 @@
           </a>
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
               <!-- <li><a class="dropdown-item" href="#">Your Order</a></li> -->
-              <li><a class="dropdown-item" href="#">Cài đặt</a></li>
+              <!-- <li><a class="dropdown-item" href="#">Cài đặt</a></li>
               <li><a class="dropdown-item" href="#">Tài khoản</a></li>
-              <li><hr class="dropdown-divider"></li>
+              <li><hr class="dropdown-divider"></li> -->
               <li><a class="dropdown-item" href="logout.php">Đăng xuất</a></li>
           </ul>
       </div>

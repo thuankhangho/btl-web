@@ -73,7 +73,7 @@
       echo "<script>
               Swal.fire({
                 icon: 'warring',
-                title: 'Please sign up in order to comment',
+                title: 'Bạn cần đăng nhập để có thể viết bình luận!',
                 confirmButtonColor: '#ff7f50',
                 footer: '<a href=login.php>Nhấn vào đây để đăng nhập</a>'
               })
@@ -87,7 +87,7 @@
       <div class="row productDISP">
 
         <!--Grid column-->
-        <div class="col-md-6 mb-4">
+        <div class="col-md-6 mb-4" style="display: flex; align-items: center; justify-content: center">
           <img src="<?php echo htmlspecialchars($dish1['img_path']); ?>" class="img-fluid" alt="">
         </div>
         <!--Grid column-->
@@ -120,7 +120,7 @@
                   }
               ?>
             </p>              
-            <a href="productsList.php" style="text-decoration: none; font-size: 150%"><button>Trở về trang Sản phẩm</button></a>
+            <a href="productsList.php" style="text-decoration: none; font-size: 150%"><button>Trở về Danh mục sản phẩm</button></a>
             
             <form class="d-flex justify-content-left">
               <!-- Default input -->
@@ -141,21 +141,15 @@
 
       <hr>
 
-      <!--Grid row-->
-      <div class="row d-flex justify-content-center commentDISP">
-
-        <!--Grid column-->
-        <div class="col-md-6 text-center">
-          <h4 class="my-4 h4">Comment</h4>
-        </div>
-        <!--Grid column-->
-
-      </div>
-      <!--Grid row-->
-
-      <!--Grid row-->
-
   <div class="container my-5 py-5">
+  <div class="row d-flex justify-content-center commentDISP">
+
+  <!--Grid column-->
+  <div class="col-md-6 text-center">
+    <h4 class="my-4 h4">Phần bình luận</h4>
+  </div>
+  <!--Grid column-->
+    </div>
     <div class="row d-flex justify-content-center">
       <div class="col-md-12 col-lg-10 col-xl-8">
         <div class="card">
@@ -185,7 +179,6 @@
             }
             foreach($cmts as $comment){
           ?>
-           
           <!--cmt-->
           <div class="card-body">
             <div class="d-flex flex-start align-items-center">
