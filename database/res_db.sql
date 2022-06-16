@@ -68,6 +68,7 @@ CREATE TABLE `news_comments` (
 
 CREATE TABLE `news` (
   `id` int(10) UNSIGNED NOT NULL,
+  `name` varchar(100) NOT NULL,
   `datetime` datetime NOT NULL,
   `content` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -125,8 +126,8 @@ INSERT INTO `product`(`id`, `name`, `description`, `price`, `img_path`, `status`
 INSERT INTO `prod_comments`(`id`, `user_id`, `datetime`, `content`, `prod_id`) VALUES 
 ('0','2052243','2022-06-15','Nhà hàng tuyệt hảo!','0');
 
-INSERT INTO `news`(`id`, `datetime`, `content`) VALUES 
-('0','2022-06-15','Địa điểm mới');
+INSERT INTO `news`(`id`, `name`, `datetime`, `content`) VALUES 
+('0','Địa điểm mới','2022-06-15','Mở chi nhánh mới ở Tokyo');
 
 INSERT INTO `news_comments`(`id`, `user_id`, `datetime`, `content`, `news_id`) VALUES 
 ('0','2052243','2022-06-15','Quán thoáng mát, rộng rãi!', '0');
