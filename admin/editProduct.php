@@ -103,10 +103,9 @@
         <tr>
           <td>Đường dẫn đến hình ảnh sản phẩm</td>
           <td>
-            <!-- <input type='text' name='img_path' class='form-control' required> -->
-            <!-- <div class="drop-zone"> -->
-              <input type="file" name="img_path" class="drop-zone__input">
-            <!-- </div> -->
+          <div class="drop-zone">
+            <input type="file" name="img_path" class="drop-zone__input">
+          </div>
           </td>
         </tr>
         <tr>
