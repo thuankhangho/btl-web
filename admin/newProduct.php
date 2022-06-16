@@ -6,14 +6,12 @@
     try {
       // // insert query
       // $nameErr = $YearErr ='';
-      //$id = $_POST['id'];
       $name = $_POST['name'];
       $description = $_POST['description'];
       $price = $_POST['price'];
-      $img_path = $_POST['img_path'];
+      $img_path = "img/product-list/" . $_FILES['img_path']['name'];
       $status = $_POST['status'];
       $feature = $_POST['feature'];
-      $comment_board_id = $_POST['comment_board_id'];
       // if($input_name=='')
       // {
       //     $nameErr = "Name is required";
@@ -34,15 +32,16 @@
       // {
       //     $YearErr = "Year must be within the range of 1990-2022";
       // }
-      $query2 = "INSERT INTO product (name, description, price, img_path, status, feature, comment_board_id) VALUES (?, ?, ?, ?, ?, ?, ?)";
+      $query2 = "INSERT INTO product (name, description, price, img_path, status, feature) VALUES (?, ?, ?, ?, ?, ?)";
       $stmt = $conn->prepare($query2);
       // prepare query for execution
 
       // Execute the query
       // if($nameErr==''&&$YearErr==''){
-          $stmt->bind_param('ssisiii', $name, $description, $price, $img_path, $status, $feature, $comment_board_id);
-          $stmt->execute();
-          echo "<div class='alert alert-success'>Record was saved.</div>";
+      $stmt->bind_param('ssisii', $name, $description, $price, $img_path, $status, $feature);
+      $stmt->execute();
+      echo "<div class='alert alert-success'>Record was saved.</div>";
+      move_uploaded_file($_FILES['img_path']['tmp_name'], '../img/product-list/' . $_FILES['img_path']['name']);
       // }
       // else{
       //     echo "<div class='alert alert-danger'>Unable to save record.</div>";
@@ -93,7 +92,7 @@
         </tr> -->
         <tr>
           <td>Tên sản phẩm</td>
-          <td><input type='text' name='name' class='form-control' required></td>
+          <td><input type="text" name='name' class='form-control' required></td>
         </tr>
         <tr>
           <td>Mô tả sản phẩm</td>
@@ -104,8 +103,8 @@
           <td><input type='number' name='price' class='form-control' required></td>
         </tr>
         <tr>
-          <td>Đường dẫn đến hình ảnh sản phẩm</td>
-          <td><input type='text' name='img_path' class='form-control' required></td>
+          <td>Hình ảnh sản phẩm</td>
+          <td><input type='file' name="img_path" class='form-control' required></td>
         </tr>
         <tr>
           <td>Trạng thái</td>
@@ -114,10 +113,6 @@
         <tr>
           <td>Trên tin tức?</td>
           <td><input type='number' name='feature' class='form-control' required></td>
-        </tr>
-        <tr>
-          <td>ID của bảng nhận xét</td>
-          <td><input type='number' name='comment_board_id' class='form-control' required></td>
         </tr>
         <tr>
           <td></td>
