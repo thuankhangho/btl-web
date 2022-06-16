@@ -46,15 +46,15 @@
     <div class="row gx-5">
       <div class="col-md-6 mb-4">
         <div class="bg-image hover-overlay ripple shadow-2-strong rounded-5" data-mdb-ripple-color="light">
-          <img src="" class="img-fluid" />
-          <a href="">
+          <a href="newsInfo.php?news_id=<?php echo htmlspecialchars($news[0]['id']); ?>">
+          <img src="img/latest-news.png" class="img-fluid" />
             <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
           </a>
         </div>
       </div>
       <div class="col-md-6 mb-4">
         <a href="newsInfo.php?news_id=<?php echo htmlspecialchars($news[0]['id']); ?>" class="minitext">
-              <span class="badge bg-danger px-2 py-1 shadow-1-strong mb-3">Tin mới</span>
+              <span class="badge bg-danger px-2 py-1 shadow-1-strong mb-3">Tin mới nhất</span>
               <h4><strong><?php echo $news[0]['name'];?></strong></h4>
               <div class="col-6">
                     <u> <?php echo $news[0]['datetime'];?></u>
