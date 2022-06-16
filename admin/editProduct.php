@@ -103,7 +103,13 @@
         </tr>
         <tr>
           <td>Đường dẫn đến hình ảnh sản phẩm</td>
-          <td><input type='text' name='img_path' class='form-control' required></td>
+          <td>
+            <!-- <input type='text' name='img_path' class='form-control' required> -->
+            <section class="droparea">
+              <i class="far fa-images"></i>
+              <p>Kéo thả hình ảnh sản phẩm</p>
+            </section>
+          </td>
         </tr>
         <tr>
           <td>Trạng thái</td>
