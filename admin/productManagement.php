@@ -48,7 +48,7 @@
               $id = $row['id'];
               echo "<tr><td>".$row['id']."</td><td>".$row['name']."</td><td>".$row['description'].
               "</td><td>".$row['price']."</td><td>".$row['img_path']."</td><td>".$row['status']."</td>
-              <td>".$row['feature']."</td><td>"."</td><td>".
+              <td>".$row['feature']."</td><td>".
               "<a href='editProduct.php?id=$id' class='btn btn-primary m-r-1em' name='edit'>Sửa</a>
               <a href='deleteProduct.php?id=$id' class='btn btn-danger'>Xóa</a></td></tr>";
           }
