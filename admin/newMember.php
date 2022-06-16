@@ -108,9 +108,9 @@
           <td>Giới tính</td>
           <td>
             <select class="select" name="sex" required>
-              <option value="male">Nam</option>
-              <option value="female">Nữ</option>
-              <option value="others">Khác</option>
+              <option value="Nam">Nam</option>
+              <option value="Nữ">Nữ</option>
+              <option value="Khác">Khác</option>
             </select>
           </td>
         </tr>
