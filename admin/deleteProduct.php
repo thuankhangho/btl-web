@@ -11,7 +11,7 @@
     <?php 
         $id = $_GET['id'];
         echo "<script>
-        if (confirm('A') == true)
+        if (confirm('Bạn có chắc muốn xóa dữ liệu?') == true)
         {  
             window.location.href = 'confirmDeleteProduct.php?id=$id';
         }

@@ -1,12 +1,22 @@
-<?php
-    include '../config/config.php';
-    $id = $_GET['id'];
-    $query4 = "DELETE FROM news WHERE id = ?";
-    $stmt = $conn->prepare($query4);
-    $stmt->bind_param('s', $id);
-    if($stmt->execute())
-    {
-        header('Location: newsManagement.php');
-    }
-    else die('Unable to delete record.');
-?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <?php 
+        $id = $_GET['id'];
+        echo "<script>
+        if (confirm('Bạn có chắc muốn xóa dữ liệu?') == true)
+        {  
+            window.location.href = 'confirmDeleteNews.php?id=$id';
+        }
+        else window.location.href = 'newsManagement.php';
+    </script>";
+    ?>
+</body>
+</html>
