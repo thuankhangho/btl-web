@@ -14,6 +14,7 @@
       $email = $_POST['email'];
       $phone = $_POST['phone'];
       $address = $_POST['address'];
+      
       // if($input_name=='')
       // {
       //     $nameErr = "Name is required";
@@ -43,8 +44,11 @@
           $stmt->bind_param('sssssssss', $username, $password, $fullname,
           $sex, $birthday, $email, $phone, $address, $id);
           $stmt->execute();
-          echo "<div class='alert alert-success'>Record was saved.</div>";
       // }
+      if (isset($_POST['submit']))
+      {
+        echo "<script>window.location.href='editMember.php?id=$id&username=$username&password=$password&full_name=$fullname&sex=$sex&birthday=$birthday&email=$email&phone=$phone&address=$address'; alert('Record was saved successfully.')</script>";
+      }
       // else{
       //     echo "<div class='alert alert-danger'>Unable to save record.</div>";
       //     if($nameErr!='')
@@ -133,8 +137,8 @@
         <tr>
           <td></td>
           <td>
-            <input type='submit' value='Lưu' class='btn btn-primary' />
-            <a href='memberManagement.php' class='btn btn-danger'>Quay lại bảng thành viên</a>
+          <input type='submit' name='submit' value='Lưu' class='btn btn-primary'/>
+          <a href='memberManagement.php' class='btn btn-danger'>Quay lại bảng thành viên</a>
           </td>
         </tr>
       </table>
