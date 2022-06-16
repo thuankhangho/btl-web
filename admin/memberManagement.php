@@ -50,10 +50,19 @@
         if ($result->num_rows > 0) {
           while ($row = $result->fetch_assoc()) {
               $id = $row['id'];
-              echo "<tr><td>".$row['id']."</td><td>".$row['username']."</td><td>".$row['password'].
+              $username = $row['username'];
+              $password = $row['password'];
+              $full_name = $row['full_name'];
+              $seggs = $row['sex'];
+              $birthday = $row['birthday'];
+              $email = $row['email'];
+              $phone = $row['phone'];
+              $address = $row['address'];
+              echo "<tr><td>".$id."</td><td>".$row['username']."</td><td>".$row['password'].
               "</td><td>".$row['full_name']."</td><td>".$row['sex']."</td><td>".$row['birthday']
               ."</td><td>".$row['email']."</td><td>".$row['phone']."</td><td>".$row['address']."</td>
-              <td><a href='editMember.php?id=$id' class='btn btn-primary m-r-1em' name='edit'>Sửa</a>
+              <td><a href='editMember.php?id=$id&username=$username&password=$password&fullname=$full_name&
+              sex=$seggs&birthday=$birthday&email=$email&phone=$phone&address=$address' class='btn btn-primary m-r-1em' name='edit'>Sửa</a>
               <a href='deleteMember.php?id=$id' class='btn btn-danger'>Xóa</a></td></tr>";
           }
           echo "</tbody></table>";
