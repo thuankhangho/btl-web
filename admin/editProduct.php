@@ -76,6 +76,7 @@
   <style>
     .container { margin: 0 auto; }
   </style>
+  <title>Sửa thông tin thành viên</title>
 </head>
 <body>
   <!-- container -->
