@@ -162,7 +162,7 @@
                 <div class="form-outline w-100">
                   <textarea class="form-control" id="textAreaExample" rows="4"
                     style="background: #fff; resize: none;" placeholder="Bình luận mới" name="comment_text"></textarea>
-                  <label class="form-label" for="textAreaExample">Bình luận</label>
+                  <!-- <label class="form-label" for="textAreaExample">Bình luận</label> -->
                 </div>
               </div>
               <div class="float-end mt-2 pt-1">
