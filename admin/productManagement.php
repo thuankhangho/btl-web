@@ -15,7 +15,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   <!-- CSS -->
   <link rel="stylesheet" href="admin-styles/styles.css">
-  <title>Admin Panel</title>
+  <title>Quản lý sản phẩm</title>
 </head>
 <body>
 

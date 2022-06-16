@@ -76,13 +76,13 @@
   <style>
     .container { margin: 0 auto; }
   </style>
-  <title>Sửa thông tin thành viên</title>
+  <title>Sửa thông tin sản phẩm</title>
 </head>
 <body>
   <!-- container -->
   <div class="container">
     <div class="page-header">
-      <h1>Sửa thông tin thành viên</h1>
+      <h1>Sửa thông tin sản phẩm</h1>
     </div>
     <form action="" method="post" enctype="multipart/form-data">
       <table class='table table-hover table-responsive table-bordered'>

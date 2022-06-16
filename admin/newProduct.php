@@ -77,6 +77,7 @@
   <style>
   .container{ margin: 0 auto; }
   </style>
+  <title>Thêm sản phẩm</title>
 </head>
 <body>
   <!-- container -->
