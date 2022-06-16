@@ -69,8 +69,6 @@
 <head>
   <!-- jQuery CDN-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <!-- Font Awesome CDN-->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" rel="stylesheet">
   <!-- Bootstrap CDN-->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -79,14 +77,12 @@
   <style>
     .container { margin: 0 auto; }
   </style>
-  <script src="../js/dragAndDrop.js" defer></script>
-  <link rel="stylesheet" href="admin-styles/dragAndDrop.css">
 </head>
 <body>
   <!-- container -->
   <div class="container">
     <div class="page-header">
-      <h1>Sửa thông tin sản phẩm</h1>
+      <h1>Sửa thông tin thành viên</h1>
     </div>
     <form method="post">
       <table class='table table-hover table-responsive table-bordered'>
@@ -107,13 +103,7 @@
         </tr>
         <tr>
           <td>Đường dẫn đến hình ảnh sản phẩm</td>
-          <td>
-            <!-- <input type='text' name='img_path' class='form-control' required> -->
-            <section class="droparea">
-              <i class="far fa-images"></i>
-              <p>Kéo thả hình ảnh sản phẩm</p>
-            </section>
-          </td>
+          <td><input type='text' name='img_path' class='form-control' required></td>
         </tr>
         <tr>
           <td>Trạng thái</td>
@@ -135,7 +125,7 @@
           </td>
         </tr>
     </form>
-  </div>
+  </div> 
   <!-- end .container -->
 </body>
 </html>
