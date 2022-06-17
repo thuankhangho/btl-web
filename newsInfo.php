@@ -79,7 +79,7 @@
     }
   ?>
   <div id="container">
-    <div class="newsDISP">
+    <div class="newsDISP" style="padding: 0 0 0 1em">
         <div class="mb-3 text-white">
             <h1><?php echo htmlspecialchars($newspage1['name']); ?></h1>
         </div>
@@ -89,6 +89,7 @@
           </span>
           <p class="text-white"><?php echo htmlspecialchars($newspage1['content']); ?></p>
         </p>
+        </div>
         <hr>
 
         <div class="container my-5 py-5">
@@ -176,7 +177,6 @@
           </div>
         </div>
     </div>
-  </div>
   <!-- footer --> 
   <div>
     <?php $IPATH = $_SERVER["DOCUMENT_ROOT"]."/btl-web/";

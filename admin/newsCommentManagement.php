@@ -37,11 +37,11 @@
                   <th>User_id</th>
                   <th>Thời gian</th>
                   <th>Nội dung</th>
-                  <th>Prod_id</th>
+                  <th>News_id</th>
                   <th>Sửa/Xóa thông tin</th>
               </tr>
               <tbody>";
-      $sql = "SELECT * from prod_comments";
+      $sql = "SELECT * from news_comments";
       $result = $conn->query($sql);
       if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
@@ -50,20 +50,20 @@
           $datetime = $row['datetime'];
           $content = $row['content'];
           $content = mysqli_real_escape_string($conn, $content);
-          $prod_id = $row['prod_id'];
+          $news_id = $row['news_id'];
           echo "<tr>
                   <td>" . $id . "</td>
                   <td>" . $user_id . "</td>
                   <td>" . $datetime . "</td>
                   <td>" . $content . "</td>
-                  <td>" . $prod_id . "</td>
+                  <td>" . $news_id . "</td>
                   <td> 
                       <a href='editComment.php?
                         id=$id&
                         user_id=$user_id&
                         datetime=$datetime&
                         content=$content&
-                        prod_id=$prod_id&' 
+                        prod_id=$news_id&' 
                         class='btn btn-primary m-r-1em' name='edit'>Sửa</a>
                       <a href='deleteComment.php?id=$id' class='btn btn-danger'>Xóa</a>
                   </td>

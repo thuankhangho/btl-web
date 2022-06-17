@@ -38,6 +38,6 @@
     <a href="productManagement.php" style="text-decoration: none"><div class="p-3 mb-2 bg-secondary bg-gradient text-white">Quản lý sản phẩm</div></a>
     <a href="newsManagement.php" style="text-decoration: none"><div class="p-3 mb-2 bg-success bg-gradient text-white">Quản lý tin tức</div></a>
     <a href="productCommentManagement.php" style="text-decoration: none"><div class="p-3 mb-2 bg-danger bg-gradient text-white">Quản lý bình luận của sản phẩm</div></a>
-    <a href="newsCommentManagement.php" style="text-decoration: none"><div class="p-3 mb-2 bg-danger bg-gradient text-white">Quản lý bình luận của tin tức</div></a>
+    <a href="newsCommentManagement.php" style="text-decoration: none"><div class="p-3 mb-2 bg-info bg-gradient text-white">Quản lý bình luận của tin tức</div></a>
 </body>
 </html>
