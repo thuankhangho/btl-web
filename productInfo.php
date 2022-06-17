@@ -176,7 +176,8 @@
                 {
                   echo "Chưa có bình luận nào";
                 }
-                if ($_SESSION['admin'] == 1){
+                if (isset($_SESSION['admin']) == false);
+                else if ($_SESSION['admin'] == 1){
                   foreach($cmts as $comment){
               ?>
               <div class="card-body">
