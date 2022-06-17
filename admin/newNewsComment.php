@@ -7,14 +7,10 @@
       // // insert query
       // $nameErr = $YearErr ='';
       //$id = $_POST['id'];
-      $username = $_POST['username'];
-      $password = $_POST['password'];
-      $fullname = $_POST['full_name'];
-      $sex = $_POST['sex'];
-      $birthday = $_POST['birthday'];
-      $email = $_POST['email'];
-      $phone = $_POST['phone'];
-      $address = $_POST['address'];
+      $user_id = $_POST['user_id'];
+      $datetime = $_POST['datetime'];
+      $content = $_POST['content'];
+      $news_id = $_POST['news_id'];
       // if($input_name=='')
       // {
       //     $nameErr = "Name is required";
@@ -35,18 +31,17 @@
       // {
       //     $YearErr = "Year must be within the range of 1990-2022";
       // }
-      $query2 = "INSERT INTO user (username, password, full_name, sex, birthday, email, phone, address) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";;
+      $query2 = "INSERT INTO news_comments (user_id, datetime, content, news_id) VALUES (?, ?, ?, ?)";;
       $stmt = $conn->prepare($query2);
       // prepare query for execution
 
       // Execute the query
       // if($nameErr==''&&$YearErr==''){
-          $stmt->bind_param('ssssssss', $username, $password, $fullname,
-          $sex, $birthday, $email, $phone, $address);
+          $stmt->bind_param('issi', $user_id, $datetime, $content, $news_id);
           $stmt->execute();
           if ($_POST['submit'])
           {
-            echo "<script>window.location.href='newsCommentManagement.php'; alert('Record was saved successfully.')</script>";
+            echo "<script>window.location.href='newsCommentManagement.php'; alert('Tạo mới bình luận thành công!')</script>";
           }
       // }
       // else{
@@ -82,62 +77,36 @@
   <style>
   .container{ margin: 0 auto; }
   </style>
+  <title>Thêm bình luận</title>
 </head>
 <body>
   <!-- container -->
   <div class="container">
     <div class="page-header">
-      <h1>Thêm thành viên</h1>
+      <h1>Thêm bình luận</h1>
     </div>
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
       <table class='table table-hover table-responsive table-bordered'>
-        <!-- <tr>
-          <td>ID</td>
-          <td><input type='text' name='id' class='form-control' required></td>
-        </tr> -->
         <tr>
-          <td>Username</td>
-          <td><input type='text' name='username' class='form-control' required></td>
+          <td>ID người viết bình luận</td>
+          <td><input type='number' name='user_id' class='form-control' required></td>
         </tr>
         <tr>
-          <td>Password</td>
-          <td><input type='text' name='password' class='form-control' required></td>
+          <td>Thời gian</td>
+          <td><input type='datetime-local' name='datetime' class='form-control' required></td>
         </tr>
         <tr>
-          <td>Họ & tên</td>
-          <td><input type='text' name='full_name' class='form-control' required></td>
+          <td>Nội dung bình luận</td>
+          <td><input type='textarea' name='content' class='form-control' style="resize:none" required></td>
         </tr>
         <tr>
-          <td>Giới tính</td>
-          <td>
-            <select class="select" name="sex" required>
-              <option value="Nam">Nam</option>
-              <option value="Nữ">Nữ</option>
-              <option value="Khác">Khác</option>
-            </select>
-          </td>
+          <td>ID bài viết</td>
+          <td><input type='number' name='news_id' class='form-control' required></td>
         </tr>
-        <tr>
-          <td>Sinh nhật</td>
-          <td><input type='date' name='birthday' class='form-control' required></td>
-        </tr>
-        <tr>
-          <td>Email</td>
-          <td><input type='email' name='email' class='form-control' required></td>
-        </tr>
-        <tr>
-          <td>Số điện thoại</td>
-          <td><input type='text' name='phone' class='form-control' required></td>
-        </tr>
-        <tr>
-          <td>Địa chỉ</td>
-          <td><input type='text' name='address' class='form-control' required></td>
-        </tr>
-        <tr>
           <td></td>
           <td>
             <input type='submit' name='submit' value='Lưu' class='btn btn-primary' />
-            <a href='memberManagement.php' class='btn btn-danger'>Quay lại bảng thành viên</a>
+            <a href='newsCommentManagement.php' class='btn btn-danger'>Quay lại bảng bình luận bài viết</a>
           </td>
         </tr>
       </table>
