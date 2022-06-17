@@ -28,7 +28,7 @@
     <div class="col-sm-8">
     <h2 style="font-size: 40px; color: #262626; font-weight: bold; padding: 10px; background: #f7f7f7; border: 1px solid #efefef;">Giới thiệu</h2>
     <h4><br>1. Hướng phát triển</h4><p>
-      Sau khi chán với thú vui quản lý nhà hàng khi còn trăm công ngàn việc phải lo, vào ngày 15/12/2020,
+      Vào ngày 15/12/2020,
       Trương Bỉ Diệm đã bán lại nhà hàng cho Ô Tá Cự, chủ nhà hàng đương thời và cũng là người đã đưa nhà
       hàng lên đến đỉnh thành công như ngày hôm nay với đa dạng kế sách cải tiến về hướng làm việc cũng 
       như sự tiếp cận về văn hóa và các tín ngưỡng phương Đông. <br>
@@ -120,7 +120,21 @@
     </p>
     
     </div>
-    <div class="col-sm-4" style="border: 1px solid black; padding: 0 20px 0 10px; margin-top: 10px"></div>
+    <div class="col-sm-4" style="padding: 0 20px 0 10px; margin-top: 10px">
+      <div class="row" style=" font-weight: bold; font-size: 30px; display: flex; justify-content: center; align-items: center; font-family: Courier, sans-serif">
+        HỖ TRỢ TRỰC TUYẾN
+      </div>
+      <div class="row" style="font-size: 20px; background-color: #2ed573; border: 1px solid black; display: flex">
+        <p style="padding-top: 10px"><i class="fa fa-phone"> Mr. Sơn: (+84)822 870 179</i><br>
+        <i class="fa fa-phone"> Mr. Khang: (+84)838 374 577</i>
+      </p>
+      </div>
+      <div class="row" style="font-size: 20px; background-color: #ffa502; border: 1px solid black; display: flex">
+        <p style="padding-top: 10px"><i class="fas fa-envelope"> Mr. Khang: khang.lamborghini@hcmut.edu.vn</i><br>
+        <i class="fas fa-envelope"> Mr. Toàn: toan.vu1805@hcmut.edu.vn</i>
+      </p>
+      </div>
+    </div>
   </div>
   <!-- end main content --> 
 
