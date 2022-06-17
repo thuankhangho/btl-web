@@ -122,7 +122,6 @@
                   </form>
                 </div>
                 <?php 
-
                   if($cmt_cnt == 0)
                   {
                     echo "Chưa có bình luận nào";
