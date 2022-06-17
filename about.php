@@ -23,7 +23,7 @@
   </div>
   <!-- end nav bar --> 
   <div class="height d-flex justify-content-center align-items-center" style="
-  background-image: url(img/site-name/prod-page.jpg);
+  background-image: url(img/site-name/about-page.jpg);
   background-repeat: no-repeat;
   background-position: center;
   padding: 9% 8%;
