@@ -54,6 +54,7 @@
                   <td>
                     <a href='editNews.php?id=$id&name=$name&datetime=$datetime&content=$content' class='btn btn-primary m-r-1em' name='edit'>Sửa</a>
                     <a href='deleteNews.php?id=$id' class='btn btn-danger'>Xóa</a>
+                    <a href='../newsInfo.php?id=$id' class='btn btn-success'>Xem</a>
                   </td>
                 </tr>";
         }

@@ -35,13 +35,12 @@
 
       // Execute the query
       // if($nameErr==''&&$YearErr==''){
-          $stmt->bind_param('sssssssss', $username, $password, $fullname,
-          $sex, $birthday, $email, $phone, $address, $id);
+          $stmt->bind_param('sssi', $name, $datetime, $content, $id);
           $stmt->execute();
       // }
       if ($_POST['submit'])
       {
-        echo "<script>window.location.href='editMember.php?id=$id&username=$username&password=$password&full_name=$fullname&sex=$sex&birthday=$birthday&email=$email&phone=$phone&address=$address'; alert('Chỉnh sửa thành công!')</script>";
+        echo "<script>window.location.href='editNews.php?id=$id&username=$username&password=$password&full_name=$fullname&sex=$sex&birthday=$birthday&email=$email&phone=$phone&address=$address'; alert('Chỉnh sửa thành công!')</script>";
       }
       // else{
       //     echo "<div class='alert alert-danger'>Unable to save record.</div>";
@@ -66,8 +65,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Font Awesome CDN-->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" rel="stylesheet">
   <!-- jQuery CDN-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!-- jsdelivr CDN / Sweet Alert2-->
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <!-- Bootstrap CDN-->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -76,73 +79,37 @@
   <style>
     .container { margin: 0 auto; }
   </style>
+  <title>Sửa thông tin bài viết</title>
 </head>
 <body>
   <!-- container -->
   <div class="container">
     <div class="page-header">
-      <h1>Sửa thông tin thành viên</h1>
+      <h1>Sửa thông tin bài viết</h1>
     </div>
     <form method="post">
       <table class='table table-hover table-responsive table-bordered'>
-        <tr>
-          <td>ID</td>
+      <tr>
+          <td>ID bài viết</td>
           <td><input type='text' name='id' class='form-control' value="<?php echo $_GET['id']?>" disabled></td>
         </tr>
-        <tr>
-          <td>Username</td>
-          <td><input type='text' name='username' class='form-control' value="<?php echo $_GET['username']?>" required></td>
+      <tr>
+          <td>Tên bài viết</td>
+          <td><input type='text' name='name' class='form-control' value="<?php echo $_GET['name']?>" required></td>
         </tr>
         <tr>
-          <td>Password</td>
-          <td><input type='text' name='password' class='form-control' value="<?php echo $_GET['password']?>" required></td>
+          <td>Ngày giờ đăng bài viết</td>
+          <td><input type='datetime-local' name='datetime' class='form-control' value="<?php echo $_GET['datetime']?>" required></td>
         </tr>
         <tr>
-          <td>Họ & tên</td>
-          <td><input type='text' name='full_name' class='form-control' value="<?php echo $_GET['full_name']?>" required></td>
-        </tr>
-        <tr>
-          <td>Giới tính</td>
-          <td>
-            <select class="select" name="sex" required>
-              <?php 
-                if ($_GET['sex'] == 'Nam') 
-                  echo "<option value='Nam' selected>Nam</option>
-                        <option value='Nữ'>Nữ</option>
-                        <option value='Khác'>Khác</option>";
-                elseif ($_GET['sex'] == 'Nữ') 
-                  echo "<option value='Nam'>Nam</option>
-                        <option value='Nữ' selected>Nữ</option>
-                        <option value='Khác'>Khác</option>";
-                elseif ($_GET['sex'] == 'Khác') 
-                  echo "<option value='Nam'>Nam</option>
-                        <option value='Nữ'>Nữ</option>
-                        <option value='Khác' selected>Khác</option>";
-              ?>
-            </select>
-          </td>
-        </tr>
-        <tr>
-          <td>Sinh nhật</td>
-          <td><input type='date' name='birthday' class='form-control' value="<?php echo $_GET['birthday']?>" required></td>
-        </tr>
-        <tr>
-          <td>Email</td>
-          <td><input type='email' name='email' class='form-control' value="<?php echo $_GET['email']?>" required></td>
-        </tr>
-        <tr>
-          <td>Số điện thoại</td>
-          <td><input type='text' name='phone' class='form-control' value="<?php echo $_GET['phone']?>" required></td>
-        </tr>
-        <tr>
-          <td>Địa chỉ</td>
-          <td><input type='text' name='address' class='form-control' value="<?php echo $_GET['address']?>" required></td>
+          <td>Nội dung bài viết</td>
+          <td><input type='textarea' name='content' class='form-control' value="<?php echo $_GET['content']?>" required></td>
         </tr>
         <tr>
           <td></td>
           <td>
           <input type='submit' name='submit' value='Lưu' class='btn btn-primary'/>
-          <a href='memberManagement.php' class='btn btn-danger'>Quay lại bảng thành viên</a>
+          <a href='newsManagement.php' class='btn btn-danger'>Quay lại bảng tin tức</a>
           </td>
         </tr>
       </table>

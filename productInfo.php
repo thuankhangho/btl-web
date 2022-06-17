@@ -71,7 +71,7 @@
     elseif (isset($_POST['comment_post']) && isset($_POST['flag']) == false) {
       echo "<script>
               Swal.fire({
-                icon: 'warring',
+                icon: 'warning',
                 title: 'Bạn cần đăng nhập để có thể viết bình luận!',
                 confirmButtonColor: '#ff7f50',
                 footer: '<a href=login.php>Nhấn vào đây để đăng nhập</a>'
