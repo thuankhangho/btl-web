@@ -38,7 +38,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   <!-- CSS -->
   <link rel="stylesheet" href="styles/productInfo-style.css">
-  <script src = "js/script.js"></script>
   <title>Thông tin món ăn</title>
 </head>
 
@@ -69,7 +68,7 @@
       }
       mysqli_free_result($res);
     }
-    elseif (isset($_POST['comment_post'])) {
+    elseif (isset($_POST['comment_post']) && isset($_POST['flag']) == false) {
       echo "<script>
               Swal.fire({
                 icon: 'warring',
@@ -177,7 +176,43 @@
                 {
                   echo "Chưa có bình luận nào";
                 }
-                foreach($cmts as $comment){
+                if ($_GET['flag'] == 'true'){
+                  foreach($cmts as $comment){
+                  ?>
+              <div class="card-body">
+                <div class="d-flex flex-start align-items-center">
+                  <img class="rounded-circle shadow-1-strong me-3"
+                    src="img/logo.png" alt="avatar" width="60"
+                    height="60" />
+                  <div>
+                    <h6 class="fw-bold text-primary mb-1">
+                      <?php $key = array_search($comment['user_id'], array_column($users, 'id')); 
+                      echo ($users[$key]['username']);
+                      ?>
+                    </h6>
+                    <p class="text-muted small mb-0">
+                      <?php echo $comment['datetime'];?>
+                    </p>
+                  </div>
+                </div>
+
+                <p class="mt-3 mb-4 pb-2">
+                  <?php echo $comment['content'];?>
+                </p>
+
+                <div class="small d-flex justify-content-start">
+                  <a href="#!" class="d-flex align-items-center me-3">
+                    <i class="fas fa-exclamation-triangle me-2"></i>
+                    <p class="mb-0">Xoá</p>
+                </div>
+              </div>
+                <?php
+                  }
+                mysqli_close($conn);
+              }
+                else if ($_GET['flag'] == 'false') 
+                {
+                  foreach($cmts as $comment){
               ?>
               <!--cmt-->
               <div class="card-body">
@@ -219,6 +254,7 @@
               <?php 
                 }
                 mysqli_close($conn);
+              }
               ?>
               <!--cmt-->
             </div>

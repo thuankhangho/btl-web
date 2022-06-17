@@ -25,9 +25,9 @@
     include($IPATH."navbar.php");?>
   </div>
   <!-- end nav bar --> 
-    <form method="post" action="commmentManagement.php">
+    <form method="post" action="productCommmentManagement.php">
       <!--<a href="memberManagement.php"><input type="button" class="p-3 mb-2 bg-primary bg-gradient text-white" name="display" value="Hiển thị danh sách thành viên"></a>-->
-      <a href="newComment.php"><input type="button" class="p-3 mb-2 bg-primary bg-gradient text-white" value="Thêm bình luận"></a>
+      <a href="newProductComment.php"><input type="button" class="p-3 mb-2 bg-primary bg-gradient text-white" value="Thêm bình luận"></a>
     </form>
     <?php
       include('../config/config.php');
@@ -58,14 +58,8 @@
                   <td>" . $content . "</td>
                   <td>" . $prod_id . "</td>
                   <td> 
-                      <a href='editComment.php?
-                        id=$id&
-                        user_id=$user_id&
-                        datetime=$datetime&
-                        content=$content&
-                        prod_id=$prod_id&' 
-                        class='btn btn-primary m-r-1em' name='edit'>Sửa</a>
-                      <a href='deleteComment.php?id=$id' class='btn btn-danger'>Xóa</a>
+                      <a href='../productInfo.php?prod_id=$prod_id&flag=true'
+                        class='btn btn-primary m-r-1em' name='edit'>Xem</a>
                   </td>
                 </tr>";
         }
