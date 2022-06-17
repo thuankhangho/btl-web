@@ -15,7 +15,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   <!-- CSS -->
   <link rel="stylesheet" href="admin-styles/styles.css">
-  <title>Admin Panel</title>
+  <title>Bảng điều khiển của Admin</title>
 </head>
 <body>
   <?php 
@@ -23,7 +23,8 @@
     if (isset($_SESSION['admin_id'])) {
       $id = $_SESSION['admin_id'];
       $username = $_SESSION['admin_username'];
-    } else {
+    } 
+    else{
       header('Location: ../admin/login.php');
     }
   ?>
@@ -33,17 +34,10 @@
     include($IPATH."navbar.php");?>
   </div>
   <!-- end nav bar --> 
-
     <a href="memberManagement.php" style="text-decoration: none"><div class="p-3 mb-2 bg-primary bg-gradient text-white">Quản lý thành viên</div></a>
     <a href="productManagement.php" style="text-decoration: none"><div class="p-3 mb-2 bg-secondary bg-gradient text-white">Quản lý sản phẩm</div></a>
     <a href="newsManagement.php" style="text-decoration: none"><div class="p-3 mb-2 bg-success bg-gradient text-white">Quản lý tin tức</div></a>
-    <a href="commentManagement.php" style="text-decoration: none"><div class="p-3 mb-2 bg-danger bg-gradient text-white">Quản lý bình luận</div></a>
-  <!-- footer --> 
-  <!-- <footer class="bg-light text-center text-lg-start">
-  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-    Admin Panel!!!
-  </div>
-  </footer> -->
-  <!-- end footer  -->
+    <a href="productCommentManagement.php" style="text-decoration: none"><div class="p-3 mb-2 bg-danger bg-gradient text-white">Quản lý bình luận của sản phẩm</div></a>
+    <a href="newsCommentManagement.php" style="text-decoration: none"><div class="p-3 mb-2 bg-danger bg-gradient text-white">Quản lý bình luận của tin tức</div></a>
 </body>
 </html>
