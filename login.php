@@ -37,14 +37,17 @@
       $password =   $_POST['password'];
       $password =   mysqli_real_escape_string($conn, $password);
 
-      $query    = "SELECT * FROM `user` WHERE username='$username' AND password='" . $password. "'";
-      $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
-      $rows = mysqli_num_rows($result);
+      $query    = "SELECT * FROM `user` WHERE username='" . $username . "' AND password='" . $password . "'";
+      $result = $conn->query($query);
+      $tmp = $result->fetch_assoc();
+      $rows = $result->num_rows;
       if ($rows == 1) {
-        $id = htmlspecialchars(mysqli_fetch_all($result, MYSQLI_ASSOC)[0]['id']);
+        $id = $tmp['id'];
+        $admin = $tmp['admin'];
         $_SESSION['user_id'] = $id;
         $_SESSION['username'] = $username;
-        header('location:../btl-web/');
+        $_SESSION['admin'] = $admin;
+        header('location: index.php');
         mysqli_free_result($result);
       } else {
         echo "<script>

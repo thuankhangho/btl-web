@@ -53,6 +53,9 @@
           </a>
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
               <li><a class="dropdown-item" href="editProfile.php?id=<?php echo $_SESSION['user_id']; ?>">Chỉnh sửa thông tin</a></li> 
+              <?php
+                if (isset($_SESSION['admin'])) echo "<li><a class='dropdown-item' href='admin/index.php'>Bảng điều khiển của Admin</a></li>";
+              ?>
               <!-- <li><a class="dropdown-item" href="#">Cài đặt</a></li> -->
               <!-- <li><a class="dropdown-item" href="profile.php">Tài khoản</a></li> -->
               <li><hr class="dropdown-divider"></li>

@@ -20,9 +20,9 @@
 <body>
   <?php 
     session_start();
-    if (isset($_SESSION['admin_id'])) {
-      $id = $_SESSION['admin_id'];
-      $username = $_SESSION['admin_username'];
+    if (isset($_SESSION['admin'])) {
+      $id = $_SESSION['user_id'];
+      $username = $_SESSION['username'];
     } 
     else{
       header('Location: ../admin/login.php');

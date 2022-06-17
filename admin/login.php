@@ -37,13 +37,14 @@
       $password =   $_POST['password'];
       $password =   mysqli_real_escape_string($conn, $password);
 
-      $query    = "SELECT * FROM `admin` WHERE username='$username' AND password='" . $password. "'";
-      $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
-      $rows = mysqli_num_rows($result);
+      $query    = "SELECT * FROM `user` WHERE username = '".$username."' AND password = '".$password."' AND admin = 1";
+      $result = $conn->query($query);
+      $rows = $result->num_rows;
       if ($rows == 1) {
-        $id = htmlspecialchars(mysqli_fetch_all($result, MYSQLI_ASSOC)[0]['id']);
-        $_SESSION['admin_id'] = $id;
-        $_SESSION['admin_username'] = $username;
+        $id = $result->fetch_assoc()['id'];
+        $_SESSION['user_id'] = $id;
+        $_SESSION['username'] = $username;
+        $_SESSION['admin'] = 1;
         header('location:../admin/');
         mysqli_free_result($result);
       } else {
