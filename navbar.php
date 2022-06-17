@@ -24,7 +24,7 @@
   </nav>    
   <nav class="my-navbar navbar navbar-expand-xl navbar-dark bg-dark">
   <div class="col-sm-3"></div>
-  <div class="col-sm-6">
+  <div class="col-sm-6" style="text-align: center">
     <div class="my-container container-fluid justify-content-center">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
           <span class="navbar-toggler-icon justify-content-center"></span>
