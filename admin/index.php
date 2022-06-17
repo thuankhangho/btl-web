@@ -20,7 +20,7 @@
 <body>
   <?php 
     session_start();
-    if (isset($_SESSION['admin'])) {
+    if ($_SESSION['admin']) {
       $id = $_SESSION['user_id'];
       $username = $_SESSION['username'];
     } 

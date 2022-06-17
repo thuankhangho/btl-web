@@ -178,7 +178,7 @@
                 }
                 if ($_SESSION['admin'] == 1){
                   foreach($cmts as $comment){
-                  ?>
+              ?>
               <div class="card-body">
                 <div class="d-flex flex-start align-items-center">
                   <img class="rounded-circle shadow-1-strong me-3"
@@ -204,16 +204,17 @@
                   <a href="#!" class="d-flex align-items-center me-3">
                     <i class="fas fa-exclamation-triangle me-2"></i>
                     <p class="mb-0">Xoá</p>
+                  </a>
                 </div>
               </div>
                 <?php
-                  }
-                mysqli_close($conn);
-              }
-                else
-                {
-                  foreach($cmts as $comment){
-              ?>
+                    }
+                  mysqli_close($conn);
+                }
+                  else
+                  {
+                    foreach($cmts as $comment){
+                ?>
               <!--cmt-->
               <div class="card-body">
                 <div class="d-flex flex-start align-items-center">
