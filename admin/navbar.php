@@ -13,8 +13,7 @@
     <!-- Container wrapper -->
     <div class="my-container container-fluid">
         <a class="navbar-brand" href="index.php">
-            <img href="index.php" src="../img/logo.png" width="30" height="30" class="d-inline-block align-text-top" alt="">
-            ADMIN DASHBOARD
+            <img href="index.php" src="../img/logo.png" width="30" height="30" class="d-inline-block align-text-top" alt=""><b>BẢNG ĐIỀU KHIỂN CỦA ADMIN</b>
         </a>
       <!-- Right elements -->
       <div class="d-flex align-items-center">

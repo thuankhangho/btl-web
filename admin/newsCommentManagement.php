@@ -25,9 +25,9 @@
     include($IPATH."navbar.php");?>
   </div>
   <!-- end nav bar --> 
-    <form method="post" action="commmentManagement.php">
+    <form method="post" action="newCommmentManagement.php">
       <!--<a href="memberManagement.php"><input type="button" class="p-3 mb-2 bg-primary bg-gradient text-white" name="display" value="Hiển thị danh sách thành viên"></a>-->
-      <a href="newComment.php"><input type="button" class="p-3 mb-2 bg-primary bg-gradient text-white" value="Thêm bình luận"></a>
+      <a href="newNewsComment.php"><input type="button" class="p-3 mb-2 bg-primary bg-gradient text-white" value="Thêm bình luận"></a>
     </form>
     <?php
       include('../config/config.php');
@@ -37,8 +37,8 @@
                   <th>ID người viết bình luận</th>
                   <th>Thời gian</th>
                   <th>Nội dung</th>
-                  <th>ID bài tin tức</th>
-                  <th>Xem bài tin tức</th>
+                  <th>ID bài viết</th>
+                  <th>Xem bài viết chứa bình luận</th>
               </tr>
               <tbody>";
       $sql = "SELECT * from news_comments";
@@ -57,13 +57,8 @@
                   <td>" . $datetime . "</td>
                   <td>" . $content . "</td>
                   <td>" . $news_id . "</td>
-                  <td> 
-                      <a href='editComment.php?
-                        id=$id&
-                        user_id=$user_id&
-                        datetime=$datetime&
-                        content=$content&
-                        prod_id=$news_id&' 
+                  <td>
+                      <a href='../newsInfo.php?news_id=$news_id'
                         class='btn btn-primary m-r-1em' name='edit'>Xem</a>
                   </td>
                 </tr>";

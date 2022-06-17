@@ -4,68 +4,33 @@
     include ('../config/config.php');
 
     try {
-      // // insert query
-      // $nameErr = $YearErr ='';
-      //$id = $_POST['id'];
-      $username = $_POST['username'];
-      $password = $_POST['password'];
-      $fullname = $_POST['full_name'];
-      $sex = $_POST['sex'];
-      $birthday = $_POST['birthday'];
-      $email = $_POST['email'];
-      $phone = $_POST['phone'];
-      $address = $_POST['address'];
-      // if($input_name=='')
-      // {
-      //     $nameErr = "Name is required";
-      // }
-      // else if(strlen($input_name)>40||strlen($input_name)<5)
-      // {
-      //     $nameErr = "Name must be within 5-40 characters";
-      // }
-      // if($input_name=='')
-      // {
-      //     $YearErr = "Year is required";
-      // }
-      // else if(!is_numeric($input_year))
-      // {
-      //     $YearErr = "Invalid input!";
-      // }
-      // else if($input_year<1990||$input_year>2022)
-      // {
-      //     $YearErr = "Year must be within the range of 1990-2022";
-      // }
-      $query2 = "INSERT INTO user (username, password, full_name, sex, birthday, email, phone, address) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";;
-      $stmt = $conn->prepare($query2);
-      // prepare query for execution
+      $user_id = test_input($_POST['user_id']);
+      $datetime = test_input($_POST['datetime']);
+      $content = test_input($_POST['content']);
+      $news_id = test_input($_POST['news_id']);
 
-      // Execute the query
-      // if($nameErr==''&&$YearErr==''){
-          $stmt->bind_param('ssssssss', $username, $password, $fullname,
-          $sex, $birthday, $email, $phone, $address);
-          $stmt->execute();
-          if ($_POST['submit'])
-          {
-            echo "<script>window.location.href='newsCommentManagement.php'; alert('Record was saved successfully.')</script>";
-          }
-      // }
-      // else{
-      //     echo "<div class='alert alert-danger'>Unable to save record.</div>";
-      //     if($nameErr!='')
-      //     {
-      //         echo "<div class='alert alert-danger'>'$nameErr'</div>";
-      //     }
-      //     if($YearErr!='')
-      //     {
-      //         echo "<div class='alert alert-danger'>'$YearErr'</div>";
-      //     }
-      // }
+      if (!preg_match("/^[0-9]*$/", $user_id) ||
+          !preg_match("/^[0-9]*$/", $news_id)
+      ) {
+        echo "<div class='alert alert-danger'>Input invalid</div>";
+      }
+      else {
+        $query2 = "INSERT INTO news_comments (user_id, datetime, content, news_id) VALUES (?, ?, ?, ?)";;
+        $stmt = $conn->prepare($query2);
+  
+        $stmt->bind_param('issi', $user_id, $datetime, $content, $news_id);
+        $stmt->execute();
+        if ($_POST['submit']) {
+          echo "<script>window.location.href='newsCommentManagement.php'; alert('Tạo mới bình luận thành công!')</script>";
+        }
+      }
       mysqli_close($conn);
     }   
     // show error
     catch(mysqli_sql_exception $exception){
       die('ERROR: ' . $exception->getMessage());
     }
+    
   }
 ?>
 
@@ -82,62 +47,36 @@
   <style>
   .container{ margin: 0 auto; }
   </style>
+  <title>Thêm bình luận</title>
 </head>
 <body>
   <!-- container -->
   <div class="container">
     <div class="page-header">
-      <h1>Thêm thành viên</h1>
+      <h1>Thêm bình luận</h1>
     </div>
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
       <table class='table table-hover table-responsive table-bordered'>
-        <!-- <tr>
-          <td>ID</td>
-          <td><input type='text' name='id' class='form-control' required></td>
-        </tr> -->
         <tr>
-          <td>Username</td>
-          <td><input type='text' name='username' class='form-control' required></td>
+          <td>ID người viết bình luận</td>
+          <td><input type='number' name='user_id' class='form-control' required></td>
         </tr>
         <tr>
-          <td>Password</td>
-          <td><input type='text' name='password' class='form-control' required></td>
+          <td>Thời gian</td>
+          <td><input type='datetime-local' name='datetime' class='form-control' required></td>
         </tr>
         <tr>
-          <td>Họ & tên</td>
-          <td><input type='text' name='full_name' class='form-control' required></td>
+          <td>Nội dung bình luận</td>
+          <td><input type='textarea' name='content' class='form-control' style="resize:none" required></td>
         </tr>
         <tr>
-          <td>Giới tính</td>
-          <td>
-            <select class="select" name="sex" required>
-              <option value="Nam">Nam</option>
-              <option value="Nữ">Nữ</option>
-              <option value="Khác">Khác</option>
-            </select>
-          </td>
+          <td>ID bài viết</td>
+          <td><input type='number' name='news_id' class='form-control' required></td>
         </tr>
-        <tr>
-          <td>Sinh nhật</td>
-          <td><input type='date' name='birthday' class='form-control' required></td>
-        </tr>
-        <tr>
-          <td>Email</td>
-          <td><input type='email' name='email' class='form-control' required></td>
-        </tr>
-        <tr>
-          <td>Số điện thoại</td>
-          <td><input type='text' name='phone' class='form-control' required></td>
-        </tr>
-        <tr>
-          <td>Địa chỉ</td>
-          <td><input type='text' name='address' class='form-control' required></td>
-        </tr>
-        <tr>
           <td></td>
           <td>
             <input type='submit' name='submit' value='Lưu' class='btn btn-primary' />
-            <a href='memberManagement.php' class='btn btn-danger'>Quay lại bảng thành viên</a>
+            <a href='newsCommentManagement.php' class='btn btn-danger'>Quay lại bảng bình luận bài viết</a>
           </td>
         </tr>
       </table>

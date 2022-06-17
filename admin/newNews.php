@@ -4,9 +4,6 @@
     include ('../config/config.php');
 
     try {
-      // // insert query
-      // $nameErr = $YearErr ='';
-      //$id = $_POST['id'];
       $username = $_POST['username'];
       $password = $_POST['password'];
       $fullname = $_POST['full_name'];
@@ -15,51 +12,17 @@
       $email = $_POST['email'];
       $phone = $_POST['phone'];
       $address = $_POST['address'];
-      // if($input_name=='')
-      // {
-      //     $nameErr = "Name is required";
-      // }
-      // else if(strlen($input_name)>40||strlen($input_name)<5)
-      // {
-      //     $nameErr = "Name must be within 5-40 characters";
-      // }
-      // if($input_name=='')
-      // {
-      //     $YearErr = "Year is required";
-      // }
-      // else if(!is_numeric($input_year))
-      // {
-      //     $YearErr = "Invalid input!";
-      // }
-      // else if($input_year<1990||$input_year>2022)
-      // {
-      //     $YearErr = "Year must be within the range of 1990-2022";
-      // }
+
       $query2 = "INSERT INTO user (username, password, full_name, sex, birthday, email, phone, address) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";;
       $stmt = $conn->prepare($query2);
-      // prepare query for execution
 
-      // Execute the query
-      // if($nameErr==''&&$YearErr==''){
-          $stmt->bind_param('ssssssss', $username, $password, $fullname,
-          $sex, $birthday, $email, $phone, $address);
-          $stmt->execute();
-          if ($_POST['submit'])
-          {
-            echo "<script>window.location.href='newsManagement.php'; alert('Tạo tin tức mới thành công!')</script>";
-          }
-      // }
-      // else{
-      //     echo "<div class='alert alert-danger'>Unable to save record.</div>";
-      //     if($nameErr!='')
-      //     {
-      //         echo "<div class='alert alert-danger'>'$nameErr'</div>";
-      //     }
-      //     if($YearErr!='')
-      //     {
-      //         echo "<div class='alert alert-danger'>'$YearErr'</div>";
-      //     }
-      // }
+      $stmt->bind_param('ssssssss', $username, $password, $fullname,
+      $sex, $birthday, $email, $phone, $address);
+      $stmt->execute();
+      if ($_POST['submit']) {
+        echo "<script>window.location.href='newsManagement.php'; alert('Tạo tin tức mới thành công!')</script>";
+      }
+
       mysqli_close($conn);
     }   
     // show error

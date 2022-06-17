@@ -1,4 +1,4 @@
-var VALID_FILE_EXTENSIONS = [".jpg", ".jpeg", ".png"];
+var VALID_FILE_EXTENSIONS = [".jpg", ".jpeg", ".png", ".gif"];
 function ValidateSingleInput(oInput) {
     if (oInput.type == "file") {
         var sFileName = oInput.value;

@@ -185,7 +185,7 @@
                     <h6 class="fw-bold text-primary mb-1">
                       <?php 
                         $key = array_search($comment['user_id'], array_column($users, 'id'));
-                        $id = $comment['id']; 
+                        $id = $comment['id'];
                         echo $users[$key]['username'];
                       ?>
                     </h6>

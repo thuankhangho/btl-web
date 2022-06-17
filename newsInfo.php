@@ -128,8 +128,46 @@
                   {
                     echo "Chưa có bình luận nào";
                   }
-                  foreach($cmts as $comment){
+                  if ($_SESSION['admin'] == 1){
+                    foreach($cmts as $comment){
                 ?>
+                <div class="card-body">
+                  <div class="d-flex flex-start align-items-center">
+                    <img class="rounded-circle shadow-1-strong me-3"
+                      src="img/logo.png" alt="avatar" width="60"
+                      height="60" />
+                    <div>
+                      <h6 class="fw-bold text-primary mb-1">
+                        <?php 
+                          $key = array_search($comment['user_id'], array_column($users, 'id'));
+                          $id = $comment['id'];
+                          echo $users[$key]['username'];
+                        ?>
+                      </h6>
+                      <p class="text-muted small mb-0">
+                        <?php echo $comment['datetime'];?>
+                      </p>
+                    </div>
+                  </div>
+                  <p class="mt-3 mb-4 pb-2">
+                    <?php echo htmlspecialchars($comment['content']);?>
+                  </p>
+                  <div class="small d-flex justify-content-start">
+                  <a href=<?php echo "admin/deleteNewsComment.php?id=$id&news_id=$news_id"?> class="d-flex align-items-center me-3">
+                    <i class="fas fa-exclamation-triangle me-2"></i>
+                    <p class="mb-0">Xóa</p>
+                    </a>
+                    </a>
+                  </div>
+                </div>
+                <?php 
+                    }
+                    mysqli_close($conn);
+                  }
+                    else
+                    {
+                      foreach($cmts as $comment){
+                  ?>
                 <!--cmt-->
                 <div class="card-body">
                   <div class="d-flex flex-start align-items-center">
@@ -169,8 +207,9 @@
                   </div>
                 </div>
                 <?php 
-                  }
-                  mysqli_close($conn);
+                      }  
+                      mysqli_close($conn);
+                }
                 ?>
                 <!--cmt-->
               </div>
