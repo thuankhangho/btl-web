@@ -108,7 +108,7 @@
         </tr>
         <tr>
           <td>Hình ảnh sản phẩm</td>
-          <td><input type='file' name="img_path" class='form-control' onchange="ValidateSingleInput(this);" required accept=".png, .jpg, .jpeg"></td>
+          <td><input type='file' name="img_path" class='form-control' onchange="ValidateSingleInput(this);" required accept=".png, .jpg, .jpeg, .gif"></td>
         </tr>
         <tr>
           <td>Trạng thái</td>

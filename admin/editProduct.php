@@ -112,7 +112,7 @@
         </tr>
         <tr>
           <td>Hình ảnh mới sản phẩm<br>(để trống nếu không thay đổi)</td>
-          <td><input type="file" name="img_path" class='form-control' value="<?php echo $_GET['img_path']?>" onchange="ValidateSingleInput(this);" accept=".png, .jpg, .jpeg"></td>
+          <td><input type="file" name="img_path" class='form-control' value="<?php echo $_GET['img_path']?>" onchange="ValidateSingleInput(this);" accept=".png, .jpg, .jpeg, .gif"></td>
         </tr>
         <tr>
           <td>Trạng thái</td>
