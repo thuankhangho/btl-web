@@ -58,7 +58,7 @@
                   <td>" . $content . "</td>
                   <td>" . $prod_id . "</td>
                   <td> 
-                      <a href='../productInfo.php?prod_id=$prod_id&flag=true'
+                      <a href='../productInfo.php?prod_id=$prod_id'
                         class='btn btn-primary m-r-1em' name='edit'>Xem</a>
                   </td>
                 </tr>";

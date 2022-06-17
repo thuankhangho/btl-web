@@ -42,7 +42,7 @@
       $stmt->execute();
       if ($_POST['submit'])
           {
-            echo "<script>window.location.href='productManagement.php'; alert('Record was saved successfully.')</script>";
+            echo "<script>window.location.href='productManagement.php'; alert('Tạo sản phẩm mới thành công!')</script>";
           }
       move_uploaded_file($_POST['img_path'], '../img/product-list/' . $_POST['img_path']);
       // }

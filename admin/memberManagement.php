@@ -69,16 +69,7 @@
                 <td>" . $phone . "</td>
                 <td>" . $address . "</td>
                 <td>
-                  <a href='editMember.php?
-                    id=$id&
-                    username=$username&
-                    password=$password&full_name=$full_name&
-                    sex=$seggs&
-                    birthday=$birthday&
-                    email=$email&
-                    phone=$phone&
-                    address=$address' 
-                    class='btn btn-primary m-r-1em' name='edit'>Sửa</a>
+                  <a href='editMember.php?id=$id&username=$username&password=$password&full_name=$full_name&sex=$seggs&birthday=$birthday&email=$email&phone=$phone&address=$address' class='btn btn-primary m-r-1em' name='edit'>Sửa</a>
                   <a href='deleteMember.php?id=$id' class='btn btn-danger'>Xóa</a>
                 </td>
               </tr>";

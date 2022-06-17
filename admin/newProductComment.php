@@ -7,14 +7,10 @@
       // // insert query
       // $nameErr = $YearErr ='';
       //$id = $_POST['id'];
-      $username = $_POST['username'];
-      $password = $_POST['password'];
-      $fullname = $_POST['full_name'];
-      $sex = $_POST['sex'];
-      $birthday = $_POST['birthday'];
-      $email = $_POST['email'];
-      $phone = $_POST['phone'];
-      $address = $_POST['address'];
+      $user_id = $_POST['user_id'];
+      $datetime = $_POST['datetime'];
+      $content = $_POST['content'];
+      $prod_id = $_POST['prod_id'];
       // if($input_name=='')
       // {
       //     $nameErr = "Name is required";
@@ -35,18 +31,17 @@
       // {
       //     $YearErr = "Year must be within the range of 1990-2022";
       // }
-      $query2 = "INSERT INTO user (username, password, full_name, sex, birthday, email, phone, address) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";;
+      $query2 = "INSERT INTO prod_comments (user_id, datetime, content, prod_id) VALUES (?, ?, ?, ?)";;
       $stmt = $conn->prepare($query2);
       // prepare query for execution
 
       // Execute the query
       // if($nameErr==''&&$YearErr==''){
-          $stmt->bind_param('ssssssss', $username, $password, $fullname,
-          $sex, $birthday, $email, $phone, $address);
+          $stmt->bind_param('issi', $user_id, $datetime, $content, $prod_id);
           $stmt->execute();
           if ($_POST['submit'])
           {
-            echo "<script>window.location.href='memberManagement.php'; alert('Record was saved successfully.')</script>";
+            echo "<script>window.location.href='productCommentManagement.php'; alert('Tạo mới bình luận thành công!')</script>";
           }
       // }
       // else{
