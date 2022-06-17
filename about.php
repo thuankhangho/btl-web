@@ -14,6 +14,9 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   <!-- CSS -->
   <link rel="stylesheet" href="../styles/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Charis+SIL&display=swap" rel="stylesheet">
   <title>Giới thiệu</title>
 </head>
 
@@ -64,7 +67,7 @@
           <td>: Nhà hàng Mesugaki</li></td>
         </tr>
         <tr>
-          <td><li>Tên giao dịch tiếng Nhật　</li></td>
+          <td><li>Tên giao dịch tiếng Nhật&nbsp;</li></td>
           <td>: メスガキの和食レストラン</li></td>
         </tr>
         <tr>
@@ -136,7 +139,7 @@
     <div class="row">
       <br><br>
     </div>
-      <div class="row" style="font-weight: bold; font-size: 30px; display: flex; justify-content: center; align-items: center; font-family: Courier, sans-serif">
+      <div class="row" style="font-weight: bold; font-size: 30px; display: flex; justify-content: center; align-items: center; font-family: 'Charis SIL', serif;">
         HỖ TRỢ TRỰC TUYẾN
       </div>
       <div class="row" style="font-size: 20px; background-color: #2ed573; border: 1px solid black; display: flex">

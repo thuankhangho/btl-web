@@ -6,10 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- CSS -->
   <link rel="stylesheet" href="styles/footer.css">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet">
   <title>Document</title>
 </head>
 <body>
-  <div class="footer text-center">
+  <div class="footer text-center" style="font-family: 'Oswald', sans-serif;">
       <div class="container p-4">
         <!-- Section: Social media -->
         <div class="mb-4">
@@ -40,10 +45,10 @@
         </div>
         <div class="row">
         <div class="col-sm-4" style="text-align: left; color: white">
-        <h4 style="font-family: Arial, sans-serif; font-weight: bold">LIÊN HỆ</h4>
+        <h4 style="font-family: 'Merriweather', serif; font-weight: bold">LIÊN HỆ</h4>
         <div style="border-top: solid; margin-right: 25px"><ul>
           <li>Nhà hàng Mesugaki</li>
-          <li>Địa chỉ: Số 315 lô L Hoàng Diệu P8 Q4 TpHCM</li>
+          <li>Địa chỉ: 315 lô L, Hoàng Diệu, P.8, Q.4, Tp. HCM</li>
           <li>Điện thoại: (+84)028 3823 3824</li>
           <li>Di động: (+84)945 605 026</li>
           <li>Fax: (0228) 3849 750</li>
@@ -51,7 +56,7 @@
         </ul></div>
         </div>
         <div class="col-sm-4" style="text-align: left; color: white">
-        <h4 style="font-family: Arial, sans-serif; font-weight: bold">LĨNH VỰC HOẠT ĐỘNG</h4>
+        <h4 style="font-family: 'Merriweather', serif; font-weight: bold">LĨNH VỰC HOẠT ĐỘNG</h4>
         <div style="border-top: solid; margin-right: 25px"><ul>
           <li>Phục vụ ẩm thực Nhật</li>
           <li>Rèn luyện kinh nghiệm Quản trị nhà hàng</li>
@@ -61,7 +66,7 @@
         </ul></div>
         </div>
         <div class="col-sm-4" style="text-align: left; color: white">
-        <h4 style="font-family: Arial, sans-serif; font-weight: bold">THỜI GIAN HOẠT ĐỘNG</h4>
+        <h4 style="font-family: 'Merriweather', serif; font-weight: bold">THỜI GIAN HOẠT ĐỘNG</h4>
         <div style="border-top: solid; margin-right: 25px"><ul>
           <li>Thời gian: 9h00 đến 20h00</li>
           <li>Hoạt động các ngày trong tuần trừ Chủ Nhật</li>
