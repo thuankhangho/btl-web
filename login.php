@@ -53,8 +53,8 @@
         echo "<script>
                 Swal.fire({
                   icon: 'warning',
-                  title: 'Username or password incorrect',
-                  text: 'Please try again!'
+                  title: 'Sai username và/hoặc mật khẩu!',
+                  text: 'Vui lòng đăng nhập lại!'
                 })
               </script>";
       }

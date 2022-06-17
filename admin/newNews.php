@@ -58,7 +58,7 @@
           <td><input type='text' name='name' class='form-control' required></td>
         </tr>
         <tr>
-          <td>Ngày giờ đăng bài viết</td>
+          <td>Ngày & giờ đăng bài viết</td>
           <td><input type='datetime-local' name='datetime' class='form-control' required></td>
         </tr>
         <tr>

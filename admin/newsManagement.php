@@ -45,6 +45,7 @@
           $id = $row['id'];
           $name = $row['name'];
           $datetime = $row['datetime'];
+          $datetime = substr($datetime, 0, 10) . "T" . substr($datetime, 11);
           $content = $row['content'];
           echo "<tr>
                   <td>" . $id . "</td>
