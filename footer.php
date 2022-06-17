@@ -40,7 +40,7 @@
         </div>
         <div class="row">
         <div class="col-sm-4" style="text-align: left; color: white">
-        <h4 style="font-family: Arial, sans-serif">LIÊN HỆ</h4>
+        <h4 style="font-family: Arial, sans-serif; font-weight: bold">LIÊN HỆ</h4>
         <div style="border-top: solid; margin-right: 25px"><ul>
           <li>Nhà hàng Mesugaki</li>
           <li>Địa chỉ: Số 315 lô L Hoàng Diệu P8 Q4 TpHCM</li>
@@ -51,7 +51,7 @@
         </ul></div>
         </div>
         <div class="col-sm-4" style="text-align: left; color: white">
-        <h4 style="font-family: Arial, sans-serif">LĨNH VỰC HOẠT ĐỘNG</h4>
+        <h4 style="font-family: Arial, sans-serif; font-weight: bold">LĨNH VỰC HOẠT ĐỘNG</h4>
         <div style="border-top: solid; margin-right: 25px"><ul>
           <li>Phục vụ ẩm thực Nhật</li>
           <li>Rèn luyện kinh nghiệm Quản trị nhà hàng</li>
@@ -61,13 +61,13 @@
         </ul></div>
         </div>
         <div class="col-sm-4" style="text-align: left; color: white">
-        <h4 style="font-family: Arial, sans-serif">THỜI GIAN HOẠT ĐỘNG</h4>
+        <h4 style="font-family: Arial, sans-serif; font-weight: bold">THỜI GIAN HOẠT ĐỘNG</h4>
         <div style="border-top: solid; margin-right: 25px"><ul>
           <li>Thời gian: 9h00 đến 20h00</li>
           <li>Hoạt động các ngày trong tuần trừ Chủ Nhật</li>
           <li>Không hoạt động vào các dịp lễ</li>
-          <li>Hotline hỗ trợ: (+84)909 567 077</li>
-          <li>Mọi tin tức mới nhất sẽ cập nhật vào tối Thứ Bảy</li>
+          <li>Hotline hỗ trợ: (+84)822 870 179</li>
+          <li>Mọi tin tức mới nhất sẽ được cập nhật vào tối Thứ Bảy</li>
         </ul></div>
         </div>
         <!-- Section: Social media -->
