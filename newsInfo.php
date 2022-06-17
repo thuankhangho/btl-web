@@ -138,8 +138,9 @@
                       height="60" />
                     <div>
                       <h6 class="fw-bold text-primary mb-1">
-                        <?php $key = array_search($comment['user_id'], array_column($users, 'id')); 
-                        echo ($users[$key]['username']);
+                        <?php 
+                          $key = array_search($comment['user_id'], array_column($users, 'id'));
+                          echo ($users[$key]['username']);
                         ?>
                       </h6>
                       <p class="text-muted small mb-0">
@@ -149,7 +150,7 @@
                   </div>
 
                   <p class="mt-3 mb-4 pb-2">
-                    <?php echo $comment['content'];?>
+                    <?php echo htmlspecialchars($comment['content']);?>
                   </p>
 
                   <div class="small d-flex justify-content-start">
