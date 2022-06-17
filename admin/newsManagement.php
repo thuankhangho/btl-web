@@ -25,8 +25,8 @@
     include($IPATH."navbar.php");?>
   </div>
   <!-- end nav bar --> 
-    <form method="post" action="productManagement.php">
-      <a href="newProduct.php"><input type="button" class="p-3 mb-2 bg-primary bg-gradient text-white" value="Thêm sản phẩm"></a>
+    <form method="post" action="newsManagement.php">
+      <a href="newNews.php"><input type="button" class="p-3 mb-2 bg-primary bg-gradient text-white" value="Thêm tin tức"></a>
     </form>
     <?php
       include('../config/config.php');

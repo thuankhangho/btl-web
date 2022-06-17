@@ -24,45 +24,6 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `admin`
---
-
-CREATE TABLE `admin` (
-  `id` int(10) UNSIGNED NOT NULL,
-  `username` varchar(100) NOT NULL,
-  `password` varchar(255) NOT NULL,
-  `full_name` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `admin`
---
--- --------------------------------------------------------
-
---
--- Table structure for table `comment`
---
-
-CREATE TABLE `prod_comments` (
-  `id` int(10) UNSIGNED NOT NULL,
-  `user_id` int(11) NOT NULL,
-  `datetime` datetime NOT NULL,
-  `content` text NOT NULL,
-  `prod_id` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
-CREATE TABLE `news_comments` (
-  `id` int(10) UNSIGNED NOT NULL,
-  `user_id` int(11) NOT NULL,
-  `datetime` datetime NOT NULL,
-  `content` text NOT NULL,
-  `news_id` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `news`
 --
 
@@ -72,6 +33,36 @@ CREATE TABLE `news` (
   `datetime` datetime NOT NULL,
   `content` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `news`
+--
+
+INSERT INTO `news` (`id`, `name`, `datetime`, `content`) VALUES
+(0, 'Địa điểm mới', '2022-06-15 00:00:00', 'Mở chi nhánh mới ở Tokyo');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `news_comments`
+--
+
+CREATE TABLE `news_comments` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `datetime` datetime NOT NULL,
+  `content` text NOT NULL,
+  `news_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `news_comments`
+--
+
+INSERT INTO `news_comments` (`id`, `user_id`, `datetime`, `content`, `news_id`) VALUES
+(0, 2052243, '2022-06-15 00:00:00', 'Quán thoáng mát, rộng rãi!', 0),
+(1, 2052242, '2016-06-22 10:14:59', 'nut', 0),
+(2, 2052242, '2016-06-22 10:16:04', '<img src=\"img/product-list/UwU.png\" class=\"img-fluid\" alt=\"\">', 0);
 
 -- --------------------------------------------------------
 
@@ -89,6 +80,43 @@ CREATE TABLE `product` (
   `feature` tinyint(1) NOT NULL DEFAULT 1 COMMENT '0: not featured on news, 1: featured on news'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `product`
+--
+
+INSERT INTO `product` (`id`, `name`, `description`, `price`, `img_path`, `status`, `feature`) VALUES
+(0, 'Shoyu Ramen', 'Ramen & nước tương', 900, 'img/product-list/shoyu-ramen.jpg', 0, 0),
+(1, 'Shio Ramen', 'Slimy as f', 22000, 'img/product-list/shio-ramen.jpg', 1, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `prod_comments`
+--
+
+CREATE TABLE `prod_comments` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `datetime` datetime NOT NULL,
+  `content` text NOT NULL,
+  `prod_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `prod_comments`
+--
+
+INSERT INTO `prod_comments` (`id`, `user_id`, `datetime`, `content`, `prod_id`) VALUES
+(0, 2052243, '2022-06-15 00:00:00', 'Nhà hàng tuyệt hảo!', 0),
+(1, 2052242, '2016-06-22 10:41:30', 'afdf', 0),
+(2, 2052242, '2016-06-22 10:41:51', 'saikyou', 0),
+(3, 2052242, '2016-06-22 10:42:01', 'deadweight', 0),
+(4, 2052242, '2016-06-22 10:43:15', 'blalablala', 0),
+(5, 2052242, '2016-06-22 10:44:18', 'lmao', 0),
+(6, 2052243, '2016-06-22 12:35:10', '<img src=\"img/product-list/shoyu-ramen.jpg\" class=\"img-fluid\" alt=\"\">', 0),
+(7, 2052242, '2016-06-22 10:12:46', 'nut', 0),
+(8, 2052242, '2016-06-22 10:15:38', '<img src=\"img/product-list/D=.jpg\" class=\"img-fluid\" alt=\"\">', 0);
+
 -- --------------------------------------------------------
 
 --
@@ -105,43 +133,24 @@ CREATE TABLE `user` (
   `email` varchar(50) NOT NULL,
   `phone` varchar(15) NOT NULL,
   `address` varchar(255) NOT NULL,
-  `active` tinyint(1) NOT NULL DEFAULT 1 COMMENT '0: banned, 1: active'
+  `admin` tinyint(1) NOT NULL DEFAULT 0 COMMENT '0: user, 1: admin'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `user`
 --
 
-INSERT INTO `admin` (`id`, `username`, `password`, `full_name`) VALUES
-(0, 'kamisamada', 'startend', 'staffA');
+INSERT INTO `user` (`id`, `username`, `password`, `full_name`, `sex`, `birthday`, `email`, `phone`, `address`, `admin`) VALUES
+(0, 'user', 'iwannafly', 'Edogawa Conan', 'Nam', '2022-06-16', 'conanmeitantei@gmail.com', '07258258758', 'asgz14hs', 0),
+(1, 'user2', 'TMD', 'Tokoyami Towa', 'Nữ', '2022-04-28', 'everlastingdarkness@gmail.com', '07258258758', 'ahudjhvkusg', 0),
+(2, 'user3', 'stellarstellar', 'Hoshimachi Suisei', 'Nữ', '2022-04-23', 'suiseinogotokuarawaretasutaanogenseki@gmail.com', '04684548214', 'asgz14hs', 0),
+(3, 'kamisamada', 'startend', 'staffA', 'Nữ', '2022-01-26', 'achan@gmail.com', '46879213548', 'grgarhhs', 1),
+(4, 'user4', 'whateverusay', 'Join Cena', 'Nam', '1997-01-24', 'jsmith@sample.com', '4682135468', 'WJDJTJAdjdtjykjyr', 0);
 
-INSERT INTO `user` (`id`, `username`, `password`, `full_name`, `sex`, `birthday`, `email`, `phone`, `address`, `active`) VALUES
-(0, 'user', 'iwannafly', 'Edogawa Conan', 'Nam', '2022-06-16', 'conanmeitantei@gmail.com', '07258258758', 'asgz14hs', 1),
-(1, 'user2', 'TMD', 'Tokoyami Towa', 'Nữ', '2022-04-28', 'everlastingdarkness@gmail.com', '07258258758', 'ahudjhvkusg', 1),
-(2, 'user3', 'stellarstellar', 'Hoshimachi Suisei', 'Nữ', '2022-04-23', 'suiseinogotokuarawaretasutaanogenseki@gmail.com', '04684548214', 'asgz14hs', 1);
-
-INSERT INTO `product`(`id`, `name`, `description`, `price`, `img_path`, `status`, `feature`) VALUES 
-('0','Shoyu Ramen','Ramen & nước tương','900','img/product-list/shoyu-ramen.jpg','0','0');
-
-INSERT INTO `prod_comments`(`id`, `user_id`, `datetime`, `content`, `prod_id`) VALUES 
-('0','2052243','2022-06-15','Nhà hàng tuyệt hảo!','0');
-
-INSERT INTO `news`(`id`, `name`, `datetime`, `content`) VALUES 
-('0','Địa điểm mới','2022-06-15','Mở chi nhánh mới ở Tokyo');
-
-INSERT INTO `news_comments`(`id`, `user_id`, `datetime`, `content`, `news_id`) VALUES 
-('0','2052243','2022-06-15','Quán thoáng mát, rộng rãi!', '0');
 --
 -- Indexes for dumped tables
 --
 
---
--- Indexes for table `admin`
---
-ALTER TABLE `admin`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `id` (`id`),
-  ADD UNIQUE KEY `username` (`username`);
 --
 -- Indexes for table `news`
 --
@@ -149,7 +158,10 @@ ALTER TABLE `news`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `id` (`id`);
 
-  ALTER TABLE `news_comments`
+--
+-- Indexes for table `news_comments`
+--
+ALTER TABLE `news_comments`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `id` (`id`);
 
@@ -160,7 +172,10 @@ ALTER TABLE `product`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `id` (`id`);
 
-  ALTER TABLE `prod_comments`
+--
+-- Indexes for table `prod_comments`
+--
+ALTER TABLE `prod_comments`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `id` (`id`);
 
@@ -177,34 +192,34 @@ ALTER TABLE `user`
 --
 
 --
--- AUTO_INCREMENT for table `admin`
+-- AUTO_INCREMENT for table `news`
 --
-ALTER TABLE `admin`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=0;
+ALTER TABLE `news`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `comment`
+-- AUTO_INCREMENT for table `news_comments`
 --
-ALTER TABLE `prod_comments`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=0;
-
-  ALTER TABLE `news_comments`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=0;
+ALTER TABLE `news_comments`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=0;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
-  ALTER TABLE `news`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=0;
+--
+-- AUTO_INCREMENT for table `prod_comments`
+--
+ALTER TABLE `prod_comments`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=0;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
