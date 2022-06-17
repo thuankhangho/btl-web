@@ -87,11 +87,10 @@
           <span class="text-white">
             <h5 class="text-white"><?php echo htmlspecialchars($newspage1['datetime']); ?></h5>
           </span>
-          <p class="text-white"><?php echo htmlspecialchars($newspage1['content']); ?></p>
         </p>
         </div>
+        <p><?php echo htmlspecialchars($newspage1['content']); ?></p>
         <hr>
-
         <div class="container my-5 py-5">
           <div class="row d-flex justify-content-center commentDISP">
 

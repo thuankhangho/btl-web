@@ -114,7 +114,8 @@
               <?php
                 if ($dish1['status'] == 1) {
                   echo '<p class="stat-ok">Còn hàng</p>';
-                } else {
+                }
+                else {
                   echo '<p class="stat-fail">Hết hàng</p>';
                 }
               ?>
