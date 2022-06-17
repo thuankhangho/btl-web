@@ -18,7 +18,7 @@
   <nav class="my-navbar-logo navbar navbar-expand-xl navbar-dark bg-dark">
       <div class="my-container container-fluid justify-content-center">
         <a class="navbar-brand" href="index.php">
-            <img src="img/logo-name.png" width="90" height="90" class="d-inline-block align-top" alt="">
+            <img src="img/logo-name.png" width="120" height="120" class="d-inline-block align-top" alt="">
         </a>
       </div>
   </nav>
@@ -27,19 +27,19 @@
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
           <span class="navbar-toggler-icon justify-content-center"></span>
       </button>
-      <div class="collapse navbar-collapse justify-content-center"  id="collapsibleNavbar">
+      <div class="collapse navbar-collapse justify-content-center"  id="collapsibleNavbar" style="font-size: 20px">
           <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" href="index.php">Trang chủ</a>
+                <a class="nav-link" href="index.php">　Trang chủ　</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="about.php">Giới thiệu</a>
+                <a class="nav-link" href="about.php">　Giới thiệu　</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="productsList.php">Sản phẩm</a>
+                <a class="nav-link" href="productsList.php">　Sản phẩm　</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="newsList.php">Tin tức</a>
+                <a class="nav-link" href="newsList.php">　Tin tức　</a>
               </li>
           </ul>
       </div>

@@ -37,14 +37,14 @@
         </div>
       </div>
   <!-- main content --> 
-  <div class="row my-container container-fluid justify-content-center">
+  <div class="row my-container container-fluid justify-content-center" style=" font-size: 20px">
     <div class="col-sm-8">
-    <h4><br>1. Hướng phát triển</h4><p>
+    <h4><br>1. Nguồn gốc sự phát triển</h4><p>
       Vào ngày 15/12/2020,
       Trương Bỉ Diệm đã bán lại nhà hàng cho Ô Tá Cự, chủ nhà hàng đương thời và cũng là người đã đưa nhà
       hàng lên đến đỉnh thành công như ngày hôm nay với đa dạng kế sách cải tiến về hướng làm việc cũng 
-      như sự tiếp cận về văn hóa và các tín ngưỡng phương Đông. <br>
-    </p>
+      như sự tiếp cận về văn hóa và các tín ngưỡng phương Đông.
+    </p><hr>
     <h4>2. Lĩnh vực hoạt động</h4><p>
     <ul>
           <li>Phục vụ ẩm thực Nhật</li>
@@ -53,8 +53,7 @@
           <li>Ngôi nhà của mọi tín ngưỡng</li>
           <li>Phương châm hướng đến "Chân - Thiện - Mỹ"</li>
         </ul>
-    </p>
-    <br>
+    </p><hr>
     <h4>3. Các thông tin khác</h4><p>
     <table style="margin-left: 18px">
         <ul>
@@ -87,9 +86,8 @@
           <td>: ymizu9@gmail.com</li></td>
         </tr>
         </ul>
-    </table>
-    <br>
-    <h4>4. Nguyên nhân hình thành</h4><p>
+    </table><hr>
+    <h4>4. Nguyên nhân hình thành</h4><p stype="text-align: justify">
       Nhà hàng Mesugaki được thành lập vào năm 2020, là kết quả của một
       câu chuyện bi thương rung động lòng người về cuộc tình trái ngang giữa cô gái 
       mang tên Trương Bỉ Diệm và chàng trai mang tên Đỗ Nam Trung. Trương Bỉ Diệm là con một 

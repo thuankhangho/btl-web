@@ -111,7 +111,7 @@
                   <input type="text" name="fullname" id="fullname" class="form-control" required>
                 </div>
                 <div class="form-outline mb-4">
-                  <label for="sex" class="form-label">Giới tính</label>
+                  <label for="sex" class="form-label">Giới tính:</label>
                   <select class="select" name="sex" required>
                     <option value="Nam">Nam</option>
                     <option value="Nữ">Nữ</option>
