@@ -21,8 +21,10 @@
             <img src="img/logo-name.png" width="120" height="120" class="d-inline-block align-top" alt="">
         </a>
       </div>
-  </nav>
+  </nav>    
   <nav class="my-navbar navbar navbar-expand-xl navbar-dark bg-dark">
+  <div class="col-sm-3"></div>
+  <div class="col-sm-6">
     <div class="my-container container-fluid justify-content-center">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
           <span class="navbar-toggler-icon justify-content-center"></span>
@@ -43,11 +45,13 @@
               </li>
           </ul>
       </div>
+    </div>
+  </div>
       <!-- Icon dropdown -->
       <?php if (isset($_SESSION['user_id'])) { ?>
-
-      <div class="dropdown">
-          <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+ 
+      <div class="dropdown col-sm-3">
+          <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false" style="justify-content: right; align-items: right; padding-right: 15px">
             <img src="img/logo.png" alt="hugenerd" width="30" height="30" class="rounded-circle">
             <span class="d-none d-sm-inline mx-1"><?php echo $_SESSION['username'];?></span>
           </a>
@@ -65,7 +69,8 @@
 
       <?php } else { ?>
 
-      <div class="dropdown user-drop">
+      <div class="dropdown user-drop col-sm-3">
+        <div style="position: absolute; right: 0; bottom: 0; margin-bottom: -20px; margin-right: 10px">
           <button type="button" class="user-btn btn btn-dark dropdown-toggle" data-bs-toggle="dropdown">
           <i class="fas fa-user-circle"></i>
           </button>
@@ -73,10 +78,10 @@
             <li><a class="dropdown-item" href="register.php">Đăng ký</a></li>
             <li><a class="dropdown-item" href="login.php">Đăng nhập</a></li>
           </ul>
+        </div>
       </div>
       
-      <?php } ?>       
-    </div>
+      <?php } ?>  
   </nav>
 </body>
 </html>
