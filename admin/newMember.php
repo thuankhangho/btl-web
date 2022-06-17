@@ -82,6 +82,7 @@
   <style>
   .container{ margin: 0 auto; }
   </style>
+  <title>Thêm thành viên</title>
 </head>
 <body>
   <!-- container -->

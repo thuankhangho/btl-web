@@ -46,7 +46,7 @@
           $stmt->execute();
           if ($_POST['submit'])
           {
-            echo "<script>window.location.href='memberManagement.php'; alert('Tạo tin tức mới thành công!')</script>";
+            echo "<script>window.location.href='newsManagement.php'; alert('Tạo tin tức mới thành công!')</script>";
           }
       // }
       // else{
@@ -82,12 +82,13 @@
   <style>
   .container{ margin: 0 auto; }
   </style>
+  <title>Thêm tin tức</title>
 </head>
 <body>
   <!-- container -->
   <div class="container">
     <div class="page-header">
-      <h1>Thêm thành viên</h1>
+      <h1>Thêm tin tức</h1>
     </div>
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
       <table class='table table-hover table-responsive table-bordered'>

@@ -38,7 +38,7 @@
                   <th>Thời gian</th>
                   <th>Nội dung</th>
                   <th>ID sản phẩm</th>
-                  <th>Xem bình luận</th>
+                  <th>Xem bài viết chứa bình luận</th>
               </tr>
               <tbody>";
       $sql = "SELECT * from prod_comments";

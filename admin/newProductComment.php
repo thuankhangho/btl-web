@@ -77,12 +77,13 @@
   <style>
   .container{ margin: 0 auto; }
   </style>
+  <title>Thêm bình luận</title>
 </head>
 <body>
   <!-- container -->
   <div class="container">
     <div class="page-header">
-      <h1>Thêm thành viên</h1>
+      <h1>Thêm bình luận</h1>
     </div>
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
       <table class='table table-hover table-responsive table-bordered'>
@@ -91,48 +92,25 @@
           <td><input type='text' name='id' class='form-control' required></td>
         </tr> -->
         <tr>
-          <td>Username</td>
-          <td><input type='text' name='username' class='form-control' required></td>
+          <td>ID người viết bình luận</td>
+          <td><input type='number' name='user_id' class='form-control' required></td>
         </tr>
         <tr>
-          <td>Password</td>
-          <td><input type='text' name='password' class='form-control' required></td>
+          <td>Thời gian</td>
+          <td><input type='datetime-local' name='datetime' class='form-control' required></td>
         </tr>
         <tr>
-          <td>Họ & tên</td>
-          <td><input type='text' name='full_name' class='form-control' required></td>
+          <td>Nội dung bình luận</td>
+          <td><input type='textarea' name='content' class='form-control' style="resize:none" required></td>
         </tr>
         <tr>
-          <td>Giới tính</td>
-          <td>
-            <select class="select" name="sex" required>
-              <option value="Nam">Nam</option>
-              <option value="Nữ">Nữ</option>
-              <option value="Khác">Khác</option>
-            </select>
-          </td>
+          <td>ID sản phẩm</td>
+          <td><input type='number' name='prod_id' class='form-control' required></td>
         </tr>
-        <tr>
-          <td>Sinh nhật</td>
-          <td><input type='date' name='birthday' class='form-control' required></td>
-        </tr>
-        <tr>
-          <td>Email</td>
-          <td><input type='email' name='email' class='form-control' required></td>
-        </tr>
-        <tr>
-          <td>Số điện thoại</td>
-          <td><input type='text' name='phone' class='form-control' required></td>
-        </tr>
-        <tr>
-          <td>Địa chỉ</td>
-          <td><input type='text' name='address' class='form-control' required></td>
-        </tr>
-        <tr>
           <td></td>
           <td>
             <input type='submit' name='submit' value='Lưu' class='btn btn-primary' />
-            <a href='memberManagement.php' class='btn btn-danger'>Quay lại bảng thành viên</a>
+            <a href='productCommentManagement.php' class='btn btn-danger'>Quay lại bảng bình luận sản phẩm</a>
           </td>
         </tr>
       </table>
