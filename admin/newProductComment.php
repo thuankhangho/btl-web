@@ -4,63 +4,32 @@
     include ('../config/config.php');
 
     try {
-      // // insert query
-      // $nameErr = $YearErr ='';
-      //$id = $_POST['id'];
       $user_id = $_POST['user_id'];
       $datetime = $_POST['datetime'];
       $content = $_POST['content'];
       $prod_id = $_POST['prod_id'];
-      // if($input_name=='')
-      // {
-      //     $nameErr = "Name is required";
-      // }
-      // else if(strlen($input_name)>40||strlen($input_name)<5)
-      // {
-      //     $nameErr = "Name must be within 5-40 characters";
-      // }
-      // if($input_name=='')
-      // {
-      //     $YearErr = "Year is required";
-      // }
-      // else if(!is_numeric($input_year))
-      // {
-      //     $YearErr = "Invalid input!";
-      // }
-      // else if($input_year<1990||$input_year>2022)
-      // {
-      //     $YearErr = "Year must be within the range of 1990-2022";
-      // }
-      $query2 = "INSERT INTO prod_comments (user_id, datetime, content, prod_id) VALUES (?, ?, ?, ?)";;
-      $stmt = $conn->prepare($query2);
-      // prepare query for execution
 
-      // Execute the query
-      // if($nameErr==''&&$YearErr==''){
-          $stmt->bind_param('issi', $user_id, $datetime, $content, $prod_id);
-          $stmt->execute();
-          if ($_POST['submit'])
-          {
-            echo "<script>window.location.href='productCommentManagement.php'; alert('Tạo mới bình luận thành công!')</script>";
-          }
-      // }
-      // else{
-      //     echo "<div class='alert alert-danger'>Unable to save record.</div>";
-      //     if($nameErr!='')
-      //     {
-      //         echo "<div class='alert alert-danger'>'$nameErr'</div>";
-      //     }
-      //     if($YearErr!='')
-      //     {
-      //         echo "<div class='alert alert-danger'>'$YearErr'</div>";
-      //     }
-      // }
-      mysqli_close($conn);
+      if (!preg_match("/^[0-9]*$/", $user_id) ||
+          !preg_match("/^[0-9]*$/", $news_id)
+      ) {
+        echo "<div class='alert alert-danger'>Input invalid</div>";
+      }
+      else {
+        $query2 = "INSERT INTO prod_comments (user_id, datetime, content, prod_id) VALUES (?, ?, ?, ?)";;
+        $stmt = $conn->prepare($query2);
+
+        $stmt->bind_param('issi', $user_id, $datetime, $content, $prod_id);
+        $stmt->execute();
+        if ($_POST['submit']) {
+          echo "<script>window.location.href='productCommentManagement.php'; alert('Tạo mới bình luận thành công!')</script>";
+        }
+      }
     }   
     // show error
     catch(mysqli_sql_exception $exception){
       die('ERROR: ' . $exception->getMessage());
     }
+    mysqli_close($conn);
   }
 ?>
 
