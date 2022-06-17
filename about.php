@@ -22,11 +22,23 @@
     include($IPATH."navbar.php");?>
   </div>
   <!-- end nav bar --> 
-
+  <div class="height d-flex justify-content-center align-items-center" style="
+  background-image: url(img/site-name/prod-page.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 9% 8%;
+  background-size: cover;
+  max-width: 100%;
+  height: 100%;
+  border-bottom: var(--border);">
+        <div class="col-md-8">
+          <div class="search">
+          </div>     
+        </div>
+      </div>
   <!-- main content --> 
   <div class="row my-container container-fluid justify-content-center">
     <div class="col-sm-8">
-    <h2 style="font-size: 40px; color: #262626; font-weight: bold; padding: 10px; background: #f7f7f7; border: 1px solid #efefef;">Giới thiệu</h2>
     <h4><br>1. Hướng phát triển</h4><p>
       Vào ngày 15/12/2020,
       Trương Bỉ Diệm đã bán lại nhà hàng cho Ô Tá Cự, chủ nhà hàng đương thời và cũng là người đã đưa nhà
@@ -121,7 +133,10 @@
     
     </div>
     <div class="col-sm-4" style="padding: 0 20px 0 10px; margin-top: 10px">
-      <div class="row" style=" font-weight: bold; font-size: 30px; display: flex; justify-content: center; align-items: center; font-family: Courier, sans-serif">
+    <div class="row">
+      <br><br>
+    </div>
+      <div class="row" style="font-weight: bold; font-size: 30px; display: flex; justify-content: center; align-items: center; font-family: Courier, sans-serif">
         HỖ TRỢ TRỰC TUYẾN
       </div>
       <div class="row" style="font-size: 20px; background-color: #2ed573; border: 1px solid black; display: flex">

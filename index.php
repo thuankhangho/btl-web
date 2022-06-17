@@ -36,7 +36,7 @@
         </div>
     </div>
     <div class="container-img">
-      <h2 class="text-center">Khám phá danh mục sản phẩm<br></h2>        
+      <h1 class="text-center">KHÁM PHÁ DANH MỤC SẢN PHẨM<br><br></h1>        
       <div class="row justify-content-center">
         <div class="col-3">
           <a href="#">
