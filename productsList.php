@@ -60,7 +60,7 @@
               <div class="last-div">
                 <i class="fa fa-comment-o"></i>
               </div>
-              <a href="productInfo.php?prod_id=<?php echo htmlspecialchars($dish['id']);?>&flag=false" class="stretched-link">
+              <a href="productInfo.php?prod_id=<?php echo htmlspecialchars($dish['id']);?>" class="stretched-link">
               </a>
           </div>
         </div>

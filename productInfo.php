@@ -176,7 +176,7 @@
                 {
                   echo "Chưa có bình luận nào";
                 }
-                if ($_GET['flag'] == 'true'){
+                if ($_SESSION['admin'] == 1){
                   foreach($cmts as $comment){
                   ?>
               <div class="card-body">
@@ -210,7 +210,7 @@
                   }
                 mysqli_close($conn);
               }
-                else if ($_GET['flag'] == 'false') 
+                else
                 {
                   foreach($cmts as $comment){
               ?>
