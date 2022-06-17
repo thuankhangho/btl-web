@@ -24,8 +24,8 @@
       $id = $_SESSION['user_id'];
       $username = $_SESSION['username'];
     } 
-    else{
-      header('Location: ../admin/login.php');
+    else {
+      header('Location: ../login.php');
     }
   ?>
   <!-- nav bar --> 
