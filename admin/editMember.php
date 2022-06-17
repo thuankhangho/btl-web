@@ -5,61 +5,34 @@
     try {
       // // insert query
       // $nameErr = $YearErr ='';
-      $id = $_GET['id'];
-      $username = $_POST['username'];
-      $password = $_POST['password'];
-      $fullname = $_POST['full_name'];
-      $sex = $_POST['sex'];
-      $birthday = $_POST['birthday'];
-      $email = $_POST['email'];
-      $phone = $_POST['phone'];
-      $address = $_POST['address'];
+      $id = test_input($_GET['id']);
+      $username = test_input($_POST['username']);
+      $password = test_input($_POST['password']);
+      $fullname = test_input($_POST['full_name']);
+      $sex = test_input($_POST['sex']);
+      $birthday = test_input($_POST['birthday']);
+      $email = test_input($_POST['email']);
+      $phone = test_input($_POST['phone']);
+      $address = test_input($_POST['address']);
       
-      // if($input_name=='')
-      // {
-      //     $nameErr = "Name is required";
-      // }
-      // else if(strlen($input_name)>40||strlen($input_name)<5)
-      // {
-      //     $nameErr = "Name must be within 5-40 characters";
-      // }
-      // if($input_name=='')
-      // {
-      //     $YearErr = "Year is required";
-      // }
-      // else if(!is_numeric($input_year))
-      // {
-      //     $YearErr = "Invalid input!";
-      // }
-      // else if($input_year<1990||$input_year>2022)
-      // {
-      //     $YearErr = "Year must be within the range of 1990-2022";
-      // }
-      $query3 = "UPDATE user SET username = ?, password = ?, full_name = ?, sex = ?, birthday = ?, email = ?, phone = ?, address = ? WHERE id = ?";
-      $stmt = $conn->prepare($query3);
-      // prepare query for execution
-
-      // Execute the query
-      // if($nameErr==''&&$YearErr==''){
-          $stmt->bind_param('sssssssss', $username, $password, $fullname,
-          $sex, $birthday, $email, $phone, $address, $id);
-          $stmt->execute();
-      // }
-      if ($_POST['submit'])
-      {
-        echo "<script>window.location.href='editMember.php?id=$id&username=$username&password=$password&full_name=$fullname&sex=$sex&birthday=$birthday&email=$email&phone=$phone&address=$address'; alert('Chỉnh sửa thành công!')</script>";
+      if (!preg_match("/^[0-9a-zA-Z-'.,()*! ]*$/", $username) ||
+          !preg_match("/^[a-zA-Z-' ]*$/", $fullname) ||
+          !filter_var($email, FILTER_VALIDATE_EMAIL) ||
+          !preg_match("/^[0-9+]*$/", $phone)
+      ) {
+        echo "<div class='alert alert-danger'>Input invalid</div>";
       }
-      // else{
-      //     echo "<div class='alert alert-danger'>Unable to save record.</div>";
-      //     if($nameErr!='')
-      //     {
-      //         echo "<div class='alert alert-danger'>'$nameErr'</div>";
-      //     }
-      //     if($YearErr!='')
-      //     {
-      //         echo "<div class='alert alert-danger'>'$YearErr'</div>";
-      //     }
-      // }
+      else {
+        $query3 = "UPDATE user SET username = ?, password = ?, full_name = ?, sex = ?, birthday = ?, email = ?, phone = ?, address = ? WHERE id = ?";
+        $stmt = $conn->prepare($query3);
+
+        $stmt->bind_param('sssssssss', $username, $password, $fullname,
+        $sex, $birthday, $email, $phone, $address, $id);
+        $stmt->execute();
+        if ($_POST['submit']) {
+          echo "<script>window.location.href='editMember.php?id=$id&username=$username&password=$password&full_name=$fullname&sex=$sex&birthday=$birthday&email=$email&phone=$phone&address=$address'; alert('Chỉnh sửa thành công!')</script>";
+        }
+      }
       mysqli_close($conn);
     }   
     // show error

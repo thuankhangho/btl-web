@@ -24,12 +24,12 @@
           echo "<script>window.location.href='productCommentManagement.php'; alert('Tạo mới bình luận thành công!')</script>";
         }
       }
+      mysqli_close($conn);
     }   
     // show error
     catch(mysqli_sql_exception $exception){
       die('ERROR: ' . $exception->getMessage());
     }
-    mysqli_close($conn);
   }
 ?>
 

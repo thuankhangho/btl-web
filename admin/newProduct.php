@@ -29,12 +29,13 @@
         }
         move_uploaded_file($_POST['img_path'], '../img/product-list/' . $_POST['img_path']);
       }
+      mysqli_close($conn);
     }   
     // show error
     catch(mysqli_sql_exception $exception){
       die('ERROR: ' . $exception->getMessage());
     }
-    mysqli_close($conn);
+    
   }
 ?>
 

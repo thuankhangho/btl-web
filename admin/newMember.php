@@ -31,12 +31,13 @@
           echo "<script>window.location.href='memberManagement.php'; alert('Tạo thành viên mới thành công!')</script>";
         }
       }
+      mysqli_close($conn);
     }   
     // show error
     catch(mysqli_sql_exception $exception){
       die('ERROR: ' . $exception->getMessage());
     }
-    mysqli_close($conn);
+    
   }
 ?>
 

@@ -5,62 +5,37 @@
     try {
       // // insert query
       // $nameErr = $YearErr ='';
-      $id = $_GET['id'];
-      $name = $_POST['name'];
-      $description = $_POST['description'];
-      $price = $_POST['price'];
-      $img_path = "img/product-list/" . $_FILES['img_path']['name'];
-      $status = $_POST['status'];
-      $feature = $_POST['feature'];
-      // if($input_name=='')
-      // {
-      //     $nameErr = "Name is required";
-      // }
-      // else if(strlen($input_name)>40||strlen($input_name)<5)
-      // {
-      //     $nameErr = "Name must be within 5-40 characters";
-      // }
-      // if($input_name=='')
-      // {
-      //     $YearErr = "Year is required";
-      // }
-      // else if(!is_numeric($input_year))
-      // {
-      //     $YearErr = "Invalid input!";
-      // }
-      // else if($input_year<1990||$input_year>2022)
-      // {
-      //     $YearErr = "Year must be within the range of 1990-2022";
-      // }
-      $query3 = "UPDATE product SET name = ?, description = ?, price = ?, img_path = ?, status = ?, feature = ? WHERE id = ?";
-      $stmt = $conn->prepare($query3);
-      // prepare query for execution
+      $id = test_input($_GET['id']);
+      $name = test_input($_POST['name']);
+      $description = test_input($_POST['description']);
+      $price = test_input($_POST['price']);
+      $img_path = test_input("img/product-list/" . $_POST['img_path']);
+      $status = test_input($_POST['status']);
+      $feature = test_input($_POST['feature']);
 
-      // Execute the query
-      // if($nameErr==''&&$YearErr==''){
-      $tmp = $_GET['img_path'];
-      if ($img_path == "img/product-list/")
-        $stmt->bind_param('ssisiii', $name, $description, $price, $tmp, $status, $feature, $id);
-      else $stmt->bind_param('ssisiii', $name, $description, $price, $img_path, $status, $feature, $id);
-      $stmt->execute();
-      move_uploaded_file($_FILES['img_path']['tmp_name'], '../img/product-list/' . $_FILES['img_path']['name']);
-      // }
-      // else{
-      //     echo "<div class='alert alert-danger'>Unable to save record.</div>";
-      //     if($nameErr!='')
-      //     {
-      //         echo "<div class='alert alert-danger'>'$nameErr'</div>";
-      //     }
-      //     if($YearErr!='')
-      //     {
-      //         echo "<div class='alert alert-danger'>'$YearErr'</div>";
-      //     }
-      // }
-      if ($_POST['submit'])
-      {
+      if (!preg_match("/^[0-9a-zA-Z-'.,()*!<>:\/ ]*$/", $name) ||
+          !preg_match("/^[0-9,.]*$/", $price) ||
+          !preg_match('/\.(jpg|png|jpeg)$/', $img_path) ||
+          !preg_match("/^[0-1]*$/", $status) ||
+          !preg_match("/^[0-1]*$/", $feature)
+      ) {
+        echo "<div class='alert alert-danger'>Input invalid</div>";
+      } else {
+        $query3 = "UPDATE product SET name = ?, description = ?, price = ?, img_path = ?, status = ?, feature = ? WHERE id = ?";
+        $stmt = $conn->prepare($query3);
+
+        $tmp = $_GET['img_path'];
         if ($img_path == "img/product-list/")
-          echo "<script>window.location.href='editProduct.php?id=$id&name=$name&description=$description&price=$price&img_path=$tmp&status=$status&feature=$feature'; alert('Chỉnh sửa thành công!')</script>";
-        else echo "<script>window.location.href='editProduct.php?id=$id&name=$name&description=$description&price=$price&img_path=$img_path&status=$status&feature=$feature'; alert('Chỉnh sửa thành công!')</script>";
+          $stmt->bind_param('ssisiii', $name, $description, $price, $tmp, $status, $feature, $id);
+        else $stmt->bind_param('ssisiii', $name, $description, $price, $img_path, $status, $feature, $id);
+        $stmt->execute();
+        move_uploaded_file($_FILES['img_path']['tmp_name'], '../img/product-list/' . $_FILES['img_path']['name']);
+
+        if ($_POST['submit']) {
+          if ($img_path == "img/product-list/")
+            echo "<script>window.location.href='editProduct.php?id=$id&name=$name&description=$description&price=$price&img_path=$tmp&status=$status&feature=$feature'; alert('Chỉnh sửa thành công!')</script>";
+          else echo "<script>window.location.href='editProduct.php?id=$id&name=$name&description=$description&price=$price&img_path=$img_path&status=$status&feature=$feature'; alert('Chỉnh sửa thành công!')</script>";
+        }
       }
       mysqli_close($conn);
     }   
