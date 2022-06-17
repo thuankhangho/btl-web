@@ -36,8 +36,7 @@
         </div>
     </div>
     <div class="container-img">
-      <h2 class="text-center">Khám phá danh mục sản phẩm</h2>
-        
+      <h2 class="text-center">Khám phá danh mục sản phẩm<br></h2>        
       <div class="row justify-content-center">
         <div class="col-3">
           <a href="#">
@@ -61,7 +60,7 @@
         </div>
       </div>
     </div>
-        <div class="blog bg-dark">
+        <!-- <div class="blog bg-dark">
             <div class="headline-container text-center">
                 <h3 class="headline">Bảng tin</h3>
             </div>
@@ -70,7 +69,7 @@
 
               Sed interdum hendrerit ante sed gravida. Quisque est augue, mattis ac mi nec, eleifend venenatis lorem. Morbi lobortis placerat commodo. In luctus mi purus. Donec non eros in velit faucibus vulputate. Nam eu est vulputate, congue justo ut, sodales orci. Praesent eu fermentum massa. Phasellus ac volutpat lacus. Sed porttitor lorem non leo placerat, in euismod risus laoreet. Praesent sit amet arcu volutpat, congue est ac, lacinia lacus. In hac habitasse platea dictumst. Suspendisse tempor ornare lorem in lacinia. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Maecenas vel metus eget ex venenatis sagittis eu et turpis. Nunc fermentum est eu odio tincidunt, non dapibus justo cursus. Donec imperdiet convallis nibh, a aliquet odio congue eget.
             </div>
-        </div>
+        </div> -->
   </div>
   <!-- end .main-content -->    
   <!-- footer --> 

@@ -38,7 +38,10 @@
 
       // Execute the query
       // if($nameErr==''&&$YearErr==''){
-      $stmt->bind_param('ssisiii', $name, $description, $price, $img_path, $status, $feature, $id);
+      $tmp = $_GET['img_path'];
+      if ($img_path == "img/product-list/")
+        $stmt->bind_param('ssisiii', $name, $description, $price, $tmp, $status, $feature, $id);
+      else $stmt->bind_param('ssisiii', $name, $description, $price, $img_path, $status, $feature, $id);
       $stmt->execute();
       move_uploaded_file($_FILES['img_path']['tmp_name'], '../img/product-list/' . $_FILES['img_path']['name']);
       // }
@@ -55,7 +58,9 @@
       // }
       if ($_POST['submit'])
       {
-        echo "<script>window.location.href='editProduct.php?id=$id&name=$name&description=$description&price=$price&img_path=$img_path&status=$status&feature=$feature'; alert('Chỉnh sửa thành công!')</script>";
+        if ($img_path == "img/product-list/")
+          echo "<script>window.location.href='editProduct.php?id=$id&name=$name&description=$description&price=$price&img_path=$tmp&status=$status&feature=$feature'; alert('Chỉnh sửa thành công!')</script>";
+        else echo "<script>window.location.href='editProduct.php?id=$id&name=$name&description=$description&price=$price&img_path=$img_path&status=$status&feature=$feature'; alert('Chỉnh sửa thành công!')</script>";
       }
       mysqli_close($conn);
     }   
@@ -106,8 +111,8 @@
           <td><input type='number' name='price' class='form-control' value="<?php echo $_GET['price']?>" required></td>
         </tr>
         <tr>
-          <td>Hình ảnh sản phẩm</td>
-          <td><input type="file" name="img_path" class='form-control' value="<?php echo $_GET['img_path']?>" onchange="ValidateSingleInput(this);" accept=".png, .jpg, .jpeg" required></td>
+          <td>Hình ảnh mới sản phẩm<br>(để trống nếu không thay đổi)</td>
+          <td><input type="file" name="img_path" class='form-control' value="<?php echo $_GET['img_path']?>" onchange="ValidateSingleInput(this);" accept=".png, .jpg, .jpeg"></td>
         </tr>
         <tr>
           <td>Trạng thái</td>
