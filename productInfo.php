@@ -186,7 +186,7 @@
                       <?php 
                         $key = array_search($comment['user_id'], array_column($users, 'id'));
                         $id = $comment['id']; 
-                        echo ($users[$key]['username']);
+                        echo $users[$key]['username'];
                       ?>
                     </h6>
                     <p class="text-muted small mb-0">

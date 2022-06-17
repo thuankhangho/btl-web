@@ -13,7 +13,7 @@
         echo "<script>
         if (confirm('Bạn có chắc muốn xóa bình luận?') == true)
         {  
-            window.location.href = 'confirmDeleteProductComment.php?id=$id';
+            window.location.href = 'confirmDeleteProductComment.php?id=$id&prod_id=$prod_id';
         }
         else window.location.href = '../productInfo.php?prod_id=$prod_id';
     </script>";
