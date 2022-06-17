@@ -231,7 +231,7 @@
                 </div>
 
                 <p class="mt-3 mb-4 pb-2">
-                  <?php echo $comment['content'];?>
+                  <?php echo htmlspecialchars($comment['content']);?>
                 </p>
 
                 <div class="small d-flex justify-content-start">
