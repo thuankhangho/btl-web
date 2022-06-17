@@ -52,12 +52,7 @@
                   <td>" . $datetime . "</td>
                   <td>" . $content . "</td>
                   <td>
-                    <a href='editNews.php?
-                      id=$id&
-                      name=$name&
-                      datetime=$datetime&
-                      content=$content' 
-                      class='btn btn-primary m-r-1em' name='edit'>Sửa</a>
+                    <a href='editNews.php?id=$id&name=$name&datetime=$datetime&content=$content' class='btn btn-primary m-r-1em' name='edit'>Sửa</a>
                     <a href='deleteNews.php?id=$id' class='btn btn-danger'>Xóa</a>
                   </td>
                 </tr>";

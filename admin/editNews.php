@@ -5,16 +5,10 @@
     try {
       // // insert query
       // $nameErr = $YearErr ='';
-      $id = $_GET['id'];
-      $username = $_POST['username'];
-      $password = $_POST['password'];
-      $fullname = $_POST['full_name'];
-      $sex = $_POST['sex'];
-      $birthday = $_POST['birthday'];
-      $email = $_POST['email'];
-      $phone = $_POST['phone'];
-      $address = $_POST['address'];
-      
+      $id = $_POST['id'];
+      $name = $_POST['name'];
+      $datetime = $_POST['datetime'];
+      $content = $_POST['content'];
       // if($input_name=='')
       // {
       //     $nameErr = "Name is required";
@@ -35,7 +29,7 @@
       // {
       //     $YearErr = "Year must be within the range of 1990-2022";
       // }
-      $query3 = "UPDATE user SET username = ?, password = ?, full_name = ?, sex = ?, birthday = ?, email = ?, phone = ?, address = ? WHERE id = ?";
+      $query3 = "UPDATE news SET name = ?, datetime = ?, content = ?, WHERE id = ?";
       $stmt = $conn->prepare($query3);
       // prepare query for execution
 

@@ -4,25 +4,19 @@
     include ('../config/config.php');
 
     try {
-      $username = $_POST['username'];
-      $password = $_POST['password'];
-      $fullname = $_POST['full_name'];
-      $sex = $_POST['sex'];
-      $birthday = $_POST['birthday'];
-      $email = $_POST['email'];
-      $phone = $_POST['phone'];
-      $address = $_POST['address'];
+      $name = $_POST['name'];
+      $datetime = $_POST['datetime'];
+      $content = $_POST['content'];
 
-      $query2 = "INSERT INTO user (username, password, full_name, sex, birthday, email, phone, address) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";;
+      $query2 = "INSERT INTO news (name, datetime, content) VALUES (?, ?, ?)";
       $stmt = $conn->prepare($query2);
 
-      $stmt->bind_param('ssssssss', $username, $password, $fullname,
-      $sex, $birthday, $email, $phone, $address);
+      $stmt->bind_param('sss', $name, $datetime, $content);
       $stmt->execute();
-      if ($_POST['submit']) {
-        echo "<script>window.location.href='newsManagement.php'; alert('Tạo tin tức mới thành công!')</script>";
+      if ($_POST['submit'])
+      {
+        echo "<script>window.location.href='newsManagement.php'; alert('Tạo bài viết mới thành công!')</script>";
       }
-
       mysqli_close($conn);
     }   
     // show error
@@ -45,63 +39,33 @@
   <style>
   .container{ margin: 0 auto; }
   </style>
-  <title>Thêm tin tức</title>
+  <title>Thêm bài viết</title>
 </head>
 <body>
   <!-- container -->
   <div class="container">
     <div class="page-header">
-      <h1>Thêm tin tức</h1>
+      <h1>Thêm bài viết</h1>
     </div>
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
       <table class='table table-hover table-responsive table-bordered'>
-        <!-- <tr>
-          <td>ID</td>
-          <td><input type='text' name='id' class='form-control' required></td>
-        </tr> -->
         <tr>
-          <td>Username</td>
-          <td><input type='text' name='username' class='form-control' required></td>
+          <td>Tên bài viết</td>
+          <td><input type='text' name='name' class='form-control' required></td>
         </tr>
         <tr>
-          <td>Password</td>
-          <td><input type='text' name='password' class='form-control' required></td>
+          <td>Ngày giờ đăng bài viết</td>
+          <td><input type='datetime-local' name='datetime' class='form-control' required></td>
         </tr>
         <tr>
-          <td>Họ & tên</td>
-          <td><input type='text' name='full_name' class='form-control' required></td>
-        </tr>
-        <tr>
-          <td>Giới tính</td>
-          <td>
-            <select class="select" name="sex" required>
-              <option value="Nam">Nam</option>
-              <option value="Nữ">Nữ</option>
-              <option value="Khác">Khác</option>
-            </select>
-          </td>
-        </tr>
-        <tr>
-          <td>Sinh nhật</td>
-          <td><input type='date' name='birthday' class='form-control' required></td>
-        </tr>
-        <tr>
-          <td>Email</td>
-          <td><input type='email' name='email' class='form-control' required></td>
-        </tr>
-        <tr>
-          <td>Số điện thoại</td>
-          <td><input type='text' name='phone' class='form-control' required></td>
-        </tr>
-        <tr>
-          <td>Địa chỉ</td>
-          <td><input type='text' name='address' class='form-control' required></td>
+          <td>Nội dung bài viết</td>
+          <td><input type='textarea' name='content' class='form-control' required></td>
         </tr>
         <tr>
           <td></td>
           <td>
             <input type='submit' name='submit' value='Lưu' class='btn btn-primary' />
-            <a href='memberManagement.php' class='btn btn-danger'>Quay lại bảng thành viên</a>
+            <a href='newsManagement.php' class='btn btn-danger'>Quay lại bảng bài viết</a>
           </td>
         </tr>
       </table>
