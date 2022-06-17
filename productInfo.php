@@ -103,7 +103,7 @@
             </div>
 
             <p class="lead">
-              <span><h4>Giá:</h4><?php echo htmlspecialchars($dish1['price']); ?> VND</span>
+              <span><h4>Giá:</h4><?php echo htmlspecialchars($dish1['price']);?>000 VND</span>
             </p>
 
             <p class="lead font-weight-bold"><h5>Miêu tả:</h5></p>

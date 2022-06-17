@@ -15,7 +15,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   <!-- CSS -->
   <link rel="stylesheet" href="admin-styles/styles.css">
-  <title>Admin Panel</title>
+  <title>Quản lý bình luận của tin tức</title>
 </head>
 <body>
 
@@ -34,11 +34,11 @@
       echo "<table class='table table-bordered'>
               <tr>
                   <th>ID</th>
-                  <th>User_id</th>
+                  <th>ID người viết bình luận</th>
                   <th>Thời gian</th>
                   <th>Nội dung</th>
-                  <th>News_id</th>
-                  <th>Sửa/Xóa thông tin</th>
+                  <th>ID bài tin tức</th>
+                  <th>Xem bài tin tức</th>
               </tr>
               <tbody>";
       $sql = "SELECT * from news_comments";
@@ -64,8 +64,7 @@
                         datetime=$datetime&
                         content=$content&
                         prod_id=$news_id&' 
-                        class='btn btn-primary m-r-1em' name='edit'>Sửa</a>
-                      <a href='deleteComment.php?id=$id' class='btn btn-danger'>Xóa</a>
+                        class='btn btn-primary m-r-1em' name='edit'>Xem</a>
                   </td>
                 </tr>";
         }
