@@ -38,7 +38,7 @@
                   <th>Thời gian</th>
                   <th>Nội dung</th>
                   <th>ID sản phẩm</th>
-                  <th>Xem bình luận</th>
+                  <th>Xem bài viết chứa bình luận</th>
               </tr>
               <tbody>";
       $sql = "SELECT * from prod_comments";
@@ -58,7 +58,7 @@
                   <td>" . $content . "</td>
                   <td>" . $prod_id . "</td>
                   <td> 
-                      <a href='../productInfo.php?prod_id=$prod_id&flag=true'
+                      <a href='../productInfo.php?prod_id=$prod_id'
                         class='btn btn-primary m-r-1em' name='edit'>Xem</a>
                   </td>
                 </tr>";

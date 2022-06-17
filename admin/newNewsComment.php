@@ -46,7 +46,7 @@
           $stmt->execute();
           if ($_POST['submit'])
           {
-            echo "<script>window.location.href='memberManagement.php'; alert('Record was saved successfully.')</script>";
+            echo "<script>window.location.href='newsCommentManagement.php'; alert('Record was saved successfully.')</script>";
           }
       // }
       // else{

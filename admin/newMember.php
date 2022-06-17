@@ -46,7 +46,7 @@
           $stmt->execute();
           if ($_POST['submit'])
           {
-            echo "<script>window.location.href='memberManagement.php'; alert('Record was saved successfully.')</script>";
+            echo "<script>window.location.href='memberManagement.php'; alert('Tạo thành viên mới thành công!')</script>";
           }
       // }
       // else{
@@ -82,6 +82,7 @@
   <style>
   .container{ margin: 0 auto; }
   </style>
+  <title>Thêm thành viên</title>
 </head>
 <body>
   <!-- container -->

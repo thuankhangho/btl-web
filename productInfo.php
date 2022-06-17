@@ -180,9 +180,7 @@
               ?>
               <div class="card-body">
                 <div class="d-flex flex-start align-items-center">
-                  <img class="rounded-circle shadow-1-strong me-3"
-                    src="img/logo.png" alt="avatar" width="60"
-                    height="60" />
+                  <img class="rounded-circle shadow-1-strong me-3" src="img/logo.png" alt="avatar" width="60" height="60" />
                   <div>
                     <h6 class="fw-bold text-primary mb-1">
                       <?php 
@@ -195,15 +193,13 @@
                     </p>
                   </div>
                 </div>
-
                 <p class="mt-3 mb-4 pb-2">
                   <?php echo htmlspecialchars($comment['content']);?>
                 </p>
-
                 <div class="small d-flex justify-content-start">
-                  <a href="#!" class="d-flex align-items-center me-3">
+                  <a href=<?php echo "admin/deleteProductComment.php?id=$id&prod_id=$prod_id"?> class="d-flex align-items-center me-3">
                     <i class="fas fa-exclamation-triangle me-2"></i>
-                    <p class="mb-0">Xoá</p>
+                    <p class="mb-0">Xóa</p>
                   </a>
                 </div>
               </div>
