@@ -9,14 +9,13 @@
       $name = test_input($_POST['name']);
       $description = test_input($_POST['description']);
       $price = test_input($_POST['price']);
-      $img_path = test_input("img/product-list/" . $_POST['img_path']);
+      $img_path = "img/product-list/" . $_POST['img_path'];
 
-      if (!preg_match("/^[0-9a-zA-Z-'.,()*!<>:\/ ]*$/", $name) ||
-          !preg_match("/^[0-9,.]*$/", $price) ||
-          !preg_match('/\.(jpg|png|jpeg)$/', $img_path)) {
-        echo "<div class='alert alert-danger'>Input invalid</div>";
-      }
-      else {
+      // if (!preg_match("/^[0-9a-zA-Z-'.,()*!<>:\/ ]*$/", $name) ||
+      //     !preg_match("/^[0-9,.]*$/", $price)) {
+      //   echo "<div class='alert alert-danger'>Input invalid</div>";
+      // }
+      // else {
         $query3 = "UPDATE product SET name = ?, description = ?, price = ?, img_path = ? WHERE id = ?";
         $stmt = $conn->prepare($query3);
 
@@ -32,7 +31,7 @@
             echo "<script>window.location.href='editProduct.php?id=$id&name=$name&description=$description&price=$price&img_path=$tmp'; alert('Chỉnh sửa thành công!')</script>";
           else echo "<script>window.location.href='editProduct.php?id=$id&name=$name&description=$description&price=$price&img_path=$img_path'; alert('Chỉnh sửa thành công!')</script>";
         }
-      }
+      //}
       mysqli_close($conn);
     }   
     // show error

@@ -37,8 +37,6 @@
                   <th>Mô tả sản phẩm</th>
                   <th>Giá</th>
                   <th>Hình</th>
-                  <th>Trạng thái (còn/hết)</th>
-                  <th>Trên tin tức?</th>
               </tr>
               <tbody>";
       $sql = "SELECT * from product";
