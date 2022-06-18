@@ -8,7 +8,7 @@
       $name = test_input($_POST['name']);
       $description = test_input($_POST['description']);
       $price = test_input($_POST['price']);
-      $img_path = "img/product-list/" . $_POST['img_path'];
+      $img_path = "img/product-list/" . $_FILES['img_path']['name'];
       $status = test_input($_POST['status']);
 
       if (!preg_match("/^[0-9a-zA-Z-'.,()*!<>:\/áàảãạăắặẳâấầẩẫậéèẻẽẹêếềểễệíìỉĩịóòỏõọôốồổỗộơớờởỡợúùủũụưứừửữựđÁÀẢÃẠĂẮẶẲÂẤẦẨẪẬÉÈẺẼẸÊẾỀỂỄỆÍÌỈĨỊÓÒỎÕỌÔỐỒỔỖỘƠỚỜỞỠỢÚÙỦŨỤƯỨỪỬỮỰĐ ]*$/", $name) ||

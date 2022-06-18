@@ -53,7 +53,7 @@
         $address =    mysqli_real_escape_string($conn, $address);
         
         if (!preg_match("/^[0-9a-zA-Z-'.,()*!áàảãạăắặẳâấầẩẫậéèẻẽẹêếềểễệíìỉĩịóòỏõọôốồổỗộơớờởỡợúùủũụưứừửữựđÁÀẢÃẠĂẮẶẲÂẤẦẨẪẬÉÈẺẼẸÊẾỀỂỄỆÍÌỈĨỊÓÒỎÕỌÔỐỒỔỖỘƠỚỜỞỠỢÚÙỦŨỤƯỨỪỬỮỰĐ ]*$/", $username) ||
-            !preg_match("/^[a-zA-Z-'áàảãạăắặẳâấầẩẫậéèẻẽẹêếềểễệíìỉĩịóòỏõọôốồổỗộơớờởỡợúùủũụưứừửữựđÁÀẢÃẠĂẮẶẲÂẤẦẨẪẬÉÈẺẼẸÊẾỀỂỄỆÍÌỈĨỊÓÒỎÕỌÔỐỒỔỖỘƠỚỜỞỠỢÚÙỦŨỤƯỨỪỬỮỰĐ ]*$/", $fullname) ||
+            !preg_match("/^[a-zA-Z-'áàảãạăắặẳâấầẩẫậéèẻẽẹêếềểễệíìỉĩịóòỏõọôốồổỗộơớờởỡợúùủũụưứừửữựđÁÀẢÃẠĂẮẶẲÂẤẦẨẪẬÉÈẺẼẸÊẾỀỂỄỆÍÌỈĨỊÓÒỎÕỌÔỐỒỔỖỘƠỚỜỞỠỢÚÙỦŨỤƯỨỪỬỮỰĐ ]*$/", $full_name) ||
             !filter_var($email, FILTER_VALIDATE_EMAIL) ||
             !preg_match("/^[0-9+()]*$/", $phone)
         ) {
@@ -82,6 +82,7 @@
           }
           mysqli_free_result($result);
         }
+        mysqli_free_result($result);
       } 
       else {
         echo "<script>
@@ -107,16 +108,14 @@
             <img src="img/reg-img/regform.jpg" class="w-100" style="border-top-left-radius: .3rem; border-top-right-radius: .3rem;">
             <div class="card-body p-4 p-md-5">
               <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">Đăng Ký</h3>
-              <form action="" method="post" class="px-md-2" id="reg-form" onsubmit="return validate()">
+              <form action="" method="post" class="px-md-2">
                 <div class="form-outline mb-4">
                   <label class="form-label" for="username">Username</label>
                   <input type="text" name="username" id="username" class="form-control" required>
-                  <div class="error" style="color: red;"></div>
                 </div>
                 <div class="form-outline mb-4">
                   <label class="form-label" for="password" required>Mật khẩu</label>
                   <input type="password" name="password" id="password" class="form-control" required>
-                  <div class="error" style="color: red;"></div>
                 </div>
                 <div class="form-outline mb-4">
                   <label class="form-label" for="fullname">Họ & tên</label>
