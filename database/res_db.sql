@@ -86,7 +86,12 @@ CREATE TABLE `product` (
 
 INSERT INTO `product` (`id`, `name`, `description`, `price`, `img_path`, `status`, `feature`) VALUES
 (0, 'Shoyu Ramen', 'Ramen & nước tương', 900, 'img/product-list/shoyu-ramen.jpg', 0, 0),
-(1, 'Shio Ramen', 'Slimy as f', 22000, 'img/product-list/shio-ramen.jpg', 1, 1);
+(1, 'Shio Ramen', 'Ramen muối', 220, 'img/product-list/shio-ramen.jpg', 1, 1),
+(2, 'Cơm Trứng', 'Cơm và trứng chiên', '324', 'img/food-img/rice-cata.jpg', '1', '1'),
+(3, 'Rượu Sake', 'Rượu Sake nhập khẩu từ Nhật Bản 100%', '950', 'img/food-img/beverage-cata.jpg', '1', '1'),
+(4, 'Tonkotsu Ramen', 'Ramen cùng thịt lợn', '340', 'img/food-img/ramen-cata.jpg', '1', '1'),
+(5, 'Sushi', 'Sushi 7 món', '240', 'img/food-img/sushi-cata.jpg', '1', '1');
+
 
 -- --------------------------------------------------------
 

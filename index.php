@@ -39,22 +39,22 @@
       <h1 class="text-center">KHÁM PHÁ DANH MỤC SẢN PHẨM<br><br></h1>        
       <div class="row justify-content-center">
         <div class="col-3">
-          <a href="#">
+          <a href="productInfo.php?prod_id=4">
             <img src="img/food-img/ramen-cata.jpg" alt="" class="img-fluid img-curve">
           </a>
         </div>
         <div class="col-3">
-          <a href="#">
+          <a href="productInfo.php?prod_id=5">
             <img src="img/food-img/sushi-cata.jpg" alt="" class="img-fluid img-curve">
           </a>
         </div>
         <div class="col-3">
-          <a href="#">
+          <a href="productInfo.php?prod_id=3">
             <img src="img/food-img/beverage-cata.jpg" alt="" class="img-fluid img-curve">
           </a>
         </div>
         <div class="col-3">
-          <a href="#">
+          <a href="productInfo.php?prod_id=2">
             <img src="img/food-img/rice-cata.jpg" alt="" class="img-fluid img-curve">
           </a>
         </div>
