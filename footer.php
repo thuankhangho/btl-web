@@ -19,27 +19,27 @@
         <!-- Section: Social media -->
         <div class="mb-4">
           <!-- Facebook -->
-          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+          <a class="btn btn-outline-light btn-floating m-1" href="https://www.youtube.com/watch?v=UIp6_0kct_U" role="button">
             <i class="fab fa-facebook-f"></i>
           </a>
 
           <!-- Twitter -->
-          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+          <a class="btn btn-outline-light btn-floating m-1" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" role="button">
             <i class="fab fa-twitter"></i>
           </a>
 
           <!-- Google -->
-          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+          <a class="btn btn-outline-light btn-floating m-1" href="https://www.youtube.com/watch?v=HAHJUtSR90g" role="button">
             <i class="fab fa-google"></i>
           </a>
 
           <!-- Instagram -->
-          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+          <a class="btn btn-outline-light btn-floating m-1" href="https://www.youtube.com/watch?v=V_bQNPG2OyE" role="button">
             <i class="fab fa-instagram"></i>
           </a>
 
           <!-- Linkedin -->
-          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+          <a class="btn btn-outline-light btn-floating m-1" href="https://www.youtube.com/watch?v=rl7ppuXMfC8" role="button">
             <i class="fab fa-linkedin-in"></i>
           </a>
         </div>
