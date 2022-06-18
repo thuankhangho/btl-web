@@ -9,10 +9,8 @@
       $content = $_POST['content'];
       $prod_id = $_POST['prod_id'];
 
-      if (!preg_match("/^[0-9]*$/", $user_id) ||
-          !preg_match("/^[0-9]*$/", $news_id)
-      ) {
-        echo "<div class='alert alert-danger'>Input không hợp lệ</div>";
+      if (!preg_match("/^[0-9]*$/", $user_id) || !preg_match("/^[0-9]*$/", $news_id)) {
+        echo "<div class='alert alert-danger'>Input không hợp lệ!</div>";
       }
       else {
         $query2 = "INSERT INTO prod_comments (user_id, datetime, content, prod_id) VALUES (?, ?, ?, ?)";;
