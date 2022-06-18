@@ -68,7 +68,7 @@
       }
       mysqli_free_result($res);
     }
-    elseif (isset($_POST['comment_post']) && isset($_POST['flag']) == false) {
+    else if (isset($_POST['comment_post'])) {
       echo "<script>
               Swal.fire({
                 icon: 'warning',

@@ -29,10 +29,12 @@
     <div class=" food-search height d-flex justify-content-center align-items-center">
         <div class="col-md-8">
           <div class="search">
+            <form method="post" action="index.php">
               <i class="fa fa-search"></i>
               <input type="text" name="input-search" class="form-control" placeholder="Bạn đang thèm gì?">
-              <button class="btn btn-primary" name="submit-search">Tìm kiếm</button>
-          </div>     
+              <input type="submit" class="form-control btn btn-primary" name="submit-search" value="Tìm kiếm">
+            </form>
+          </div>
         </div>
     </div>
     <div class="container-img">
@@ -70,3 +72,11 @@
   <!-- end footer --> 
 </body>
 </html>
+
+<?php
+  if (isset($_POST["submit-search"]))
+  {
+    $temp = $_POST["input-search"];
+    echo "<script>window.location.href = 'productsListSearch.php?content=$temp';</script>";
+  }
+?>
