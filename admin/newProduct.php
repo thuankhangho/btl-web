@@ -10,7 +10,7 @@
       $img_path = test_input("img/product-list/" . $_POST['img_path']);
       $status = test_input($_POST['status']);
 
-      if (!preg_match("/^[0-9a-zA-Z-'.,()*!<>:\/ ]*$/", $name) ||
+      if (!preg_match("/^[0-9a-zA-Z-'.,()*!<>:\/áàảãạăắặẳâấầẩẫậéèẻẽẹêếềểễệíìỉĩịóòỏõọôốồổỗộơớờởỡợúùủũụưứừửữựđÁÀẢÃẠĂẮẶẲÂẤẦẨẪẬÉÈẺẼẸÊẾỀỂỄỆÍÌỈĨỊÓÒỎÕỌÔỐỒỔỖỘƠỚỜỞỠỢÚÙỦŨỤƯỨỪỬỮỰĐ ]*$/", $name) ||
           !preg_match("/^[0-9,.]*$/", $price) ||
           !preg_match('/\.(jpg|png|jpeg)$/', $img_path) ||
           !preg_match("/^[0-1]*$/", $status)) {

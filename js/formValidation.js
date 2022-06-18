@@ -12,13 +12,21 @@ function validate() {
     errorMsg = document.getElementsByClassName("error"); // num = 6
   var out = true;
 
-  if (!username.value.match("/^[0-9a-zA-Z-'.,()*! ]*$/")) {
+  if (
+    !username.value.match(
+      "/^[0-9a-zA-Z-'.,()*!áàảãạăắặẳâấầẩẫậéèẻẽẹêếềểễệíìỉĩịóòỏõọôốồổỗộơớờởỡợúùủũụưứừửữựđÁÀẢÃẠĂẮẶẲÂẤẦẨẪẬÉÈẺẼẸÊẾỀỂỄỆÍÌỈĨỊÓÒỎÕỌÔỐỒỔỖỘƠỚỜỞỠỢÚÙỦŨỤƯỨỪỬỮỰĐ ]*$/"
+    )
+  ) {
     errorMsg[0].innerHTML =
       "Valid input only include 0-9a-zA-Z-'.,()*! and space";
     out = false;
   }
 
-  if (!fullname.value.match("/^[a-zA-Z-' ]*$/")) {
+  if (
+    !fullname.value.match(
+      "/^[a-zA-Z-'áàảãạăắặẳâấầẩẫậéèẻẽẹêếềểễệíìỉĩịóòỏõọôốồổỗộơớờởỡợúùủũụưứừửữựđÁÀẢÃẠĂẮẶẲÂẤẦẨẪẬÉÈẺẼẸÊẾỀỂỄỆÍÌỈĨỊÓÒỎÕỌÔỐỒỔỖỘƠỚỜỞỠỢÚÙỦŨỤƯỨỪỬỮỰĐ ]*$/"
+    )
+  ) {
     errorMsg[2].innerHTML = "Valid input only include a-zA-Z-' and space";
     out = false;
   }

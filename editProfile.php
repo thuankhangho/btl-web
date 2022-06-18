@@ -1,39 +1,42 @@
 <?php
+  // include database connection
+  require_once ('config/config.php');
   if ($_POST) {
-    // include database connection
-    require_once ('config/config.php');
     try {
-      // // insert query
-      // $nameErr = $YearErr ='';
-      $id = $_GET['id'];
-      $username = $_POST['username'];
-      $password = $_POST['password'];
-      $fullname = $_POST['full_name'];
-      $sex = $_POST['sex'];
-      $birthday = $_POST['birthday'];
-      $email = $_POST['email'];
-      $phone = $_POST['phone'];
-      $address = $_POST['address'];
+      $id = test_input($_GET['id']);
+      $username = test_input($_POST['username']);
+      $password = test_input($_POST['password']);
+      $fullname = test_input($_POST['full_name']);
+      $sex = test_input($_POST['sex']);
+      $birthday = test_input($_POST['birthday']);
+      $email = test_input($_POST['email']);
+      $phone = test_input($_POST['phone']);
+      $address = test_input($_POST['address']);
       
-      $query3 = "UPDATE user SET username = ?, password = ?, full_name = ?, sex = ?, birthday = ?, email = ?, phone = ?, address = ? WHERE id = ?";
-      $stmt = $conn->prepare($query3);
-      // prepare query for execution
+      if (!preg_match("/^[0-9a-zA-Z-'.,()*!áàảãạăắặẳâấầẩẫậéèẻẽẹêếềểễệíìỉĩịóòỏõọôốồổỗộơớờởỡợúùủũụưứừửữựđÁÀẢÃẠĂẮẶẲÂẤẦẨẪẬÉÈẺẼẸÊẾỀỂỄỆÍÌỈĨỊÓÒỎÕỌÔỐỒỔỖỘƠỚỜỞỠỢÚÙỦŨỤƯỨỪỬỮỰĐ ]*$/", $username) ||
+          !preg_match("/^[a-zA-Z-'áàảãạăắặẳâấầẩẫậéèẻẽẹêếềểễệíìỉĩịóòỏõọôốồổỗộơớờởỡợúùủũụưứừửữựđÁÀẢÃẠĂẮẶẲÂẤẦẨẪẬÉÈẺẼẸÊẾỀỂỄỆÍÌỈĨỊÓÒỎÕỌÔỐỒỔỖỘƠỚỜỞỠỢÚÙỦŨỤƯỨỪỬỮỰĐ ]*$/", $fullname) ||
+          !filter_var($email, FILTER_VALIDATE_EMAIL) ||
+          !preg_match("/^[0-9+()]*$/", $phone)
+      ) {
+        echo "<div class='alert alert-danger'>Input invalid</div>";
+      }
+      else {
+        $query3 = "UPDATE user SET username = ?, password = ?, full_name = ?, sex = ?, birthday = ?, email = ?, phone = ?, address = ? WHERE id = ?";
+        $stmt = $conn->prepare($query3);
 
-      // Execute the query
-      // if($nameErr==''&&$YearErr==''){
-          $stmt->bind_param('sssssssss', $username, $password, $fullname,
-          $sex, $birthday, $email, $phone, $address, $id);
-          $stmt->execute();
-      // }
-      if ($_POST['submit'])
-      {
-        echo "<script>
-                Swal.fire({
-                  icon: 'success',
-                  title: 'Chỉnh sửa thành công!',
-                  confirmButtonColor: '#ff7f50'
-                })
-              </script>";
+        $stmt->bind_param('sssssssss', $username, $password, $fullname,
+        $sex, $birthday, $email, $phone, $address, $id);
+        $stmt->execute();
+        if ($_POST['submit'])
+        {
+          echo "<script>
+                  Swal.fire({
+                    icon: 'success',
+                    title: 'Chỉnh sửa thành công!',
+                    confirmButtonColor: '#ff7f50'
+                  })
+                </script>";
+        }
       }
     }   
     // show error
@@ -41,19 +44,16 @@
       die('ERROR: ' . $exception->getMessage());
     }
   }
-?>
 
-<?php
-    require_once ('config/config.php');
-    $user_id = "";
-    if (isset($_GET['id'])) {
-      $user_id = $_GET['id'];
-    }
-    $query = "SELECT * FROM user WHERE id = '" . $user_id . "'";
-    $res = mysqli_query($conn, $query);
-    $mem = mysqli_fetch_all($res, MYSQLI_ASSOC);
-    $mem1 = $mem[0];
-    mysqli_free_result($res);
+  $user_id = "";
+  if (isset($_GET['id'])) {
+    $user_id = $_GET['id'];
+  }
+  $query = "SELECT * FROM user WHERE id = '" . $user_id . "'";
+  $res = mysqli_query($conn, $query);
+  $mem = mysqli_fetch_all($res, MYSQLI_ASSOC);
+  $mem1 = $mem[0];
+  mysqli_free_result($res);
 ?>
 
 <!DOCTYPE html>
@@ -87,7 +87,7 @@
     <div class="page-header">
       <h1>Chỉnh sửa thông tin tài khoản</h1>
     </div>
-    <form method="post">
+    <form method="post" onsubmit="return validation()">
       <table class='table table-hover table-responsive table-bordered'>
         <tr>
           <td>ID</td>
@@ -95,15 +95,15 @@
         </tr>
         <tr>
           <td>Username</td>
-          <td><input type='text' name='username' class='form-control' value="<?php echo $mem1['username']?>" required></td>
+          <td><input type='text' name='username' class='form-control' value="<?php echo $mem1['username']?>" required><div class="error" style="color: red;"></div></td>
         </tr>
         <tr>
           <td>Password</td>
-          <td><input type='text' name='password' class='form-control' value="<?php echo $mem1['password']?>" required></td>
+          <td><input type='text' name='password' class='form-control' value="<?php echo $mem1['password']?>" required><div class="error" style="color: red;"></div></td>
         </tr>
         <tr>
           <td>Họ & tên</td>
-          <td><input type='text' name='full_name' class='form-control' value="<?php echo $mem1['full_name']?>" required></td>
+          <td><input type='text' name='full_name' class='form-control' value="<?php echo $mem1['full_name']?>" required><div class="error" style="color: red;"></div></td>
         </tr>
         <tr>
           <td>Giới tính</td>
@@ -133,15 +133,15 @@
         </tr>
         <tr>
           <td>Email</td>
-          <td><input type='email' name='email' class='form-control' value="<?php echo $mem1['email']?>" required></td>
+          <td><input type='email' name='email' class='form-control' value="<?php echo $mem1['email']?>" required><div class="error" style="color: red;"></div></td>
         </tr>
         <tr>
           <td>Số điện thoại</td>
-          <td><input type='text' name='phone' class='form-control' value="<?php echo $mem1['phone']?>" required></td>
+          <td><input type='text' name='phone' class='form-control' value="<?php echo $mem1['phone']?>" required><div class="error" style="color: red;"></div></td>
         </tr>
         <tr>
           <td>Địa chỉ</td>
-          <td><input type='text' name='address' class='form-control' value="<?php echo $mem1['address']?>" required></td>
+          <td><input type='text' name='address' class='form-control' value="<?php echo $mem1['address']?>" required><div class="error" style="color: red;"></div></td>
         </tr>
         <tr>
           <td></td>
@@ -160,6 +160,7 @@
     include($IPATH."footer.php");
     mysqli_close($conn);?>
   </div>
-  <!-- end footer --> 
+  <!-- end footer -->
+  <script src="js/formValidation.js"></script>
 </body>
 </html>

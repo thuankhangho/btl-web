@@ -52,8 +52,8 @@
         $address =    $_POST['address'];
         $address =    mysqli_real_escape_string($conn, $address);
         
-        if (!preg_match("/^[0-9a-zA-Z-'.,()*! ]*$/", $username) ||
-            !preg_match("/^[a-zA-Z-' ]*$/", $fullname) ||
+        if (!preg_match("/^[0-9a-zA-Z-'.,()*!áàảãạăắặẳâấầẩẫậéèẻẽẹêếềểễệíìỉĩịóòỏõọôốồổỗộơớờởỡợúùủũụưứừửữựđÁÀẢÃẠĂẮẶẲÂẤẦẨẪẬÉÈẺẼẸÊẾỀỂỄỆÍÌỈĨỊÓÒỎÕỌÔỐỒỔỖỘƠỚỜỞỠỢÚÙỦŨỤƯỨỪỬỮỰĐ ]*$/", $username) ||
+            !preg_match("/^[a-zA-Z-'áàảãạăắặẳâấầẩẫậéèẻẽẹêếềểễệíìỉĩịóòỏõọôốồổỗộơớờởỡợúùủũụưứừửữựđÁÀẢÃẠĂẮẶẲÂẤẦẨẪẬÉÈẺẼẸÊẾỀỂỄỆÍÌỈĨỊÓÒỎÕỌÔỐỒỔỖỘƠỚỜỞỠỢÚÙỦŨỤƯỨỪỬỮỰĐ ]*$/", $fullname) ||
             !filter_var($email, FILTER_VALIDATE_EMAIL) ||
             !preg_match("/^[0-9+()]*$/", $phone)
         ) {
