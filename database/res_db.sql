@@ -75,22 +75,20 @@ CREATE TABLE `product` (
   `name` varchar(100) NOT NULL,
   `description` text NOT NULL,
   `price` float UNSIGNED NOT NULL,
-  `img_path` text NOT NULL,
-  `status` tinyint(1) NOT NULL DEFAULT 1 COMMENT '0: unavailable, 1: available',
-  `feature` tinyint(1) NOT NULL DEFAULT 1 COMMENT '0: not featured on news, 1: featured on news'
+  `img_path` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `product`
 --
 
-INSERT INTO `product` (`id`, `name`, `description`, `price`, `img_path`, `status`, `feature`) VALUES
-(0, 'Shoyu Ramen', 'Ramen & nước tương', 900, 'img/product-list/shoyu-ramen.jpg', 0, 0),
-(1, 'Shio Ramen', 'Ramen muối', 220, 'img/product-list/shio-ramen.jpg', 1, 1),
-(2, 'Cơm Trứng', 'Cơm và trứng chiên', '324', 'img/food-img/rice-cata.jpg', '1', '1'),
-(3, 'Rượu Sake', 'Rượu Sake nhập khẩu từ Nhật Bản 100%', '950', 'img/food-img/beverage-cata.jpg', '1', '1'),
-(4, 'Tonkotsu Ramen', 'Ramen cùng thịt lợn', '340', 'img/food-img/ramen-cata.jpg', '1', '1'),
-(5, 'Sushi', 'Sushi 7 món', '240', 'img/food-img/sushi-cata.jpg', '1', '1');
+INSERT INTO `product` (`id`, `name`, `description`, `price`, `img_path`) VALUES
+(0, 'Shoyu Ramen', 'Ramen & nước tương', 900, 'img/product-list/shoyu-ramen.jpg'),
+(1, 'Shio Ramen', 'Ramen muối', 220, 'img/product-list/shio-ramen.jpg'),
+(2, 'Cơm Trứng', 'Cơm và trứng chiên', '324', 'img/food-img/rice-cata.jpg'),
+(3, 'Rượu Sake', 'Rượu Sake nhập khẩu từ Nhật Bản 100%', '950', 'img/food-img/beverage-cata.jpg'),
+(4, 'Tonkotsu Ramen', 'Ramen cùng thịt lợn', '340', 'img/food-img/ramen-cata.jpg'),
+(5, 'Sushi', 'Sushi 7 món', '240', 'img/food-img/sushi-cata.jpg');
 
 
 -- --------------------------------------------------------
@@ -113,14 +111,12 @@ CREATE TABLE `prod_comments` (
 
 INSERT INTO `prod_comments` (`id`, `user_id`, `datetime`, `content`, `prod_id`) VALUES
 (0, 2052243, '2022-06-15 00:00:00', 'Nhà hàng tuyệt hảo!', 0),
-(1, 2052242, '2016-06-22 10:41:30', 'afdf', 0),
-(2, 2052242, '2016-06-22 10:41:51', 'saikyou', 0),
-(3, 2052242, '2016-06-22 10:42:01', 'deadweight', 0),
-(4, 2052242, '2016-06-22 10:43:15', 'blalablala', 0),
-(5, 2052242, '2016-06-22 10:44:18', 'lmao', 0),
-(6, 2052243, '2016-06-22 12:35:10', '<img src=\"img/product-list/shoyu-ramen.jpg\" class=\"img-fluid\" alt=\"\">', 0),
-(7, 2052242, '2016-06-22 10:12:46', 'nut', 0),
-(8, 2052242, '2016-06-22 10:15:38', '<img src=\"img/product-list/D=.jpg\" class=\"img-fluid\" alt=\"\">', 0);
+(1, 2052242, '2016-06-22 10:41:30', 'afdf', 1),
+(2, 2052242, '2016-06-22 10:41:51', 'saikyou', 2),
+(3, 2052242, '2016-06-22 10:42:01', 'deadweight', 3),
+(4, 2052242, '2016-06-22 10:43:15', 'blalablala', 4),
+(5, 2052242, '2016-06-22 10:44:18', 'lmao', 5),
+(6, 2052242, '2016-06-22 10:12:46', 'nut', 6),
 
 -- --------------------------------------------------------
 
