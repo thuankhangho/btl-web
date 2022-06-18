@@ -39,7 +39,8 @@ CREATE TABLE `news` (
 --
 
 INSERT INTO `news` (`id`, `name`, `datetime`, `content`) VALUES
-(0, 'Địa điểm mới', '2022-06-15 00:00:00', 'Mở chi nhánh mới ở Tokyo');
+(0, 'Địa điểm mới', '2022-06-15 00:00:00', 'Mở chi nhánh mới ở Bình Thạnh'),
+(1, 'Địa điểm mới', '2022-06-15 00:00:00', 'Mở chi nhánh mới ở Thủ Đức');
 
 -- --------------------------------------------------------
 
@@ -62,7 +63,7 @@ CREATE TABLE `news_comments` (
 INSERT INTO `news_comments` (`id`, `user_id`, `datetime`, `content`, `news_id`) VALUES
 (0, 2052243, '2022-06-15 00:00:00', 'Quán thoáng mát, rộng rãi!', 0),
 (1, 2052242, '2016-06-22 10:14:59', 'nut', 0),
-(2, 2052242, '2016-06-22 10:16:04', '<img src=\"img/product-list/UwU.png\" class=\"img-fluid\" alt=\"\">', 0);
+(2, 2052242, '2016-06-22 10:16:04', 'Địa điểm gần nhà, thuận tiện!', 1);
 
 -- --------------------------------------------------------
 
@@ -76,8 +77,7 @@ CREATE TABLE `product` (
   `description` text NOT NULL,
   `price` float UNSIGNED NOT NULL,
   `img_path` text NOT NULL,
-  `status` tinyint(1) NOT NULL DEFAULT 1 COMMENT '0: unavailable, 1: available',
-  `feature` tinyint(1) NOT NULL DEFAULT 1 COMMENT '0: not featured on news, 1: featured on news'
+  `status` tinyint(1) NOT NULL DEFAULT 1 COMMENT '0: hết hàng, 1: còn hàng'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --

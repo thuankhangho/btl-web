@@ -91,8 +91,7 @@
               <a href="" class="text-info minitext">
               <img class="rounded-circle shadow-1-strong me-3 d-inline-block align-top"
                 src="img/logo.png" alt="avatar" width="24"
-                height="24" />
-                Unknown
+                height="24" />Admin
               </a>
             </div>
 
