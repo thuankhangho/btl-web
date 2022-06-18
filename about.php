@@ -148,7 +148,7 @@
       </p>
       </div>
       <div class="row" style="font-size: 20px; background-color: #ffa502; border: 1px solid black; display: flex">
-        <p style="padding-top: 10px"><i class="fas fa-envelope"> Mr. Khang: khang.lamborghini@hcmut.edu.vn</i><br>
+        <p style="padding-top: 10px"><i class="fas fa-envelope"> Mr. Khang: khang.hothuan@hcmut.edu.vn</i><br>
         <i class="fas fa-envelope"> Mr. Toàn: toan.vu1805@hcmut.edu.vn</i>
       </p>
       </div>
