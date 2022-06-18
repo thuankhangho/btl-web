@@ -43,7 +43,7 @@
       </div>
   <!-- main content --> 
   <div class="row my-container container-fluid justify-content-center" style=" font-size: 20px">
-    <div class="col-sm-8">
+    <div class="col-sm-7">
     <h4><br>1. Nguồn gốc sự phát triển</h4><p>
       Vào ngày 15/12/2020,
       Trương Bỉ Diệm đã bán lại nhà hàng cho Ô Tá Cự, chủ nhà hàng đương thời và cũng là người đã đưa nhà
@@ -60,7 +60,7 @@
         </ul>
     </p><hr>
     <h4>3. Các thông tin khác</h4><p>
-    <table style="margin-left: 18px">
+    <table style="margin-left: 10px">
         <ul>
         <tr>
           <td><li>Tên giao dịch tiếng Việt</li></td>
@@ -135,7 +135,7 @@
     </p>
     
     </div>
-    <div class="col-sm-4" style="padding: 0 20px 0 10px; margin-top: 10px">
+    <div class="col-sm-5" style="padding: 0 20px 0 10px; margin-top: 10px">
     <div class="row">
       <br><br>
     </div>
@@ -148,7 +148,7 @@
       </p>
       </div>
       <div class="row" style="font-size: 20px; background-color: #ffa502; border: 1px solid black; display: flex">
-        <p style="padding-top: 10px"><i class="fas fa-envelope"> Mr. Khang: khang.hothuan@hcmut.edu.vn</i><br>
+        <p style="padding-top: 10px"><i class="fas fa-envelope"> Mr. Khang: khang.lamborghini@hcmut.edu.vn</i><br>
         <i class="fas fa-envelope"> Mr. Toàn: toan.vu1805@hcmut.edu.vn</i>
       </p>
       </div>
