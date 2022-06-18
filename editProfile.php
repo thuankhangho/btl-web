@@ -29,13 +29,7 @@
         $stmt->execute();
         if ($_POST['submit'])
         {
-          echo "<script>
-                  Swal.fire({
-                    icon: 'success',
-                    title: 'Chỉnh sửa thành công!',
-                    confirmButtonColor: '#ff7f50'
-                  })
-                </script>";
+          echo "<script>alert('Chỉnh sửa thành công!');</script>";
         }
       }
     }   
