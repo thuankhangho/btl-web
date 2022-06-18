@@ -14,7 +14,7 @@
       if (!preg_match("/^[0-9a-zA-Z-'.,()*!<>:\/ ]*$/", $name) ||
           !preg_match("/^[0-9,.]*$/", $price) ||
           !preg_match("/^[0-1]*$/", $status)) {
-        echo "<div class='alert alert-danger'>Input invalid</div>";
+        echo "<div class='alert alert-danger'>Input không hợp lệ!</div>";
       }
       else {
         $query3 = "UPDATE product SET name = ?, description = ?, price = ?, img_path = ?, status = ? WHERE id = ?";

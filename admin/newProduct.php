@@ -14,8 +14,9 @@
           !preg_match("/^[0-9,.]*$/", $price) ||
           !preg_match('/\.(jpg|png|jpeg)$/', $img_path) ||
           !preg_match("/^[0-1]*$/", $status)) {
-        echo "<div class='alert alert-danger'>Input invalid</div>";
-      } else {
+        echo "<div class='alert alert-danger'>Input không hợp lệ!</div>";
+      }
+      else {
         $query2 = "INSERT INTO product (name, description, price, img_path, status) VALUES (?, ?, ?, ?, ?)";
         $stmt = $conn->prepare($query2);
   

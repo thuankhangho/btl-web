@@ -20,7 +20,7 @@
           !filter_var($email, FILTER_VALIDATE_EMAIL) ||
           !preg_match("/^[0-9+]*$/", $phone)
       ) {
-        echo "<div class='alert alert-danger'>Input invalid</div>";
+        echo "<div class='alert alert-danger'>Input không hợp lệ!</div>";
       }
       else {
         $query3 = "UPDATE user SET username = ?, password = ?, full_name = ?, sex = ?, birthday = ?, email = ?, phone = ?, address = ? WHERE id = ?";
