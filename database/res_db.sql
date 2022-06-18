@@ -75,20 +75,22 @@ CREATE TABLE `product` (
   `name` varchar(100) NOT NULL,
   `description` text NOT NULL,
   `price` float UNSIGNED NOT NULL,
-  `img_path` text NOT NULL
+  `img_path` text NOT NULL,
+  `status` tinyint(1) NOT NULL DEFAULT 1 COMMENT '0: unavailable, 1: available',
+  `feature` tinyint(1) NOT NULL DEFAULT 1 COMMENT '0: not featured on news, 1: featured on news'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `product`
 --
 
-INSERT INTO `product` (`id`, `name`, `description`, `price`, `img_path`) VALUES
-(0, 'Shoyu Ramen', 'Ramen & nước tương', 900, 'img/product-list/shoyu-ramen.jpg'),
-(1, 'Shio Ramen', 'Ramen muối', 220, 'img/product-list/shio-ramen.jpg'),
-(2, 'Cơm Trứng', 'Cơm và trứng chiên', '324', 'img/food-img/rice-cata.jpg'),
-(3, 'Rượu Sake', 'Rượu Sake nhập khẩu từ Nhật Bản 100%', '950', 'img/food-img/beverage-cata.jpg'),
-(4, 'Tonkotsu Ramen', 'Ramen cùng thịt lợn', '340', 'img/food-img/ramen-cata.jpg'),
-(5, 'Sushi', 'Sushi 7 món', '240', 'img/food-img/sushi-cata.jpg');
+INSERT INTO `product` (`id`, `name`, `description`, `price`, `img_path`, `status`) VALUES
+(0, 'Shoyu Ramen', 'Ramen & nước tương', 900, 'img/product-list/shoyu-ramen.jpg', 0),
+(1, 'Shio Ramen', 'Ramen muối', 220, 'img/product-list/shio-ramen.jpg', 1),
+(2, 'Cơm Trứng', 'Cơm và trứng chiên', '324', 'img/food-img/rice-cata.jpg', 1),
+(3, 'Rượu Sake', 'Rượu Sake nhập khẩu từ Nhật Bản 100%', '950', 'img/food-img/beverage-cata.jpg', 1),
+(4, 'Tonkotsu Ramen', 'Ramen cùng thịt lợn', '340', 'img/food-img/ramen-cata.jpg', 1),
+(5, 'Sushi', 'Sushi 7 món', '240', 'img/food-img/sushi-cata.jpg', 1);
 
 
 -- --------------------------------------------------------

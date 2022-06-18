@@ -37,6 +37,8 @@
                   <th>Mô tả sản phẩm</th>
                   <th>Giá</th>
                   <th>Hình</th>
+                  <th>Trạng thái (còn/hết)</th>
+                  <th>Trên tin tức?</th>
               </tr>
               <tbody>";
       $sql = "SELECT * from product";
@@ -48,14 +50,18 @@
           $description = $row['description'];
           $price = $row['price'];
           $img_path = $row['img_path'];
+          $status = $row['status'];
+          $feature = $row['feature'];
           echo "<tr>
                   <td>" . $id . "</td>
                   <td>" . $name . "</td>
                   <td>" . $description . "</td>
                   <td>" . $price . "</td>
                   <td>" . $img_path . "</td>
+                  <td>" . $status . "</td>
+                  <td>" . $feature . "</td>
                   <td>
-                    <a href='editProduct.php?id=$id&name=$name&description=$description&price=$price&img_path=$img_path' 
+                    <a href='editProduct.php?id=$id&name=$name&description=$description&price=$price&img_path=$img_path&status=$status&feature=$feature' 
                       class='btn btn-primary m-r-1em' name='edit'>Sửa</a>
                     <a href='deleteProduct.php?id=$id' class='btn btn-danger'>Xóa</a>
                     <a href='../productInfo.php?id=$id' class='btn btn-success'>Xem</a>

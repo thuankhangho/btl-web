@@ -8,17 +8,21 @@
       $description = test_input($_POST['description']);
       $price = test_input($_POST['price']);
       $img_path = test_input("img/product-list/" . $_POST['img_path']);
+      $status = test_input($_POST['status']);
+      $feature = test_input($_POST['feature']);
 
       if (!preg_match("/^[0-9a-zA-Z-'.,()*!<>:\/ ]*$/", $name) ||
           !preg_match("/^[0-9,.]*$/", $price) ||
-          !preg_match('/\.(jpg|png|jpeg)$/', $img_path)) {
+          !preg_match('/\.(jpg|png|jpeg)$/', $img_path) ||
+          !preg_match("/^[0-1]*$/", $status) ||
+          !preg_match("/^[0-1]*$/", $feature)
+      ) {
         echo "<div class='alert alert-danger'>Input invalid</div>";
-      }
-      else {
-        $query2 = "INSERT INTO product (name, description, price, img_path) VALUES (?, ?, ?, ?)";
+      } else {
+        $query2 = "INSERT INTO product (name, description, price, img_path, status, feature) VALUES (?, ?, ?, ?, ?, ?)";
         $stmt = $conn->prepare($query2);
   
-        $stmt->bind_param('ssis', $name, $description, $price, $img_path);
+        $stmt->bind_param('ssisii', $name, $description, $price, $img_path, $status, $feature);
         $stmt->execute();
         if ($_POST['submit']) {
           echo "<script>window.location.href='productManagement.php'; alert('Tạo sản phẩm mới thành công!')</script>";
