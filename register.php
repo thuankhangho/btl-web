@@ -52,27 +52,36 @@
         $address =    $_POST['address'];
         $address =    mysqli_real_escape_string($conn, $address);
         
-        $query = "INSERT INTO `user` (username, password, full_name, sex, birthday, email, phone, address) VALUES ('$username','$password','$full_name', '$sex', '$birthday','$email','$phone','$address')";
-        $result = mysqli_query($conn, $query);
-        if ($result) {
-          echo "<script>
-                  Swal.fire({
-                    icon: 'success',
-                    title: 'Đăng ký tài khoản thành công!',
-                    confirmButtonColor: '#ff7f50',
-                    footer: '<a href=login.php>Nhấn vào đây để đăng nhập</a>'
-                  })
-                </script>";
-        } else {
-          echo "<script>
-                  Swal.fire({
-                    icon: 'warning',
-                    title: 'Lỗi',
-                    text: 'Đã xảy ra lỗi!'
-                  })
-                </script>";
+        if (!preg_match("/^[0-9a-zA-Z-'.,()*! ]*$/", $username) ||
+            !preg_match("/^[a-zA-Z-' ]*$/", $fullname) ||
+            !filter_var($email, FILTER_VALIDATE_EMAIL) ||
+            !preg_match("/^[0-9+()]*$/", $phone)
+        ) {
+          echo "<div class='alert alert-danger'>Input invalid</div>";
         }
-        mysqli_free_result($result);
+        else {
+          $query = "INSERT INTO `user` (username, password, full_name, sex, birthday, email, phone, address) VALUES ('$username','$password','$full_name', '$sex', '$birthday','$email','$phone','$address')";
+          $result = mysqli_query($conn, $query);
+          if ($result) {
+            echo "<script>
+                    Swal.fire({
+                      icon: 'success',
+                      title: 'Đăng ký tài khoản thành công!',
+                      confirmButtonColor: '#ff7f50',
+                      footer: '<a href=login.php>Nhấn vào đây để đăng nhập</a>'
+                    })
+                  </script>";
+          } else {
+            echo "<script>
+                    Swal.fire({
+                      icon: 'warning',
+                      title: 'Lỗi',
+                      text: 'Đã xảy ra lỗi!'
+                    })
+                  </script>";
+          }
+          mysqli_free_result($result);
+        }
       } 
       else {
         echo "<script>
@@ -98,18 +107,21 @@
             <img src="img/reg-img/regform.jpg" class="w-100" style="border-top-left-radius: .3rem; border-top-right-radius: .3rem;">
             <div class="card-body p-4 p-md-5">
               <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">Đăng Ký</h3>
-              <form action="" method="post" class="px-md-2">
+              <form action="" method="post" class="px-md-2" id="reg-form" onsubmit="return validate()">
                 <div class="form-outline mb-4">
                   <label class="form-label" for="username">Username</label>
                   <input type="text" name="username" id="username" class="form-control" required>
+                  <div class="error"></div>
                 </div>
                 <div class="form-outline mb-4">
                   <label class="form-label" for="password" required>Mật khẩu</label>
                   <input type="password" name="password" id="password" class="form-control" required>
+                  <div class="error"></div>
                 </div>
                 <div class="form-outline mb-4">
                   <label class="form-label" for="fullname">Họ & tên</label>
                   <input type="text" name="fullname" id="fullname" class="form-control" required>
+                  <div class="error"></div>
                 </div>
                 <div class="form-outline mb-4">
                   <label for="sex" class="form-label">Giới tính:</label>
@@ -128,14 +140,17 @@
                 <div class="form-outline mb-4">
                   <label class="form-label" for="email" required>Email</label>
                   <input type="email" name="email" id="email" class="form-control"/>
+                  <div class="error"></div>
                 </div>
                 <div class="form-outline mb-4">
                   <label class="form-label" for="phone" required>Số điện thoại</label>
                   <input type="text" name="phone" id="phone" class="form-control"/>
+                  <div class="error"></div>
                 </div>
                 <div class="form-outline mb-4">
                   <label class="form-label" for="address" required>Địa chỉ</label>
                   <input type="text" name="address" id="address" class="form-control"/>
+                  <div class="error"></div>
                 </div>
                 <p class="text-center text-muted mt-5 mb-0">Đã có tài khoản? <a href="login.php"
                     class="fw-bold text-body"><u>Hãy đăng nhập</u></a></p><br>
@@ -150,5 +165,6 @@
     </div>
   </div>
   <!-- End Register Form -->
+  <script src="js/formValidation.js"></script>
 </body>
 </html>
