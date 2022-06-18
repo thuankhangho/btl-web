@@ -1,7 +1,7 @@
 <?php
   if ($_POST) {
     // include database connection
-    include ('config/config.php');
+    require_once ('config/config.php');
     try {
       // // insert query
       // $nameErr = $YearErr ='';
@@ -35,7 +35,6 @@
                 })
               </script>";
       }
-      mysqli_close($conn);
     }   
     // show error
     catch(mysqli_sql_exception $exception){
@@ -45,7 +44,7 @@
 ?>
 
 <?php
-    include ('config/config.php');
+    require_once ('config/config.php');
     $user_id = "";
     if (isset($_GET['id'])) {
       $user_id = $_GET['id'];
@@ -158,7 +157,8 @@
   <!-- footer --> 
   <div>
     <?php $IPATH = $_SERVER["DOCUMENT_ROOT"]."/btl-web/";
-    include($IPATH."footer.php");?>
+    include($IPATH."footer.php");
+    mysqli_close($conn);?>
   </div>
   <!-- end footer --> 
 </body>
