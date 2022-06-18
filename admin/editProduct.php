@@ -4,13 +4,12 @@
     include ('../config/config.php');
     try {
       // // insert query
-      $id = test_input($_GET['id']);
-      $name = test_input($_POST['name']);
-      $description = test_input($_POST['description']);
-      $price = test_input($_POST['price']);
-      $img_path = "img/product-list/" . $_POST['img_path'];
-      $status = test_input($_POST['status']);
-
+      $id = $_GET['id'];
+      $name = $_POST['name'];
+      $description = $_POST['description'];
+      $price = $_POST['price'];
+      $img_path = "img/product-list/" . $_FILES['img_path']['name'];
+      $status = $_POST['status'];
       if (!preg_match("/^[0-9a-zA-Z-'.,()*!<>:\/ áàảãạăắặẳâấầẩẫậéèẻẽẹêếềểễệíìỉĩịóòỏõọôốồổỗộơớờởỡợúùủũụưứừửữựđÁÀẢÃẠĂẮẶẲÂẤẦẨẪẬÉÈẺẼẸÊẾỀỂỄỆÍÌỈĨỊÓÒỎÕỌÔỐỒỔỖỘƠỚỜỞỠỢÚÙỦŨỤƯỨỪỬỮỰĐ]*$/", $name) ||
           !preg_match("/^[0-9,.]*$/", $price) ||
           !preg_match("/^[0-1]*$/", $status)) {
