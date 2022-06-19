@@ -3,7 +3,7 @@
     // include database connection
     include ('../config/config.php');
     try {
-      // // insert query
+      // insert query
       $id = $_GET['id'];
       $name = $_POST['name'];
       $datetime = $_POST['datetime'];

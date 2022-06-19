@@ -38,7 +38,6 @@
                   <th>Giá</th>
                   <th>Hình</th>
                   <th>Trạng thái (còn/hết)</th>
-                  <th>Trên tin tức?</th>
               </tr>
               <tbody>";
       $sql = "SELECT * from product";
@@ -69,12 +68,5 @@
         echo "</tbody></table>";
       }
     ?>
-  <!-- footer --> 
-  <!-- <footer class="bg-light text-center text-lg-start">
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-      Admin Panel!!!
-    </div>
-  </footer> -->
-  <!-- end footer  -->
 </body>
 </html>

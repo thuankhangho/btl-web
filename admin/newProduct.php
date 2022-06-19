@@ -65,10 +65,6 @@
     </div>
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
       <table class='table table-hover table-responsive table-bordered'>
-        <!-- <tr>
-          <td>ID</td>
-          <td><input type='text' name='id' class='form-control' required></td>
-        </tr> -->
         <tr>
           <td>Tên sản phẩm</td>
           <td><input type="text" name='name' class='form-control' required></td>
